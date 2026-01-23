@@ -1,0 +1,37 @@
+pathway_id,step_from,step_to,source_node,source_id,source_type,target_node,target_id,target_type,edge_direction,relation,display_relation
+bupropion_nicotine,1,2,Bupropion,DB01156,drug,SLC6A3,6531,gene/protein,forward,drug_protein,target
+bupropion_nicotine,1,2,Bupropion,DB01156,drug,SLC6A3,6531,gene/protein,backward,drug_protein,target
+bupropion_nicotine,2,3,SLC6A3,6531,gene/protein,DRD2,1813,gene/protein,forward,protein_protein,ppi
+bupropion_nicotine,2,3,SLC6A3,6531,gene/protein,DRD2,1813,gene/protein,backward,protein_protein,ppi
+bupropion_nicotine,3,4,DRD2,1813,gene/protein,nicotine dependence,8575,disease,forward,disease_protein,associated with
+bupropion_nicotine,3,4,DRD2,1813,gene/protein,nicotine dependence,8575,disease,backward,disease_protein,associated with
+minoxidil_alopecia,1,2,Minoxidil,DB00350,drug,REN,5972,gene/protein,forward,drug_protein,target
+minoxidil_alopecia,1,2,Minoxidil,DB00350,drug,REN,5972,gene/protein,backward,drug_protein,target
+minoxidil_alopecia,2,3,REN,5972,gene/protein,kidney,2113,anatomy,forward,anatomy_protein_present,expression present
+minoxidil_alopecia,2,3,REN,5972,gene/protein,kidney,2113,anatomy,backward,anatomy_protein_present,expression present
+minoxidil_alopecia,3,4,kidney,2113,anatomy,AR,367,gene/protein,forward,anatomy_protein_present,expression present
+minoxidil_alopecia,3,4,kidney,2113,anatomy,AR,367,gene/protein,backward,anatomy_protein_present,expression present
+minoxidil_alopecia,4,5,AR,367,gene/protein,androgenetic alopecia,7184_5339_10410_12899,disease,forward,disease_protein,associated with
+minoxidil_alopecia,4,5,AR,367,gene/protein,androgenetic alopecia,7184_5339_10410_12899,disease,backward,disease_protein,associated with
+sildenafil_ed,1,2,Sildenafil,DB00203,drug,PDE5A,8654,gene/protein,forward,drug_protein,target
+sildenafil_ed,1,2,Sildenafil,DB00203,drug,PDE5A,8654,gene/protein,backward,drug_protein,target
+sildenafil_ed,2,3,PDE5A,8654,gene/protein,cGMP effects,R-HSA-418457,pathway,forward,pathway_protein,interacts with
+sildenafil_ed,2,3,PDE5A,8654,gene/protein,cGMP effects,R-HSA-418457,pathway,backward,pathway_protein,interacts with
+sildenafil_ed,3,4,cGMP effects,R-HSA-418457,pathway,Nitric oxide stimulates guanylate cyclase,R-HSA-392154,pathway,forward,pathway_pathway,parent-child
+sildenafil_ed,3,4,cGMP effects,R-HSA-418457,pathway,Nitric oxide stimulates guanylate cyclase,R-HSA-392154,pathway,backward,pathway_pathway,parent-child
+sildenafil_ed,4,5,Nitric oxide stimulates guanylate cyclase,R-HSA-392154,pathway,NOS3,4846,gene/protein,forward,pathway_protein,interacts with
+sildenafil_ed,4,5,Nitric oxide stimulates guanylate cyclase,R-HSA-392154,pathway,NOS3,4846,gene/protein,backward,pathway_protein,interacts with
+sildenafil_ed,5,6,NOS3,4846,gene/protein,erectile dysfunction (disease),5362,disease,forward,disease_protein,associated with
+sildenafil_ed,5,6,NOS3,4846,gene/protein,erectile dysfunction (disease),5362,disease,backward,disease_protein,associated with
+thalidomide_primary,1,2,Thalidomide,DB01041,drug,CRBN,51185,gene/protein,forward,drug_protein,target
+thalidomide_primary,1,2,Thalidomide,DB01041,drug,CRBN,51185,gene/protein,backward,drug_protein,target
+thalidomide_primary,2,3,CRBN,51185,gene/protein,plasma cell myeloma,9693,disease,forward,disease_protein,associated with
+thalidomide_primary,2,3,CRBN,51185,gene/protein,plasma cell myeloma,9693,disease,backward,disease_protein,associated with
+finasteride_alopecia,1,2,Finasteride,DB01216,drug,SRD5A2,6716,gene/protein,forward,drug_protein,target
+finasteride_alopecia,1,2,Finasteride,DB01216,drug,SRD5A2,6716,gene/protein,backward,drug_protein,target
+finasteride_alopecia,2,3,SRD5A2,6716,gene/protein,androgenetic alopecia,7184_5339_10410_12899,disease,forward,disease_protein,associated with
+finasteride_alopecia,2,3,SRD5A2,6716,gene/protein,androgenetic alopecia,7184_5339_10410_12899,disease,backward,disease_protein,associated with
+finasteride_bph,1,2,Finasteride,DB01216,drug,SRD5A2,6716,gene/protein,forward,drug_protein,target
+finasteride_bph,1,2,Finasteride,DB01216,drug,SRD5A2,6716,gene/protein,backward,drug_protein,target
+finasteride_bph,2,3,SRD5A2,6716,gene/protein,benign prostatic hyperplasia,10811,disease,forward,disease_protein,associated with
+finasteride_bph,2,3,SRD5A2,6716,gene/protein,benign prostatic hyperplasia,10811,disease,backward,disease_protein,associated with
