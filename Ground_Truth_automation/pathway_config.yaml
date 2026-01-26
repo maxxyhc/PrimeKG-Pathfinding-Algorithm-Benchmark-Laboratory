@@ -1,0 +1,101 @@
+# Drug Repurposing Pathway Validation Configuration
+# ===================================================
+# Define your known drug repurposing pathways here for automated validation
+
+pathways:
+  - name: "thalidomide_multiple_myeloma"
+    drug: "Thalidomide"
+    disease: "multiple myeloma"
+    mechanism_type: "protein_degradation"
+    documented_source: "FDA approval 2006, Singhal et al. 1999"
+    expected_pathway:
+      - node: "Thalidomide"
+        type: "drug"
+      - node: "CRBN"
+        type: "gene/protein"
+        description: "Cereblon - E3 ubiquitin ligase component"
+      - node: "protein ubiquitination"
+        type: "biological_process"
+      - node: "proteasome-mediated ubiquitin-dependent protein degradation"
+        type: "biological_process"
+    
+  - name: "aspirin_myocardial_infarction"
+    drug: "Aspirin"
+    disease: "myocardial infarction"
+    mechanism_type: "antiplatelet"
+    documented_source: "Secondary prevention standard of care"
+    expected_pathway:
+      - node: "Aspirin"
+        type: "drug"
+      - node: "PTGS1"
+        type: "gene/protein"
+        description: "Cyclooxygenase-1 (COX-1)"
+      - node: "platelet activation"
+        type: "biological_process"
+      - node: "thrombosis"
+        type: "disease"
+      - node: "myocardial infarction"
+        type: "disease"
+        
+  - name: "sildenafil_pulmonary_hypertension"
+    drug: "Sildenafil"
+    disease: "pulmonary arterial hypertension"
+    mechanism_type: "vasodilation"
+    documented_source: "FDA approval 2005 (Revatio)"
+    expected_pathway:
+      - node: "Sildenafil"
+        type: "drug"
+      - node: "PDE5A"
+        type: "gene/protein"
+        description: "Phosphodiesterase 5A"
+      - node: "cGMP signaling"
+        type: "pathway"
+      - node: "vasodilation"
+        type: "biological_process"
+      - node: "pulmonary arterial hypertension"
+        type: "disease"
+        
+  - name: "metformin_polycystic_ovary"
+    drug: "Metformin"
+    disease: "polycystic ovary syndrome"
+    mechanism_type: "insulin_sensitization"
+    documented_source: "Common off-label use"
+    expected_pathway:
+      - node: "Metformin"
+        type: "drug"
+      - node: "AMPK"
+        type: "gene/protein"
+        description: "AMP-activated protein kinase"
+      - node: "insulin signaling"
+        type: "pathway"
+      - node: "glucose metabolism"
+        type: "biological_process"
+      - node: "polycystic ovary syndrome"
+        type: "disease"
+        
+  - name: "rituximab_rheumatoid_arthritis"
+    drug: "Rituximab"
+    disease: "rheumatoid arthritis"
+    mechanism_type: "B_cell_depletion"
+    documented_source: "FDA approval 2006"
+    expected_pathway:
+      - node: "Rituximab"
+        type: "drug"
+      - node: "CD20"
+        type: "gene/protein"
+        description: "B-lymphocyte antigen CD20"
+      - node: "B cell activation"
+        type: "biological_process"
+      - node: "immune response"
+        type: "biological_process"
+      - node: "rheumatoid arthritis"
+        type: "disease"
+
+# Additional pathways to validate
+# Add more entries following the same structure
+
+validation_settings:
+  check_alternative_names: true
+  max_search_depth: 5
+  min_coverage_threshold: 0.7
+  fuzzy_matching: true
