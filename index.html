@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeKG Pathfinding Algorithm Benchmark Laboratory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PrimeKG Pathfinding Algorithm Benchmark Laboratory</h1>
+            <p class="subtitle">Benchmarking Graph Algorithms for Drug Repurposing Discovery</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Project Overview -->
+        <section id="overview">
+            <h2>Project Overview</h2>
+            <p>
+                This project investigates and benchmarks pathfinding algorithms on the 
+                <strong>PrimeKG</strong> (Precision Medicine Knowledge Graph) to evaluate their 
+                effectiveness in discovering mechanistically plausible drug repurposing candidates.
+            </p>
+            <p>
+                We aim to answer a critical question: <em>Can standard graph algorithms find 
+                biologically meaningful pathways, or do they fall into "shortcut traps" that 
+                produce statistically short but mechanistically meaningless paths?</em>
+            </p>
+        </section>
+
+        <!-- Motivation -->
+        <section id="motivation">
+            <h2>Motivation</h2>
+            <div class="motivation-grid">
+                <div class="motivation-card">
+                    <h3>The Hub Trap</h3>
+                    <p>
+                        High-degree nodes like TP53 (2,670 connections) or UBC (10,396 connections) 
+                        act as "shortcuts" that algorithms prefer, but these paths lack biological specificity.
+                    </p>
+                </div>
+                <div class="motivation-card">
+                    <h3>The Drug Trap</h3>
+                    <p>
+                        Naive algorithms often route through other drugs as intermediates, 
+                        producing paths like "Drug A → Drug B → Disease" that are pharmacologically meaningless.
+                    </p>
+                </div>
+                <div class="motivation-card">
+                    <h3>The Disease Trap</h3>
+                    <p>
+                        Paths may jump through unrelated diseases that share genetic risk factors, 
+                        creating spurious associations without mechanistic basis.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dataset -->
+        <section id="dataset">
+            <h2>The Dataset: PrimeKG</h2>
+            <p>
+                <a href="https://github.com/mims-harvard/PrimeKG" target="_blank">PrimeKG</a> is a 
+                precision medicine knowledge graph that integrates 20+ biomedical resources.
+            </p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">8.1M+</span>
+                    <span class="stat-label">Edges (Relationships)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">129K+</span>
+                    <span class="stat-label">Nodes (Entities)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Entity Types</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">18</span>
+                    <span class="stat-label">Relationship Types</span>
+                </div>
+            </div>
+            
+            <h3>Entity Types</h3>
+            <div class="entity-types">
+                <span class="entity-tag drug">Drug</span>
+                <span class="entity-tag gene">Gene/Protein</span>
+                <span class="entity-tag disease">Disease</span>
+                <span class="entity-tag anatomy">Anatomy</span>
+                <span class="entity-tag pathway">Pathway</span>
+                <span class="entity-tag phenotype">Effect/Phenotype</span>
+                <span class="entity-tag bp">Biological Process</span>
+                <span class="entity-tag mf">Molecular Function</span>
+                <span class="entity-tag cc">Cellular Component</span>
+                <span class="entity-tag exposure">Exposure</span>
+            </div>
+        </section>
+
+        <!-- Ground Truth Pathway -->
+        <section id="pathway">
+            <h2>Example: Sildenafil → Erectile Dysfunction Pathway</h2>
+            <p>
+                Below is a mechanistically validated drug repurposing pathway showing how 
+                <strong>Sildenafil (Viagra)</strong> treats <strong>Erectile Dysfunction</strong> 
+                through the nitric oxide/cGMP signaling cascade.
+            </p>
+
+            <div class="pathway-container">
+                <div class="pathway-visualization">
+                    <!-- Node 1: Sildenafil -->
+                    <div class="pathway-node drug">
+                        <div class="node-icon">💊</div>
+                        <div class="node-name">Sildenafil</div>
+                        <div class="node-meta">DB00203 | Drug</div>
+                    </div>
+                    
+                    <div class="pathway-edge">
+                        <div class="edge-line"></div>
+                        <div class="edge-label">target</div>
+                    </div>
+
+                    <!-- Node 2: PDE5A -->
+                    <div class="pathway-node gene">
+                        <div class="node-icon">🧬</div>
+                        <div class="node-name">PDE5A</div>
+                        <div class="node-meta">8654 | Gene/Protein</div>
+                    </div>
+
+                    <div class="pathway-edge">
+                        <div class="edge-line"></div>
+                        <div class="edge-label">interacts with</div>
+                    </div>
+
+                    <!-- Node 3: cGMP effects -->
+                    <div class="pathway-node pathway">
+                        <div class="node-icon">🔄</div>
+                        <div class="node-name">cGMP effects</div>
+                        <div class="node-meta">R-HSA-418457 | Pathway</div>
+                    </div>
+
+                    <div class="pathway-edge">
+                        <div class="edge-line"></div>
+                        <div class="edge-label">parent-child</div>
+                    </div>
+
+                    <!-- Node 4: NO stimulates guanylate cyclase -->
+                    <div class="pathway-node pathway">
+                        <div class="node-icon">🔄</div>
+                        <div class="node-name">Nitric oxide stimulates guanylate cyclase</div>
+                        <div class="node-meta">R-HSA-392154 | Pathway</div>
+                    </div>
+
+                    <div class="pathway-edge">
+                        <div class="edge-line"></div>
+                        <div class="edge-label">interacts with</div>
+                    </div>
+
+                    <!-- Node 5: NOS3 -->
+                    <div class="pathway-node gene">
+                        <div class="node-icon">🧬</div>
+                        <div class="node-name">NOS3</div>
+                        <div class="node-meta">4846 | Gene/Protein</div>
+                    </div>
+
+                    <div class="pathway-edge">
+                        <div class="edge-line"></div>
+                        <div class="edge-label">associated with</div>
+                    </div>
+
+                    <!-- Node 6: Erectile Dysfunction -->
+                    <div class="pathway-node disease">
+                        <div class="node-icon">🏥</div>
+                        <div class="node-name">Erectile Dysfunction</div>
+                        <div class="node-meta">5362 | Disease</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pathway-explanation">
+                <h3>Mechanistic Explanation</h3>
+                <ol>
+                    <li><strong>Sildenafil</strong> inhibits <strong>PDE5A</strong> (Phosphodiesterase 5A), preventing the breakdown of cGMP.</li>
+                    <li><strong>PDE5A</strong> is part of the <strong>cGMP effects</strong> pathway, which regulates smooth muscle relaxation.</li>
+                    <li>The <strong>cGMP effects</strong> pathway is downstream of <strong>Nitric oxide stimulates guanylate cyclase</strong>, which produces cGMP.</li>
+                    <li>This pathway involves <strong>NOS3</strong> (Endothelial Nitric Oxide Synthase), which produces nitric oxide in blood vessels.</li>
+                    <li><strong>NOS3</strong> dysfunction is associated with <strong>Erectile Dysfunction</strong> due to impaired vasodilation.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Methodology -->
+        <section id="methodology">
+            <h2>Methodology</h2>
+            <ol class="methodology-list">
+                <li>
+                    <strong>Curate Ground Truth Pathways:</strong> Collect validated drug-mechanism-disease 
+                    pathways from literature and pharmacological databases.
+                </li>
+                <li>
+                    <strong>Implement Pathfinding Algorithms:</strong> Test BFS, Dijkstra, A*, 
+                    bidirectional search, and constrained variants on PrimeKG.
+                </li>
+                <li>
+                    <strong>Benchmark Against Ground Truth:</strong> Measure how often algorithms 
+                    recover the mechanistically correct pathway vs. taking shortcuts.
+                </li>
+                <li>
+                    <strong>Develop Quality Metrics:</strong> Score paths based on biological plausibility, 
+                    hub avoidance, and mechanistic coherence.
+                </li>
+            </ol>
+        </section>
+
+        <!-- Repository -->
+        <section id="repository">
+            <h2>Repository Structure</h2>
+            <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
+├── data/
+│   └── ground_truths/
+│       ├── ground_truth_final.csv    # Validated pathway nodes
+│       └── pathway_edges_final.csv   # Pathway edge relationships
+├── notebooks/
+│   └── exploration.ipynb             # EDA and algorithm development
+├── src/
+│   └── prepare_primekg.py            # Data preprocessing scripts
+└── README.md</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>PrimeKG Pathfinding Algorithm Benchmark Laboratory</p>
+            <p>
+                <a href="https://github.com/maxxyhc/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory" target="_blank">
+                    View on GitHub
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
