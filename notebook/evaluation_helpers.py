@@ -51,8 +51,8 @@ def compute_degree_counts(edges_df):
     """
     degree_count = Counter()
     for _, row in edges_df.iterrows():
-        degree_count[row[':START_ID']] += 1
-        degree_count[row[':END_ID']] += 1
+        degree_count[row['x_index']] += 1
+        degree_count[row['y_index']] += 1
     return degree_count
 
 
