@@ -1,0 +1,151 @@
+pathway_id,algorithm,predicted_node_indices,predicted_node_ids,predicted_node_names,predicted_relations,predicted_length,ground_truth_length,time_ms
+diflunisal_Rheumatoid_arthritis,Shortest Path,"14062,29078","DB00861,8383","Diflunisal,rheumatoid arthritis",indication,2,5,0.26658399997359083
+bromocriptine_Hyperprolactinemia,Shortest Path,"15493,39081","DB01200,5804","Bromocriptine,hyperprolactinemia (disease)",indication,2,5,0.06654200001321442
+amobarbital_Epilepsy,Shortest Path,"17066,35641","DB01351,5027","Amobarbital,epilepsy",indication,2,6,0.04562500021165761
+capecitabine_Malignant_tumor_of_stomach,Shortest Path,"14758,36000","DB01101,21085","Capecitabine,gastric neoplasm",indication,2,4,0.07287499988706259
+oxaprozin_Rheumatoid_arthritis,Shortest Path,"15984,29078","DB00991,8383","Oxaprozin,rheumatoid arthritis",indication,2,5,0.021374999960244168
+regorafenib_Gastrointestinal_stromal_tumor,Shortest Path,"15599,29194","DB08896,11719","Regorafenib,gastrointestinal stromal tumor",indication,2,5,0.035374999924897566
+abiraterone_acetate_Malignant_tumor_of_prostate,Shortest Path,"14376,14483,35966","DB05812,DB13956,8315","Abiraterone,Estradiol valerate,prostate cancer","drug_drug,contraindication",3,7,0.1973329999600537
+abiraterone_acetate_Malignant_tumor_of_prostate_2,Shortest Path,"14376,14483,35966","DB05812,DB13956,8315","Abiraterone,Estradiol valerate,prostate cancer","drug_drug,contraindication",3,5,0.06079199988562323
+abiraterone_acetate_Malignant_tumor_of_prostate_4,Shortest Path,"14376,14483,35966","DB05812,DB13956,8315","Abiraterone,Estradiol valerate,prostate cancer","drug_drug,contraindication",3,7,0.06345899987536541
+alfacalcidol_Chronic_Kidney_Disease-Mineral,Shortest Path,"14562,84162","DB01436,6946","Alfacalcidol,renal osteodystrophy",indication,2,5,0.03229100002499763
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,Shortest Path,"14562,84162","DB01436,6946","Alfacalcidol,renal osteodystrophy",indication,2,5,0.005749999900217517
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,Shortest Path,"14562,84162","DB01436,6946","Alfacalcidol,renal osteodystrophy",indication,2,5,0.00579199991079804
+Dyphylline_Asthma,Shortest Path,"15956,33675","DB00651,4979","Dyphylline,asthma",indication,2,4,0.05320800005392812
+Tirofiban_Acute_Coronary_Syndrome,Shortest Path,"17226,83812","DB00775,5542","Tirofiban,acute coronary syndrome",indication,2,5,0.02141699997082469
+Cilastatin_Pneumonia_Pneumococcal,Shortest Path,"18687,83926","DB01597,5972","Cilastatin,streptococcal pneumonia",indication,2,4,0.037416999930428574
+Cilastatin_Pneumonia_Bacterial,Shortest Path,"18687,37574","DB01597,4652","Cilastatin,bacterial pneumonia",indication,2,4,0.013792000117973657
+Magnesium_salicylate_Rheumatoid_arthritis,Shortest Path,"14340,29078","DB01397,8383","Magnesium salicylate,rheumatoid arthritis",indication,2,5,0.014374999864230631
+baricitinib_Arthritis_Rheumatoid,Shortest Path,"15666,29078","DB11817,8383","Baricitinib,rheumatoid arthritis",indication,2,7,0.02408299997114227
+Budesonide_Asthma,Shortest Path,"14034,33675","DB01222,4979","Budesonide,asthma",indication,2,10,0.04150000017943967
+ketoprofen_Rheumatoid_arthritis,Shortest Path,"14278,29078","DB01009,8383","Ketoprofen,rheumatoid arthritis",indication,2,5,0.014874999806124833
+Tegafur_Stomach_Neoplasms,Shortest Path,"14516,36000","DB09256,21085","Tegafur,gastric neoplasm",indication,2,4,0.013000000080864993
+nintedanib_Carcinoma_Non-Small-Cell_Lung,Shortest Path,"14413,33688","DB09079,5233","Nintedanib,non-small cell lung carcinoma (disease)",indication,2,4,0.02262499992866651
+Naloxone_Opioid-Related_Disorders,Shortest Path,"14314,37753","DB01183,5530","Naloxone,opiate dependence",indication,2,6,0.05591700005425082
+Meclofenamic_acid_Rheumatoid_arthritis,Shortest Path,"14509,29078","DB00939,8383","Meclofenamic acid,rheumatoid arthritis",indication,2,5,0.014958000065234955
+methyltestosterone_Eunuchism,Shortest Path,"14387,84093","DB06710,5758","Methyltestosterone,eunuchism",indication,2,4,0.03983300007348589
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,Shortest Path,"15987,29078","DB01401,8383","Choline magnesium trisalicylate,rheumatoid arthritis",indication,2,5,0.008750000006330083
+Amantadine_Basal_Ganglia_Diseases,Shortest Path,"14830,38003","DB00915,3996","Amantadine,basal ganglia disease",indication,2,4,0.022459000092567294
+Amantadine_Parkinsonian_Disorders,Shortest Path,"14830,37706","DB00915,21095","Amantadine,parkinsonian disorder",indication,2,4,0.016250000044237822
+methylphenidate_Attention_deficit_hyperactivit,Shortest Path,"16855,84036","DB00422,5302","Methylphenidate,attention deficit hyperactivity disorder, inattentive type",indication,2,5,0.032250000003841706
+fosphenytoin_Epilepsy,Shortest Path,"14330,35641","DB01320,5027","Fosphenytoin,epilepsy",indication,2,4,0.01708300010250241
+fosphenytoin_Status_Epilepticus,Shortest Path,"14330,83906","DB01320,2125","Fosphenytoin,status epilepticus",indication,2,4,0.017791999880500953
+Nabumetone_Arthritis_Rheumatoid,Shortest Path,"14175,29078","DB00461,8383","Nabumetone,rheumatoid arthritis",indication,2,5,0.016791999996712548
+Axitinib_Carcinoma_Renal_Cell,Shortest Path,"15020,33643","DB06626,5086","Axitinib,renal cell carcinoma (disease)",indication,2,6,0.015874999917286914
+Aspirin_Arthritis_Rheumatoid,Shortest Path,"15781,29078","DB00945,8383","Acetylsalicylic acid,rheumatoid arthritis",indication,2,5,0.02891700000873243
+imatinib_Gastrointestinal_stromal_tumor,Shortest Path,"14207,29194","DB00619,11719","Imatinib,gastrointestinal stromal tumor",indication,2,4,0.02358400001867267
+Troglitazone_Diabetes_Mellitus_Type_2,Shortest Path,"14813,28208","DB00197,5148","Troglitazone,type 2 diabetes mellitus",indication,2,4,0.03229100002499763
+dofetilide_Atrial_fibrillation,Shortest Path,"15418,33618","DB00204,4981","Dofetilide,atrial fibrillation (disease)",indication,2,5,0.020833000007769442
+Terfenadine_Rhinitis_Vasomotor,Shortest Path,"14942,83791","DB00342,6004","Terfenadine,vasomotor rhinitis",indication,2,4,0.017500000012660166
+Piribedil_Parkinsonism,Shortest Path,"17414,37706","DB12478,21095","Piribedil,parkinsonian disorder",indication,2,5,0.02637500006130722
+dexibuprofen_Rheumatoid_arthritis,Shortest Path,"14419,29078","DB09213,8383","Dexibuprofen,rheumatoid arthritis",indication,2,5,0.019250000150350388
+metharbital_Epilepsy,Shortest Path,"17065,35641","DB00463,5027","Metharbital,epilepsy",indication,2,6,0.022791999981564004
+eptacog_alfa_activated_Factor_VII_deficiency,Shortest Path,"16634,38622","DB00036,2244","Coagulation factor VIIa Recombinant Human,factor VII deficiency",indication,2,5,0.037416999930428574
+etodolac_Rheumatoid_arthritis,Shortest Path,"14227,29078","DB00749,8383","Etodolac,rheumatoid arthritis",indication,2,5,0.0128340000173921
+norepinephrine_Low_blood_pressure,Shortest Path,"16352,33605","DB00368,5468","Norepinephrine,hypotensive disorder",indication,2,5,0.026708000177677604
+aripiprazole_Infantile_autism,Shortest Path,"14323,84310","DB01238,5260","Aripiprazole,autism (disease)",indication,2,6,0.03166700003021106
+melevodopa_Parkinsonism,Shortest Path,"14321,37706","DB01235,21095","Levodopa,parkinsonian disorder",indication,2,6,0.01874999998108251
+methoxamine_Low_blood_pressure,Shortest Path,"17339,33605","DB00723,5468","Methoxamine,hypotensive disorder",indication,2,4,0.01341600000159815
+flurbiprofen_Rheumatoid_arthritis,Shortest Path,"14219,29078","DB00712,8383","Flurbiprofen,rheumatoid arthritis",indication,2,5,0.012125000012019882
+Diphenhydramine_Rhinitis_Vasomotor,Shortest Path,"14607,83791","DB01075,6004","Diphenhydramine,vasomotor rhinitis",indication,2,4,0.02041599987023801
+tolmetin_Rheumatoid_arthritis,Shortest Path,"14183,29078","DB00500,8383","Tolmetin,rheumatoid arthritis",indication,2,5,0.014083999985814444
+sorafenib_Renal_cell_carcinoma,Shortest Path,"14945,33643","DB00398,5086","Sorafenib,renal cell carcinoma (disease)",indication,2,10,0.018416999864712125
+midostaurin_Mast_cell_leukemia,Shortest Path,"15018,39171","DB06595,20334","Midostaurin,mast cell leukemia",indication,2,6,0.020124999991821824
+sulfasalazine_Rheumatoid_arthritis,Shortest Path,"15982,29078","DB00795,8383","Sulfasalazine,rheumatoid arthritis",indication,2,5,0.012874999811174348
+pegvisomant_Acromegaly,Shortest Path,"14695,32847","DB00082,19933","Pegvisomant,acromegaly",indication,2,4,0.025583000024198554
+diclofenac_Rheumatoid_arthritis,Shortest Path,"14061,29078","DB00586,8383","Diclofenac,rheumatoid arthritis",indication,2,5,0.015749999874969944
+sulindac_Rheumatoid_arthritis,Shortest Path,"14204,29078","DB00605,8383","Sulindac,rheumatoid arthritis",indication,2,5,0.011209000149392523
+sunitinib_Gastrointestinal_stromal_tumor,Shortest Path,"15002,29194","DB01268,11719","Sunitinib,gastrointestinal stromal tumor",indication,2,10,0.02645799986566999
+sunitinib_Renal_cell_carcinoma,Shortest Path,"15002,33643","DB01268,5086","Sunitinib,renal cell carcinoma (disease)",indication,2,10,0.012582999943333562
+mephentermine_Low_blood_pressure,Shortest Path,"20151,33605","DB01365,5468","Mephentermine,hypotensive disorder",indication,2,5,0.02325000014025136
+norethindrone_acetate_Endometriosis,Shortest Path,"14221,33680","DB00717,5133","Norethisterone,endometriosis (disease)",indication,2,4,0.028417000066838227
+aceclofenac_Rheumatoid_arthritis,Shortest Path,"15794,29078","DB06736,8383","Aceclofenac,rheumatoid arthritis",indication,2,5,0.01250000013897079
+methotrexate_Burkitt's_lymphoma,Shortest Path,"14194,30075","DB00563,7243","Methotrexate,Burkitt lymphoma",indication,2,4,0.037375000147221726
+methotrexate_Malignant_tumor_of_lung,Shortest Path,"14194,36812","DB00563,21117","Methotrexate,lung neoplasm",indication,2,4,0.025584000013623154
+gabapentin_enacarbil_Restless_legs,Shortest Path,"17559,38121","DB08872,5391","Gabapentin enacarbil,restless legs syndrome",indication,2,4,0.02083399999719404
+ibuprofen_Rheumatoid_arthritis,Shortest Path,"14287,29078","DB01050,8383","Ibuprofen,rheumatoid arthritis",indication,2,5,0.015999999959603883
+dexamfetamine_Attention_deficit_hyperactivit,Shortest Path,"15173,84036","DB01576,5302","Dextroamphetamine,attention deficit hyperactivity disorder, inattentive type",indication,2,7,0.030499999866151484
+tretinoin_Acute_promyelocytic_leukemia_F,Shortest Path,"14229,29361","DB00755,12883","Tretinoin,acute promyelocytic leukemia",indication,2,4,0.03412499995647522
+secobarbital_Epilepsy,Shortest Path,"15297,35641","DB00418,5027","Secobarbital,epilepsy",indication,2,6,0.01720800014481938
+indomethacin_Rheumatoid_arthritis,Shortest Path,"14158,29078","DB00328,8383","Indomethacin,rheumatoid arthritis",indication,2,5,0.023374999955194653
+ruxolitinib_Polycythemia_vera,Shortest Path,"15597,29118","DB08877,9891","Ruxolitinib,acquired polycythemia vera",indication,2,6,0.013500000022759195
+tiaprofenic_acid_Rheumatoid_arthritis,Shortest Path,"15989,29078","DB01600,8383","Tiaprofenic acid,rheumatoid arthritis",indication,2,5,0.010665999980119523
+Thiopental_Epilepsy,Shortest Path,"15834,35641","DB00599,5027","Thiopental,epilepsy",indication,2,6,0.018291999822395155
+pazopanib_Renal_cell_carcinoma,Shortest Path,"15205,33643","DB06589,5086","Pazopanib,renal cell carcinoma (disease)",indication,2,6,0.022040999965611263
+calcifediol_Renal_osteodystrophy,Shortest Path,"14704,84162","DB00146,6946","Calcifediol,renal osteodystrophy",indication,2,4,0.01170799987448845
+calcifediol_Hypophosphatemia,Shortest Path,"14704,33625","DB00146,313","Calcifediol,hypophosphatemia (disease)",indication,2,4,0.012459000117814867
+calcifediol_Rickets,Shortest Path,"14704,33626","DB00146,5520","Calcifediol,rickets (disease)",indication,2,4,0.01816700000745186
+vernakalant_Atrial_fibrillation,Shortest Path,"15200,33618","DB06217,4981","Vernakalant,atrial fibrillation (disease)",indication,2,5,0.012875000038548023
+chlorphenamine_Vasomotor_rhinitis,Shortest Path,"14990,83791","DB01114,6004","Chlorpheniramine,vasomotor rhinitis",indication,2,4,0.01799999995455437
+cabozantinib_Renal_cell_carcinoma,Shortest Path,"15596,33643","DB08875,5086","Cabozantinib,renal cell carcinoma (disease)",indication,2,6,0.01308300011260144
+piroxicam_Rheumatoid_arthritis,Shortest Path,"14191,29078","DB00554,8383","Piroxicam,rheumatoid arthritis",indication,2,4,0.010624999958963599
+salicylic_acid_Rheumatoid_arthritis,Shortest Path,"14262,29078","DB00936,8383","Salicylic acid,rheumatoid arthritis",indication,2,5,0.01754200002324069
+glipizide_Diabetes_mellitus_type_2,Shortest Path,"14293,28208","DB01067,5148","Glipizide,type 2 diabetes mellitus",indication,2,4,0.016582999933234532
+tamibarotene_Acute_promyelocytic_leukemia_F,Shortest Path,"14113,29361","DB04942,12883","Tamibarotene,acute promyelocytic leukemia",indication,2,4,0.012583000170707237
+fenoprofen_Rheumatoid_arthritis,Shortest Path,"14197,29078","DB00573,8383","Fenoprofen,rheumatoid arthritis",indication,2,4,0.009750000117492164
+loxoprofen_Rheumatoid_arthritis,Shortest Path,"15816,29078","DB09212,8383","Loxoprofen,rheumatoid arthritis",indication,2,4,0.013667000075656688
+doxepin_Anxiety,Shortest Path,"14310,84019","DB01142,11918","Doxepin,anxiety",indication,2,4,0.02320799990229716
+glibenclamide_Diabetes_mellitus_type_2,Shortest Path,"14280,28208","DB01016,5148","Glyburide,type 2 diabetes mellitus",indication,2,4,0.02191600015066797
+phenobarbital_Epilepsy,Shortest Path,"14993,35641","DB01174,5027","Phenobarbital,epilepsy",off-label use,2,6,0.013667000075656688
+phenobarbital_Tonic-clonic_seizure,Shortest Path,"14993,39815","DB01174,1386","Phenobarbital,visual epilepsy",indication,2,6,0.05474999989019125
+phenobarbital_Simple_partial_seizure,Shortest Path,"14993,36743","DB01174,5384","Phenobarbital,partial epilepsy",indication,2,6,0.01975000009224459
+risperidone_Autistic_Disorder,Shortest Path,"14223,84310","DB00734,5260","Risperidone,autism (disease)",indication,2,4,0.020707999965452473
+salicylsalicylic_acid_Arthritis_Rheumatoid,Shortest Path,"15986,29078","DB01399,8383","Salsalate,rheumatoid arthritis",indication,2,5,0.014792000001762062
+tolazamide_Diabetes_Mellitus_Type_2,Shortest Path,"15778,28208","DB00839,5148","Tolazamide,type 2 diabetes mellitus",indication,2,4,0.012499999911597115
+carbimazole_Hyperthyroidism,Shortest Path,"14815,36034","DB00389,4425","Carbimazole,hyperthyroidism",indication,2,4,0.012125000012019882
+carbimazole_Graves'_disease,Shortest Path,"14815,38784","DB00389,5364","Carbimazole,Graves disease",indication,2,4,0.005625000085274223
+lisdexamfetamine_Attention_deficit_hyperactivit,Shortest Path,"15159,84036","DB01255,5302","Lisdexamfetamine,attention deficit hyperactivity disorder, inattentive type",indication,2,8,0.014208000038706814
+hydrocortisone_Arthritis_Rheumatoid,Shortest Path,"14028,29078","DB00741,8383","Hydrocortisone,rheumatoid arthritis",indication,2,10,0.021958999923299416
+hydrocortisone_Asthma,Shortest Path,"14028,33675","DB00741,4979","Hydrocortisone,asthma",indication,2,10,0.01970899984371499
+hydrocortisone_Berylliosis,Shortest Path,"14028,83795","DB00741,15274","Hydrocortisone,chronic beryllium disease",indication,2,11,0.033624999787207344
+hydrocortisone_Brain_Edema,Shortest Path,"14028,83775","DB00741,6684","Hydrocortisone,brain edema",indication,2,11,0.018124999996871338
+hydrocortisone_Bursitis,Shortest Path,"14028,36272","DB00741,2471","Hydrocortisone,bursitis",indication,2,10,0.018959000044560526
+hydrocortisone_Dermatitis_Atopic,Shortest Path,"14028,36129","DB00741,4980","Hydrocortisone,atopic eczema",indication,2,10,0.02366699982303544
+hydrocortisone_Dermatitis_Contact,Shortest Path,"14028,37770","DB00741,5480","Hydrocortisone,contact dermatitis",indication,2,10,0.018083999975715415
+hydrocortisone_Eye_Diseases,Shortest Path,"14028,35823","DB00741,5328","Hydrocortisone,eye disease",indication,2,10,0.026790999982040375
+hydrocortisone_Lupus_Erythematosus_Systemic,Shortest Path,"14028,29182","DB00741,7915","Hydrocortisone,systemic lupus erythematosus (disease)",indication,2,10,0.0178749999122374
+hydrocortisone_Pemphigus,Shortest Path,"14028,38016","DB00741,6594","Hydrocortisone,pemphigus",indication,2,10,0.019709000071088667
+hydrocortisone_Serum_Sickness,Shortest Path,"14028,83789","DB00741,43789","Hydrocortisone,serum sickness",indication,2,10,0.022209000007933355
+naproxen_Arthritis_Rheumatoid,Shortest Path,"14238,29078","DB00788,8383","Naproxen,rheumatoid arthritis",indication,2,5,0.01608399998076493
+promazine_Porphyria_Acute_Intermittent,Shortest Path,"15098,27843","DB00420,8294","Promazine,acute intermittent porphyria",indication,2,8,0.03133299992441607
+methylprednisolone_Arthritis_Rheumatoid,Shortest Path,"14269,29078","DB00959,8383","Methylprednisolone,rheumatoid arthritis",indication,2,9,0.021500000002561137
+methylprednisolone_Asthma,Shortest Path,"14269,33675","DB00959,4979","Methylprednisolone,asthma",indication,2,10,0.03812500017374987
+methylprednisolone_Lupus_Erythematosus_Systemic,Shortest Path,"14269,29182","DB00959,7915","Methylprednisolone,systemic lupus erythematosus (disease)",indication,2,9,0.017916999922817922
+triamcinolone_Arthritis_Rheumatoid,Shortest Path,"14023,29078","DB00620,8383","Triamcinolone,rheumatoid arthritis",indication,2,9,0.0222920000396698
+triamcinolone_Asthma,Shortest Path,"14023,33675","DB00620,4979","Triamcinolone,asthma",indication,2,10,0.03025000000889122
+triamcinolone_Lupus_Erythematosus_Systemic,Shortest Path,"14023,29182","DB00620,7915","Triamcinolone,systemic lupus erythematosus (disease)",indication,2,9,0.022209000007933355
+cortisone_acetate_Arthritis_Rheumatoid,Shortest Path,"15003,29078","DB01380,8383","Cortisone acetate,rheumatoid arthritis",indication,2,9,0.018375000081505277
+cortisone_acetate_Asthma,Shortest Path,"15003,33675","DB01380,4979","Cortisone acetate,asthma",indication,2,10,0.017374999970343197
+cortisone_acetate_Lupus_Erythematosus_Systemic,Shortest Path,"15003,29182","DB01380,7915","Cortisone acetate,systemic lupus erythematosus (disease)",indication,2,9,0.017583000044396613
+prednisolone_Arthritis_Rheumatoid,Shortest Path,"14030,29078","DB00860,8383","Prednisolone,rheumatoid arthritis",indication,2,9,0.01808300021366449
+prednisolone_Asthma,Shortest Path,"14030,33675","DB00860,4979","Prednisolone,asthma",indication,2,10,0.017249999928026227
+prednisolone_Lupus_Erythematosus_Systemic,Shortest Path,"14030,29182","DB00860,7915","Prednisolone,systemic lupus erythematosus (disease)",indication,2,9,0.014875000033498509
+betamethasone_Arthritis_Rheumatoid,Shortest Path,"14019,29078","DB00443,8383","Betamethasone,rheumatoid arthritis",indication,2,9,0.02058300015050918
+betamethasone_Asthma,Shortest Path,"14019,33675","DB00443,4979","Betamethasone,asthma",indication,2,10,0.025290999928984093
+betamethasone_Lupus_Erythematosus_Systemic,Shortest Path,"14019,29182","DB00443,7915","Betamethasone,systemic lupus erythematosus (disease)",indication,2,9,0.0351250000676373
+prednisone_Angioedema,Shortest Path,"14024,39540","DB00635,10481","Prednisone,angioedema",indication,2,4,0.03337499992994708
+prednisone_Arthritis_Psoriatic,Shortest Path,"14024,39524","DB00635,11849","Prednisone,psoriatic arthritis",indication,2,4,0.018666999949346064
+prednisone_Arthritis_Rheumatoid,Shortest Path,"14024,29078","DB00635,8383","Prednisone,rheumatoid arthritis",indication,2,10,0.02112499987561023
+prednisone_Asthma,Shortest Path,"14024,33675","DB00635,4979","Prednisone,asthma",indication,2,11,0.01874999998108251
+prednisone_Autoimmune_Diseases,Shortest Path,"14024,28478","DB00635,7179","Prednisone,autoimmune disease",indication,2,4,0.018916999806606327
+prednisone_Berylliosis,Shortest Path,"14024,83795","DB00635,15274","Prednisone,chronic beryllium disease",indication,2,4,0.023541000018667546
+prednisone_Dermatitis_Atopic,Shortest Path,"14024,36129","DB00635,4980","Prednisone,atopic eczema",indication,2,4,0.021041000081822858
+prednisone_Dermatitis_Contact,Shortest Path,"14024,37770","DB00635,5480","Prednisone,contact dermatitis",indication,2,4,0.015999999959603883
+prednisone_Dermatitis_Exfoliative,Shortest Path,"14024,83782","DB00635,43233","Prednisone,exfoliative dermatitis",indication,2,4,0.021041999843873782
+prednisone_Hodgkin_Disease,Shortest Path,"14024,33077","DB00635,4952","Prednisone,Hodgkins lymphoma",indication,2,4,0.02187499990213837
+prednisone_Lupus_Erythematosus_Systemic,Shortest Path,"14024,29182","DB00635,7915","Prednisone,systemic lupus erythematosus (disease)",indication,2,10,0.017833000129030552
+prednisone_Lymphoma_Follicular,Shortest Path,"14024,33294","DB00635,18906","Prednisone,follicular lymphoma",indication,2,4,0.031083000067155808
+prednisone_Lymphoma_T-Cell_Cutaneous,Shortest Path,"14024,38708","DB00635,607","Prednisone,primary cutaneous T-cell non-Hodgkin lymphoma",indication,2,4,0.0324160000673146
+prednisone_Multiple_Sclerosis,Shortest Path,"14024,37722","DB00635,5301","Prednisone,multiple sclerosis",indication,2,4,0.024625000150990672
+prednisone_Musculoskeletal_Diseases,Shortest Path,"14024,35750","DB00635,2081","Prednisone,musculoskeletal system disease",off-label use,2,4,0.02891700000873243
+prednisone_Nephrotic_Syndrome,Shortest Path,"14024,36604","DB00635,5377","Prednisone,nephrotic syndrome",indication,2,4,0.017957999943973846
+prednisone_Pemphigus,Shortest Path,"14024,38016","DB00635,6594","Prednisone,pemphigus",indication,2,4,0.011749999885068974
+prednisone_Psoriasis,Shortest Path,"14024,38024","DB00635,5083","Prednisone,psoriasis",indication,2,4,0.02116699988619075
+prednisone_Pulmonary_Eosinophilia,Shortest Path,"14024,39506","DB00635,4802","Prednisone,pulmonary eosinophilia",indication,2,4,0.013832999911755905
+prednisone_Rheumatic_Heart_Disease,Shortest Path,"14024,36433","DB00635,6955","Prednisone,rheumatic heart disease",indication,2,4,0.024582999913036474
+prednisone_Sarcoidosis,Shortest Path,"14024,32967","DB00635,19338","Prednisone,sarcoidosis",indication,2,4,0.028292000024521258
+prednisone_Serum_Sickness,Shortest Path,"14024,83789","DB00635,43789","Prednisone,serum sickness",indication,2,4,0.01762499982760346
+prednisone_Skin_Diseases,Shortest Path,"14024,36644","DB00635,5093","Prednisone,skin disease",indication,2,4,0.029083000072205323
+prednisone_Tennis_Elbow,Shortest Path,"14024,84040","DB00635,1875","Prednisone,epicondylitis",indication,2,4,0.025832999881458818
+prednisone_Thyroiditis,Shortest Path,"14024,33576","DB00635,4126","Prednisone,thyroiditis (disease)",indication,2,4,0.022291000050245202
+Acebutolol_Hypertension,Shortest Path,"15153,33577","DB01193,5044","Acebutolol,hypertensive disorder",indication,2,4,0.01962500004992762
