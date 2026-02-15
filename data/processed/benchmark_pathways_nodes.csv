@@ -1,0 +1,1457 @@
+pathway_id,drugmechdb_pathway_id,step_order,node_name,node_id,node_type,node_index,drugmechdb_id
+valganciclovir_CMV_infection,DBDB01610_MESH_D003586_9,1,valganciclovir,DB01610,drug,20215,MESH:D000077562
+valganciclovir_CMV_infection,DBDB01610_MESH_D003586_9,2,ganciclovir,DB01004,drug,20263,MESH:D015774
+valganciclovir_CMV_infection,DBDB01610_MESH_D003586_9,3,CMV infection,5132,disease,35871,MESH:D003586
+antazoline_Vasomotor_rhinitis,DBDB08799_MESH_D012223_19,1,antazoline,DB08799,drug,17252,MESH:D000865
+antazoline_Vasomotor_rhinitis,DBDB08799_MESH_D012223_19,2,histamine H1 Receptor,3269,gene/protein,8354,UniProt:P35367
+antazoline_Vasomotor_rhinitis,DBDB08799_MESH_D012223_19,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+apalutamide_Nonmetastatic_prostate_cancer,DBDB11901_MESH_D011471_82,1,apalutamide,DB11901,drug,15668,MESH:C572045
+apalutamide_Nonmetastatic_prostate_cancer,DBDB11901_MESH_D011471_82,2,androgen receptor,367,gene/protein,363,UniProt:P10275
+apalutamide_Nonmetastatic_prostate_cancer,DBDB11901_MESH_D011471_82,3,Nonmetastatic prostate cancer,8315,disease,35966,MESH:D011471
+aminoglutethimide_Secondary_malignant_neoplasm_o,DBDB00357_MESH_D001943_84,1,aminoglutethimide,DB00357,drug,15437,MESH:D000616
+aminoglutethimide_Secondary_malignant_neoplasm_o,DBDB00357_MESH_D001943_84,2,aromatase,1588,gene/protein,2756,UniProt:P11511
+aminoglutethimide_Secondary_malignant_neoplasm_o,DBDB00357_MESH_D001943_84,3,Secondary malignant neoplasm of female breast,21100,disease,35771,MESH:D001943
+anastrozole_Hormone_receptor_positive_mali,DBDB01217_MESH_D001943_87,1,anastrozole,DB01217,drug,14997,MESH:D000077384
+anastrozole_Hormone_receptor_positive_mali,DBDB01217_MESH_D001943_87,2,aromatase,1588,gene/protein,2756,UniProt:P11511
+anastrozole_Hormone_receptor_positive_mali,DBDB01217_MESH_D001943_87,3,Hormone receptor positive malignant neoplasm of breast,21100,disease,35771,MESH:D001943
+diflunisal_Rheumatoid_arthritis,DBDB00861_MESH_D001172_118,1,diflunisal,DB00861,drug,14062,MESH:D004061
+diflunisal_Rheumatoid_arthritis,DBDB00861_MESH_D001172_118,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+diflunisal_Rheumatoid_arthritis,DBDB00861_MESH_D001172_118,3,inflammatory response,6954,biological_process,39999,GO:0006954
+diflunisal_Rheumatoid_arthritis,DBDB00861_MESH_D001172_118,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+diflunisal_Rheumatoid_arthritis,DBDB00861_MESH_D001172_118,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+mepyramine_Vasomotor_rhinitis,DBDB06691_MESH_D012223_128,1,mepyramine,DB06691,drug,15210,MESH:D011738
+mepyramine_Vasomotor_rhinitis,DBDB06691_MESH_D012223_128,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+mepyramine_Vasomotor_rhinitis,DBDB06691_MESH_D012223_128,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+azilsartan_medoxomil_Hypertensive_disorder,DBDB08822_MESH_D006973_131,1,azilsartan medoxomil,DB08822,drug,16214,DB:DB08822
+azilsartan_medoxomil_Hypertensive_disorder,DBDB08822_MESH_D006973_131,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+azilsartan_medoxomil_Hypertensive_disorder,DBDB08822_MESH_D006973_131,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+bromocriptine_Hyperprolactinemia,DBDB01200_MESH_D006966_143,1,bromocriptine,DB01200,drug,15493,MESH:D001971
+bromocriptine_Hyperprolactinemia,DBDB01200_MESH_D006966_143,2,Dopamine D3 receptor,1814,gene/protein,8832,UniProt:P35462
+bromocriptine_Hyperprolactinemia,DBDB01200_MESH_D006966_143,3,dopamine,DB00988,drug,14641,MESH:D004298
+bromocriptine_Hyperprolactinemia,DBDB01200_MESH_D006966_143,4,Dopamine D2 receptor,1813,gene/protein,2401,UniProt:P14416
+bromocriptine_Hyperprolactinemia,DBDB01200_MESH_D006966_143,5,Hyperprolactinemia,5804,disease,39081,MESH:D006966
+amobarbital_Epilepsy,DBDB01351_MESH_D004827_170,1,amobarbital,DB01351,drug,17066,MESH:D000654
+amobarbital_Epilepsy,DBDB01351_MESH_D004827_170,2,Gamma-aminobutyric acid receptor subunit alpha-2,2555,gene/protein,11253,UniProt:P47869
+amobarbital_Epilepsy,DBDB01351_MESH_D004827_170,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+amobarbital_Epilepsy,DBDB01351_MESH_D004827_170,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+amobarbital_Epilepsy,DBDB01351_MESH_D004827_170,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+amobarbital_Epilepsy,DBDB01351_MESH_D004827_170,6,Epilepsy,5027,disease,35641,MESH:D004827
+terbutaline_Asthma,DBDB00871_MESH_D001249_188,1,terbutaline,DB00871,drug,14848,MESH:D013726
+terbutaline_Asthma,DBDB00871_MESH_D001249_188,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+terbutaline_Asthma,DBDB00871_MESH_D001249_188,3,Asthma,4979,disease,33675,MESH:D001249
+tafamidis_Amyloidosis,DBDB05352_MESH_D000686_195,1,tafamidis,DB05352,drug,14081,MESH:C547076
+tafamidis_Amyloidosis,DBDB05352_MESH_D000686_195,2,Transthyretin,7276,gene/protein,111,UniProt:P02766
+tafamidis_Amyloidosis,DBDB05352_MESH_D000686_195,3,Amyloidosis,19065,disease,33591,MESH:D000686
+FYX-051_Hyperuricemia,DBDB01685_MESH_D033461_213,1,FYX-051,DB01685,drug,14352,MESH:C504882
+FYX-051_Hyperuricemia,DBDB01685_MESH_D033461_213,2,Xanthine dehydrogenase/oxidase,7498,gene/protein,7034,UniProt:P47989
+FYX-051_Hyperuricemia,DBDB01685_MESH_D033461_213,3,Hyperuricemia,2144,disease,83802,MESH:D033461
+FYX-051_Gout,DBDB01685_MESH_D006073_214,1,FYX-051,DB01685,drug,14352,MESH:C504882
+FYX-051_Gout,DBDB01685_MESH_D006073_214,2,Xanthine dehydrogenase/oxidase,7498,gene/protein,7034,UniProt:P47989
+FYX-051_Gout,DBDB01685_MESH_D006073_214,3,Gout,5393,disease,83790,MESH:D006073
+glimepiride_Diabetes_mellitus_type_2,DBDB00222_MESH_D003924_222,1,glimepiride,DB00222,drug,15770,MESH:C057619
+glimepiride_Diabetes_mellitus_type_2,DBDB00222_MESH_D003924_222,2,ATP-sensitive inward rectifier potassium channel 11,3767,gene/protein,7568,UniProt:Q14654
+glimepiride_Diabetes_mellitus_type_2,DBDB00222_MESH_D003924_222,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+capecitabine_Malignant_tumor_of_stomach,DBDB01101_MESH_D013274_234,1,Capecitabine,DB01101,drug,14758,MESH:D000069287
+capecitabine_Malignant_tumor_of_stomach,DBDB01101_MESH_D013274_234,2,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+capecitabine_Malignant_tumor_of_stomach,DBDB01101_MESH_D013274_234,3,Fluorouracil,DB00544,drug,14190,MESH:D005472
+capecitabine_Malignant_tumor_of_stomach,DBDB01101_MESH_D013274_234,4,Malignant tumor of stomach,21085,disease,36000,MESH:D013274
+oxaprozin_Rheumatoid_arthritis,DBDB00991_MESH_D001172_237,1,oxaprozin,DB00991,drug,15984,MESH:C008729
+oxaprozin_Rheumatoid_arthritis,DBDB00991_MESH_D001172_237,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+oxaprozin_Rheumatoid_arthritis,DBDB00991_MESH_D001172_237,3,inflammatory response,6954,biological_process,39999,GO:0006954
+oxaprozin_Rheumatoid_arthritis,DBDB00991_MESH_D001172_237,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+oxaprozin_Rheumatoid_arthritis,DBDB00991_MESH_D001172_237,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+pimozide_Gilles_de_la_Tourette's_syndro,DBDB01100_MESH_D005879_238,1,pimozide,DB01100,drug,14988,MESH:D010868
+pimozide_Gilles_de_la_Tourette's_syndro,DBDB01100_MESH_D005879_238,2,Dopamine D3 receptor,1814,gene/protein,8832,UniProt:P35462
+pimozide_Gilles_de_la_Tourette's_syndro,DBDB01100_MESH_D005879_238,3,Gilles de la Tourette's syndrome,7661,disease,31283,MESH:D005879
+clemastine_Vasomotor_rhinitis,DBDB00283_MESH_D012223_247,1,clementine,DB00283,drug,15086,MESH:D002974
+clemastine_Vasomotor_rhinitis,DBDB00283_MESH_D012223_247,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+clemastine_Vasomotor_rhinitis,DBDB00283_MESH_D012223_247,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+insulin_detemir_Diabetes_mellitus,DBDB01307_MESH_D003920_256,1,insulin detemir,DB01307,drug,14329,MESH:D000069057
+insulin_detemir_Diabetes_mellitus,DBDB01307_MESH_D003920_256,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+insulin_detemir_Diabetes_mellitus,DBDB01307_MESH_D003920_256,3,Diabetes mellitus,5015,disease,33575,MESH:D003920
+Methadyl_Acetate_Opioid-Related_Disorders,DBDB01227_MESH_D009293_277,1,Methadyl Acetate,DB01227,drug,15497,MESH:D008692
+Methadyl_Acetate_Opioid-Related_Disorders,DBDB01227_MESH_D009293_277,2,Mu opioid receptor,4988,gene/protein,532,UniProt:P35372
+Methadyl_Acetate_Opioid-Related_Disorders,DBDB01227_MESH_D009293_277,3,Opioid-Related Disorders,5530,disease,37753,MESH:D009293
+Brompheniramine_Rhinitis_Vasomotor,DBDB00835_MESH_D012223_301,1,Brompheniramine,DB00835,drug,16066,MESH:D001977
+Brompheniramine_Rhinitis_Vasomotor,DBDB00835_MESH_D012223_301,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+Brompheniramine_Rhinitis_Vasomotor,DBDB00835_MESH_D012223_301,3,"Rhinitis, Vasomotor",6004,disease,83791,MESH:D012223
+bitolterol_Asthma,DBDB00901_MESH_D001249_309,1,bitolterol,DB00901,drug,17561,MESH:C011685
+bitolterol_Asthma,DBDB00901_MESH_D001249_309,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+bitolterol_Asthma,DBDB00901_MESH_D001249_309,3,Asthma,4979,disease,33675,MESH:D001249
+acrivastine_Vasomotor_rhinitis,DBDB09488_MESH_D012223_320,1,acrivastine,DB09488,drug,17258,MESH:C043648
+acrivastine_Vasomotor_rhinitis,DBDB09488_MESH_D012223_320,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+acrivastine_Vasomotor_rhinitis,DBDB09488_MESH_D012223_320,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+adalimumab_Rheumatoid_arthritis,DBDB00051_MESH_D001172_329,1,adalimumab,DB00051,drug,17584,MESH:D000068879
+adalimumab_Rheumatoid_arthritis,DBDB00051_MESH_D001172_329,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+adalimumab_Rheumatoid_arthritis,DBDB00051_MESH_D001172_329,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+adalimumab_Psoriasis_with_arthropathy,DBDB00051_MESH_D015535_331,1,adalimumab,DB00051,drug,17584,MESH:D000068879
+adalimumab_Psoriasis_with_arthropathy,DBDB00051_MESH_D015535_331,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+adalimumab_Psoriasis_with_arthropathy,DBDB00051_MESH_D015535_331,3,Psoriasis with arthropathy,11849,disease,39524,MESH:D015535
+adalimumab_Ulcerative_colitis,DBDB00051_MESH_D003093_334,1,adalimumab,DB00051,drug,17584,MESH:D000068879
+adalimumab_Ulcerative_colitis,DBDB00051_MESH_D003093_334,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+adalimumab_Ulcerative_colitis,DBDB00051_MESH_D003093_334,3,Ulcerative colitis,5101,disease,37785,MESH:D003093
+regorafenib_Gastrointestinal_stromal_tumor,DBDB08896_MESH_D046152_348,1,regorafenib,DB08896,drug,15599,MESH:C559147
+regorafenib_Gastrointestinal_stromal_tumor,DBDB08896_MESH_D046152_348,2,Platelet-derived growth factor receptor alpha,5156,gene/protein,3772,UniProt:P16234
+regorafenib_Gastrointestinal_stromal_tumor,DBDB08896_MESH_D046152_348,3,positive regulation of cell population proliferation,8284,biological_process,40225,GO:0008284
+regorafenib_Gastrointestinal_stromal_tumor,DBDB08896_MESH_D046152_348,4,Mast/stem cell growth factor receptor Kit,3815,gene/protein,2108,UniProt:P10721
+regorafenib_Gastrointestinal_stromal_tumor,DBDB08896_MESH_D046152_348,5,Gastrointestinal stromal tumor,11719,disease,29194,MESH:D046152
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,1,abiraterone acetate,DB05812,drug,14376,DB:DB05812
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,2,"Steroid 17-alpha-hydroxylase/17,20 lyase",1586,gene/protein,3501,UniProt:P05093
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,3,glucocorticoid biosynthetic process,6704,biological_process,45244,GO:0006704
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,4,3 beta-hydroxysteroid dehydrogenase/Delta 5-->4-isomerase type 1,3283,gene/protein,10312,UniProt:P14060
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,5,androgen biosynthetic process,6702,biological_process,102397,GO:0006702
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,6,3 beta-hydroxysteroid dehydrogenase/Delta 5-->4-isomerase type 2,3284,gene/protein,3043,UniProt:P26439
+abiraterone_acetate_Malignant_tumor_of_prostate,DBDB05812_MESH_D011471_355,7,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+abiraterone_acetate_Malignant_tumor_of_prostate_2,DBDB05812_MESH_D011471_356,1,abiraterone acetate,DB05812,drug,14376,MESH:D000069501
+abiraterone_acetate_Malignant_tumor_of_prostate_2,DBDB05812_MESH_D011471_356,2,Cytochrome P450 2C9,1559,gene/protein,7880,UniProt:P11712
+abiraterone_acetate_Malignant_tumor_of_prostate_2,DBDB05812_MESH_D011471_356,3,cholesterol metabolic process,8203,biological_process,40792,GO:0008203
+abiraterone_acetate_Malignant_tumor_of_prostate_2,DBDB05812_MESH_D011471_356,4,Cytochrome P450 3A4,1576,gene/protein,8974,UniProt:P08684
+abiraterone_acetate_Malignant_tumor_of_prostate_2,DBDB05812_MESH_D011471_356,5,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+abiraterone_acetate_Malignant_tumor_of_prostate_3,DBDB05812_MESH_D011471_357,1,abiraterone acetate,DB05812,drug,14376,MESH:D000069501
+abiraterone_acetate_Malignant_tumor_of_prostate_3,DBDB05812_MESH_D011471_357,2,Cytochrome P450 3A4,1576,gene/protein,8974,UniProt:P08684
+abiraterone_acetate_Malignant_tumor_of_prostate_3,DBDB05812_MESH_D011471_357,3,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,1,abiraterone acetate,DB05812,drug,14376,DB:DB05812
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,2,"Steroid 17-alpha-hydroxylase/17,20 lyase",1586,gene/protein,3501,UniProt:P05093
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,3,glucocorticoid biosynthetic process,6704,biological_process,45244,GO:0006704
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,4,3 beta-hydroxysteroid dehydrogenase/Delta 5-->4-isomerase type 1,3283,gene/protein,10312,UniProt:P14060
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,5,androgen biosynthetic process,6702,biological_process,102397,GO:0006702
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,6,3 beta-hydroxysteroid dehydrogenase/Delta 5-->4-isomerase type 2,3284,gene/protein,3043,UniProt:P26439
+abiraterone_acetate_Malignant_tumor_of_prostate_4,DBDB05812_MESH_D011471_360,7,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+tulobuterol_Asthma,DBDB12248_MESH_D001249_374,1,tulobuterol,DB12248,drug,17568,MESH:C010809
+tulobuterol_Asthma,DBDB12248_MESH_D001249_374,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+tulobuterol_Asthma,DBDB12248_MESH_D001249_374,3,Asthma,4979,disease,33675,MESH:D001249
+alfacalcidol_Chronic_Kidney_Disease-Mineral,DBDB01436_MESH_D012080_383,1,alfacalcidol,DB01436,drug,14562,MESH:C008088
+alfacalcidol_Chronic_Kidney_Disease-Mineral,DBDB01436_MESH_D012080_383,2,Retinoic acid receptor RXR-alpha,6256,gene/protein,1926,UniProt:P19793
+alfacalcidol_Chronic_Kidney_Disease-Mineral,DBDB01436_MESH_D012080_383,3,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+alfacalcidol_Chronic_Kidney_Disease-Mineral,DBDB01436_MESH_D012080_383,4,Calcitriol,DB00136,drug,14559,MESH:D002117
+alfacalcidol_Chronic_Kidney_Disease-Mineral,DBDB01436_MESH_D012080_383,5,Chronic Kidney Disease-Mineral and Bone Disorder,6946,disease,84162,MESH:D012080
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,DBDB01436_MESH_D012080_384,1,alfacalcidol,DB01436,drug,14562,MESH:C008088
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,DBDB01436_MESH_D012080_384,2,Retinoic acid receptor RXR-alpha,6256,gene/protein,1926,UniProt:P19793
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,DBDB01436_MESH_D012080_384,3,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,DBDB01436_MESH_D012080_384,4,Calcitriol,DB00136,drug,14559,MESH:D002117
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,DBDB01436_MESH_D012080_384,5,Chronic Kidney Disease-Mineral and Bone Disorder,6946,disease,84162,MESH:D012080
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,DBDB01436_MESH_D012080_385,1,alfacalcidol,DB01436,drug,14562,MESH:C008088
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,DBDB01436_MESH_D012080_385,2,Retinoic acid receptor RXR-alpha,6256,gene/protein,1926,UniProt:P19793
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,DBDB01436_MESH_D012080_385,3,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,DBDB01436_MESH_D012080_385,4,Calcitriol,DB00136,drug,14559,MESH:D002117
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,DBDB01436_MESH_D012080_385,5,Chronic Kidney Disease-Mineral and Bone Disorder,6946,disease,84162,MESH:D012080
+irbesartan_Hypertensive_disorder,DBDB01029_MESH_D006973_432,1,Irbesartan,DB01029,drug,14282,MESH:C081309
+irbesartan_Hypertensive_disorder,DBDB01029_MESH_D006973_432,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+irbesartan_Hypertensive_disorder,DBDB01029_MESH_D006973_432,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+Dyphylline_Asthma,DBDB00651_MESH_D001249_479,1,Dyphylline,DB00651,drug,15956,MESH:D004400
+Dyphylline_Asthma,DBDB00651_MESH_D001249_479,2,"cAMP-specific 3',5'-cyclic phosphodiesterase 4B",5142,gene/protein,8130,UniProt:Q07343
+Dyphylline_Asthma,DBDB00651_MESH_D001249_479,3,"cAMP-specific 3',5'-cyclic phosphodiesterase 4D",5144,gene/protein,1873,UniProt:Q08499
+Dyphylline_Asthma,DBDB00651_MESH_D001249_479,4,Asthma,4979,disease,33675,MESH:D001249
+Liraglutide_Diabetes_Mellitus_Type_2,DBDB06655_MESH_D003924_498,1,Liraglutide,DB06655,drug,14385,MESH:D000069450
+Liraglutide_Diabetes_Mellitus_Type_2,DBDB06655_MESH_D003924_498,2,Glucagon-like peptide 1 receptor,2740,gene/protein,447,UniProt:P43220
+Liraglutide_Diabetes_Mellitus_Type_2,DBDB06655_MESH_D003924_498,3,"Diabetes Mellitus, Type 2",5148,disease,28208,MESH:D003924
+Crizotinib_Carcinoma_Non-Small-Cell_Lung,DBDB08865_MESH_D002289_507,1,Crizotinib,DB08865,drug,15027,MESH:D000077547
+Crizotinib_Carcinoma_Non-Small-Cell_Lung,DBDB08865_MESH_D002289_507,2,ALK tyrosine kinase receptor,238,gene/protein,390,UniProt:Q9UM73
+Crizotinib_Carcinoma_Non-Small-Cell_Lung,DBDB08865_MESH_D002289_507,3,"Carcinoma, Non-Small-Cell Lung",5233,disease,33688,MESH:D002289
+Buprenorphine_Opioid-Related_Disorders,DBDB00921_MESH_D009293_520,1,Buprenorphine,DB00921,drug,14981,MESH:D002047
+Buprenorphine_Opioid-Related_Disorders,DBDB00921_MESH_D009293_520,2,Mu opioid receptor,4988,gene/protein,532,UniProt:P35372
+Buprenorphine_Opioid-Related_Disorders,DBDB00921_MESH_D009293_520,3,Opioid-Related Disorders,5530,disease,37753,MESH:D009293
+Pioglitazone_Diabetes_Mellitus_Type_2,DBDB01132_MESH_D003924_533,1,Pioglitazone,DB01132,drug,14306,MESH:D000077205
+Pioglitazone_Diabetes_Mellitus_Type_2,DBDB01132_MESH_D003924_533,2,Peroxisome proliferator-activated receptor gamma,5468,gene/protein,989,UniProt:P37231
+Pioglitazone_Diabetes_Mellitus_Type_2,DBDB01132_MESH_D003924_533,3,"Diabetes Mellitus, Type 2",5148,disease,28208,MESH:D003924
+Sotalol_Atrial_Fibrillation,DBDB00489_MESH_D001281_534,1,Sotalol,DB00489,drug,15102,MESH:D013015
+Sotalol_Atrial_Fibrillation,DBDB00489_MESH_D001281_534,2,Potassium voltage-gated channel subfamily H member 2,3757,gene/protein,4447,UniProt:Q12809
+Sotalol_Atrial_Fibrillation,DBDB00489_MESH_D001281_534,3,Atrial Fibrillation,4981,disease,33618,MESH:D001281
+Tirofiban_Acute_Coronary_Syndrome,DBDB00775_MESH_D054058_536,1,Tirofiban,DB00775,drug,17226,MESH:D000077466
+Tirofiban_Acute_Coronary_Syndrome,DBDB00775_MESH_D054058_536,2,Integrin alpha-IIb,3674,gene/protein,11356,UniProt:P08514
+Tirofiban_Acute_Coronary_Syndrome,DBDB00775_MESH_D054058_536,3,platelet aggregation,70527,biological_process,100078,GO:0070527
+Tirofiban_Acute_Coronary_Syndrome,DBDB00775_MESH_D054058_536,4,Integrin beta-3,3690,gene/protein,2515,UniProt:P05106
+Tirofiban_Acute_Coronary_Syndrome,DBDB00775_MESH_D054058_536,5,Acute Coronary Syndrome,5542,disease,83812,MESH:D054058
+cabergoline_Hyperprolactinemia,DBDB00248_MESH_D006966_542,1,Cabergoline,DB00248,drug,15424,MESH:D000077465
+cabergoline_Hyperprolactinemia,DBDB00248_MESH_D006966_542,2,D2 dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+cabergoline_Hyperprolactinemia,DBDB00248_MESH_D006966_542,3,Hyperprolactinemia,5804,disease,39081,MESH:D006966
+necitumumab_Non-small_cell_lung_cancer,DBDB09559_MESH_D002289_581,1,Necitumumab,DB09559,drug,17718,MESH:C527969
+necitumumab_Non-small_cell_lung_cancer,DBDB09559_MESH_D002289_581,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+necitumumab_Non-small_cell_lung_cancer,DBDB09559_MESH_D002289_581,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+infliximab_Rheumatoid_arthritis,DBDB00065_MESH_D001172_609,1,Infliximab,DB00065,drug,17585,MESH:D000069285
+infliximab_Rheumatoid_arthritis,DBDB00065_MESH_D001172_609,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+infliximab_Rheumatoid_arthritis,DBDB00065_MESH_D001172_609,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+infliximab_Ulcerative_colitis,DBDB00065_MESH_D003093_610,1,Infliximab,DB00065,drug,17585,MESH:D000069285
+infliximab_Ulcerative_colitis,DBDB00065_MESH_D003093_610,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+infliximab_Ulcerative_colitis,DBDB00065_MESH_D003093_610,3,Ulcerative colitis,5101,disease,37785,MESH:D003093
+infliximab_Psoriatic_Arthritis,DBDB00065_MESH_D015535_613,1,Infliximab,DB00065,drug,17585,MESH:D000069285
+infliximab_Psoriatic_Arthritis,DBDB00065_MESH_D015535_613,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+infliximab_Psoriatic_Arthritis,DBDB00065_MESH_D015535_613,3,Psoriatic Arthritis,11849,disease,39524,MESH:D015535
+Febuxostat_Hyperuricemia,DBDB04854_MESH_D033461_634,1,Febuxostat,DB04854,drug,19245,MESH:D000069465
+Febuxostat_Hyperuricemia,DBDB04854_MESH_D033461_634,2,Xanthine dehydrogenase/oxidase,7498,gene/protein,7034,UniProt:P47989
+Febuxostat_Hyperuricemia,DBDB04854_MESH_D033461_634,3,Hyperuricemia,2144,disease,83802,MESH:D033461
+Cilastatin_Pneumonia_Pneumococcal,DBDB01597_MESH_D011018_640,1,Cilastatin,DB01597,drug,18687,MESH:D015377
+Cilastatin_Pneumonia_Pneumococcal,DBDB01597_MESH_D011018_640,2,Dipeptidase 1,1800,gene/protein,5982,UniProt:P16444
+Cilastatin_Pneumonia_Pneumococcal,DBDB01597_MESH_D011018_640,3,Imipenem,DB01598,drug,14797,MESH:D015378
+Cilastatin_Pneumonia_Pneumococcal,DBDB01597_MESH_D011018_640,4,"Pneumonia, Pneumococcal",5972,disease,83926,MESH:D011018
+Cilastatin_Pneumonia_Bacterial,DBDB01597_MESH_D018410_641,1,Cilastatin,DB01597,drug,18687,MESH:D015377
+Cilastatin_Pneumonia_Bacterial,DBDB01597_MESH_D018410_641,2,Dipeptidase 1,1800,gene/protein,5982,UniProt:P16444
+Cilastatin_Pneumonia_Bacterial,DBDB01597_MESH_D018410_641,3,Imipenem,DB01598,drug,14797,MESH:D015378
+Cilastatin_Pneumonia_Bacterial,DBDB01597_MESH_D018410_641,4,"Pneumonia, Bacterial",4652,disease,37574,MESH:D018410
+Siltuximab_Angiofollicular_lymph_node_hyp,DBDB09036_MESH_D005871_700,1,Siltuximab,DB09036,drug,15612,MESH:C504234
+Siltuximab_Angiofollicular_lymph_node_hyp,DBDB09036_MESH_D005871_700,2,Interleukin-6,3569,gene/protein,1567,UniProt:P05231
+Siltuximab_Angiofollicular_lymph_node_hyp,DBDB09036_MESH_D005871_700,3,Angiofollicular lymph node hyperplasia,15564,disease,32631,MESH:D005871
+Magnesium_salicylate_Rheumatoid_arthritis,DBDB01397_MESH_D001172_721,1,Magnesium salicylate,DB01397,drug,14340,MESH:C496892
+Magnesium_salicylate_Rheumatoid_arthritis,DBDB01397_MESH_D001172_721,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Magnesium_salicylate_Rheumatoid_arthritis,DBDB01397_MESH_D001172_721,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+Magnesium_salicylate_Rheumatoid_arthritis,DBDB01397_MESH_D001172_721,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+Magnesium_salicylate_Rheumatoid_arthritis,DBDB01397_MESH_D001172_721,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+Tenofovir_disoproxil_HIV_Infections,DBDB00300_MESH_D015658_726,1,Tenofovir disoproxil,DB00300,drug,15889,DB:DB00300
+Tenofovir_disoproxil_HIV_Infections,DBDB00300_MESH_D015658_726,2,Tenofovir,DB14126,drug,14484,MESH:D000068698
+Tenofovir_disoproxil_HIV_Infections,DBDB00300_MESH_D015658_726,3,HIV Infections,5109,disease,37805,MESH:D015658
+Tenofovir_disoproxil_Hepatitis_B_Chronic,DBDB00300_MESH_D019694_727,1,Tenofovir disoproxil,DB00300,drug,15889,DB:DB00300
+Tenofovir_disoproxil_Hepatitis_B_Chronic,DBDB00300_MESH_D019694_727,2,Tenofovir,DB14126,drug,14484,MESH:D000068698
+Tenofovir_disoproxil_Hepatitis_B_Chronic,DBDB00300_MESH_D019694_727,3,"Hepatitis B, Chronic",5366,disease,83800,MESH:D019694
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,1,baricitinib,DB11817,drug,15666,MESH:C000596027
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,2,Tyrosine-protein kinase JAK2,3717,gene/protein,1618,UniProt:O60674
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,3,cytokine-mediated signaling pathway,19221,biological_process,47242,GO:0019221
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,4,Tyrosine-protein kinase JAK1,3716,gene/protein,1410,UniProt:P23458
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,5,Tyrosine-protein kinase JAK3,3718,gene/protein,6655,UniProt:P52333
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,6,Non-receptor tyrosine-protein kinase TYK2,7297,gene/protein,6428,UniProt:P29597
+baricitinib_Arthritis_Rheumatoid,DBDB11817_MESH_D001172_729,7,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+fimasartan_Hypertension,DBDB09279_MESH_D006973_730,1,fimasartan,DB09279,drug,16215,MESH:C558933
+fimasartan_Hypertension,DBDB09279_MESH_D006973_730,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+fimasartan_Hypertension,DBDB09279_MESH_D006973_730,3,Hypertension,5044,disease,33577,MESH:D006973
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,1,Budesonide,DB01222,drug,14034,MESH:D019819
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,3,bronchus,2185,anatomy,64621,UBERON:0002185
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,8,inflammatory response,6954,biological_process,39999,GO:0006954
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+Budesonide_Asthma,DBDB01222_MESH_D001249_732,10,Asthma,4979,disease,33675,MESH:D001249
+ketoprofen_Rheumatoid_arthritis,DBDB01009_MESH_D001172_787,1,ketoprofen,DB01009,drug,14278,MESH:D007660
+ketoprofen_Rheumatoid_arthritis,DBDB01009_MESH_D001172_787,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+ketoprofen_Rheumatoid_arthritis,DBDB01009_MESH_D001172_787,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+ketoprofen_Rheumatoid_arthritis,DBDB01009_MESH_D001172_787,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+ketoprofen_Rheumatoid_arthritis,DBDB01009_MESH_D001172_787,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+Tegafur_Stomach_Neoplasms,DBDB09256_MESH_D013274_795,1,Tegafur,DB09256,drug,14516,MESH:D005641
+Tegafur_Stomach_Neoplasms,DBDB09256_MESH_D013274_795,2,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+Tegafur_Stomach_Neoplasms,DBDB09256_MESH_D013274_795,3,Fluorouracil,DB00544,drug,14190,MESH:D005472
+Tegafur_Stomach_Neoplasms,DBDB09256_MESH_D013274_795,4,Stomach Neoplasms,21085,disease,36000,MESH:D013274
+nintedanib_Carcinoma_Non-Small-Cell_Lung,DBDB09079_MESH_D002289_798,1,nintedanib,DB09079,drug,14413,MESH:C530716
+nintedanib_Carcinoma_Non-Small-Cell_Lung,DBDB09079_MESH_D002289_798,2,Vascular endothelial growth factor receptor 3,2324,gene/protein,2160,UniProt:P35916
+nintedanib_Carcinoma_Non-Small-Cell_Lung,DBDB09079_MESH_D002289_798,3,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+nintedanib_Carcinoma_Non-Small-Cell_Lung,DBDB09079_MESH_D002289_798,4,"Carcinoma, Non-Small-Cell Lung",5233,disease,33688,MESH:D002289
+Naloxone_Opioid-Related_Disorders,DBDB01183_MESH_D009293_814,1,Naloxone,DB01183,drug,14314,MESH:D009270
+Naloxone_Opioid-Related_Disorders,DBDB01183_MESH_D009293_814,2,Delta-type opioid receptor,4985,gene/protein,9180,UniProt:P41143
+Naloxone_Opioid-Related_Disorders,DBDB01183_MESH_D009293_814,3,Kappa-type opioid receptor,4986,gene/protein,10047,UniProt:P41145
+Naloxone_Opioid-Related_Disorders,DBDB01183_MESH_D009293_814,4,G protein-coupled opioid receptor signaling pathway,38003,biological_process,48690,GO:0038003
+Naloxone_Opioid-Related_Disorders,DBDB01183_MESH_D009293_814,5,Mu-type opioid receptor,4988,gene/protein,532,UniProt:P35372
+Naloxone_Opioid-Related_Disorders,DBDB01183_MESH_D009293_814,6,Opioid-Related Disorders,5530,disease,37753,MESH:D009293
+Meclofenamic_acid_Rheumatoid_arthritis,DBDB00939_MESH_D001172_867,1,Meclofenamic acid,DB00939,drug,14509,MESH:D008469
+Meclofenamic_acid_Rheumatoid_arthritis,DBDB00939_MESH_D001172_867,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Meclofenamic_acid_Rheumatoid_arthritis,DBDB00939_MESH_D001172_867,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+Meclofenamic_acid_Rheumatoid_arthritis,DBDB00939_MESH_D001172_867,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+Meclofenamic_acid_Rheumatoid_arthritis,DBDB00939_MESH_D001172_867,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+methyltestosterone_Eunuchism,DBDB06710_MESH_D005058_894,1,methyltestosterone,DB06710,drug,14387,MESH:D008777
+methyltestosterone_Eunuchism,DBDB06710_MESH_D005058_894,2,Androgen receptor,367,gene/protein,363,UniProt:P10275
+methyltestosterone_Eunuchism,DBDB06710_MESH_D005058_894,3,testosterone,DB00624,drug,14208,CHEBI:17347
+methyltestosterone_Eunuchism,DBDB06710_MESH_D005058_894,4,Eunuchism,5758,disease,84093,MESH:D005058
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,DBDB01401_MESH_D001172_914,1,Choline magnesium trisalicylate,DB01401,drug,15987,MESH:C017959
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,DBDB01401_MESH_D001172_914,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,DBDB01401_MESH_D001172_914,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,DBDB01401_MESH_D001172_914,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,DBDB01401_MESH_D001172_914,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+Lumacaftor_Cystic_fibrosis_of_the_lung,DBDB09280_MESH_D003550_962,1,Lumacaftor,DB09280,drug,14427,MESH:C569105
+Lumacaftor_Cystic_fibrosis_of_the_lung,DBDB09280_MESH_D003550_962,2,Cystic fibrosis transmembrane conductance regulator,1080,gene/protein,3384,UniProt:P13569
+Lumacaftor_Cystic_fibrosis_of_the_lung,DBDB09280_MESH_D003550_962,3,Cystic fibrosis of the lung,9061,disease,28714,MESH:D003550
+Dexbrompheniramine_Vasomotor_rhinitis,DBDB00405_MESH_D012223_966,1,Dexbrompheniramine,DB00405,drug,17231,MESH:C015121
+Dexbrompheniramine_Vasomotor_rhinitis,DBDB00405_MESH_D012223_966,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+Dexbrompheniramine_Vasomotor_rhinitis,DBDB00405_MESH_D012223_966,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+Amantadine_Basal_Ganglia_Diseases,DBDB00915_MESH_D001480_969,1,Amantadine,DB00915,drug,14830,MESH:D000547
+Amantadine_Basal_Ganglia_Diseases,DBDB00915_MESH_D001480_969,2,Dopamine,DB00988,drug,14641,MESH:D004298
+Amantadine_Basal_Ganglia_Diseases,DBDB00915_MESH_D001480_969,3,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+Amantadine_Basal_Ganglia_Diseases,DBDB00915_MESH_D001480_969,4,Basal Ganglia Diseases,3996,disease,38003,MESH:D001480
+Amantadine_Parkinsonian_Disorders,DBDB00915_MESH_D020734_971,1,Amantadine,DB00915,drug,14830,MESH:D000547
+Amantadine_Parkinsonian_Disorders,DBDB00915_MESH_D020734_971,2,Dopamine,DB00988,drug,14641,MESH:D004298
+Amantadine_Parkinsonian_Disorders,DBDB00915_MESH_D020734_971,3,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+Amantadine_Parkinsonian_Disorders,DBDB00915_MESH_D020734_971,4,Parkinsonian Disorders,21095,disease,37706,MESH:D020734
+Dulaglutide_Diabetes_mellitus_type_2,DBDB09045_MESH_D003924_1003,1,Dulaglutide,DB09045,drug,17950,MESH:C555680
+Dulaglutide_Diabetes_mellitus_type_2,DBDB09045_MESH_D003924_1003,2,Glucagon-like peptide 1 receptor,2740,gene/protein,447,UniProt:P43220
+Dulaglutide_Diabetes_mellitus_type_2,DBDB09045_MESH_D003924_1003,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+Enalaprilat_Congestive_heart_failure,DBDB09477_MESH_D006333_1005,1,Enalaprilat,DB09477,drug,16698,MESH:D015773
+Enalaprilat_Congestive_heart_failure,DBDB09477_MESH_D006333_1005,2,Angiotensin-converting enzyme,1636,gene/protein,13097,UniProt:P12821
+Enalaprilat_Congestive_heart_failure,DBDB09477_MESH_D006333_1005,3,Congestive heart failure,5252,disease,37659,MESH:D006333
+methylphenidate_Attention_deficit_hyperactivit,DBDB00422_MESH_D001289_1012,1,methylphenidate,DB00422,drug,16855,MESH:D008774
+methylphenidate_Attention_deficit_hyperactivit,DBDB00422_MESH_D001289_1012,2,Sodium-dependent noradrenaline transporter,6530,gene/protein,12489,UniProt:P23975
+methylphenidate_Attention_deficit_hyperactivit,DBDB00422_MESH_D001289_1012,3,norepinephrine uptake,51620,biological_process,112996,GO:0051620
+methylphenidate_Attention_deficit_hyperactivit,DBDB00422_MESH_D001289_1012,4,Sodium-dependent dopamine transporter,6531,gene/protein,1311,UniProt:Q01959
+methylphenidate_Attention_deficit_hyperactivit,DBDB00422_MESH_D001289_1012,5,Attention deficit hyperactivity disorder,5302,disease,84036,MESH:D001289
+Simvastatin_Hyperlipidemia_Familial_Combin,DBDB00641_MESH_D006950_1028,1,Simvastatin,DB00641,drug,14961,MESH:D019821
+Simvastatin_Hyperlipidemia_Familial_Combin,DBDB00641_MESH_D006950_1028,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+Simvastatin_Hyperlipidemia_Familial_Combin,DBDB00641_MESH_D006950_1028,3,"Hyperlipidemia, Familial Combined",1807,disease,83898,MESH:D006950
+fosphenytoin_Epilepsy,DBDB01320_MESH_D004827_1040,1,fosphenytoin,DB01320,drug,14330,MESH:C043114
+fosphenytoin_Epilepsy,DBDB01320_MESH_D004827_1040,2,Seizure,1250,effect/phenotype,23000,HP:0001250
+fosphenytoin_Epilepsy,DBDB01320_MESH_D004827_1040,3,Phenytoin,DB00252,drug,14141,MESH:D010672
+fosphenytoin_Epilepsy,DBDB01320_MESH_D004827_1040,4,Epilepsy,5027,disease,35641,MESH:D004827
+fosphenytoin_Status_Epilepticus,DBDB01320_MESH_D013226_1041,1,fosphenytoin,DB01320,drug,14330,MESH:C043114
+fosphenytoin_Status_Epilepticus,DBDB01320_MESH_D013226_1041,2,Seizure,1250,effect/phenotype,23000,HP:0001250
+fosphenytoin_Status_Epilepticus,DBDB01320_MESH_D013226_1041,3,Phenytoin,DB00252,drug,14141,MESH:D010672
+fosphenytoin_Status_Epilepticus,DBDB01320_MESH_D013226_1041,4,Status Epilepticus,2125,disease,83906,MESH:D013226
+Felbamate_Epilepsy,DBDB00949_MESH_D004827_1061,1,Felbamate,DB00949,drug,15475,MESH:C047360
+Felbamate_Epilepsy,DBDB00949_MESH_D004827_1061,2,"Glutamate receptor ionotropic, NMDA 2B",2904,gene/protein,2452,UniProt:Q13224
+Felbamate_Epilepsy,DBDB00949_MESH_D004827_1061,3,Epilepsy,5027,disease,35641,MESH:D004827
+Clofedanol_Vasomotor_rhinitis,DBDB04837_MESH_D012223_1069,1,Clofedanol,DB04837,drug,17246,MESH:C010432
+Clofedanol_Vasomotor_rhinitis,DBDB04837_MESH_D012223_1069,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+Clofedanol_Vasomotor_rhinitis,DBDB04837_MESH_D012223_1069,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+azelastine_Vasomotor_rhinitis,DBDB00972_MESH_D012223_1077,1,azelastine,DB00972,drug,14983,MESH:C020976
+azelastine_Vasomotor_rhinitis,DBDB00972_MESH_D012223_1077,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+azelastine_Vasomotor_rhinitis,DBDB00972_MESH_D012223_1077,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+acetylmethadol_Opioid_dependence,DBDB01433_MESH_D009293_1083,1,acetylmethadol,DB01433,drug,17724,MESH:D008692
+acetylmethadol_Opioid_dependence,DBDB01433_MESH_D009293_1083,2,Mu opioid receptor,4988,gene/protein,532,UniProt:P35372
+acetylmethadol_Opioid_dependence,DBDB01433_MESH_D009293_1083,3,Opioid dependence,5530,disease,37753,MESH:D009293
+chlorcyclizine_Vasomotor_rhinitis,DBDB08936_MESH_D012223_1091,1,chlorcyclizine,DB08936,drug,17256,MESH:C084597
+chlorcyclizine_Vasomotor_rhinitis,DBDB08936_MESH_D012223_1091,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+chlorcyclizine_Vasomotor_rhinitis,DBDB08936_MESH_D012223_1091,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+Nabumetone_Arthritis_Rheumatoid,DBDB00461_MESH_D001172_1105,1,Nabumetone,DB00461,drug,14175,MESH:D000077430
+Nabumetone_Arthritis_Rheumatoid,DBDB00461_MESH_D001172_1105,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Nabumetone_Arthritis_Rheumatoid,DBDB00461_MESH_D001172_1105,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+Nabumetone_Arthritis_Rheumatoid,DBDB00461_MESH_D001172_1105,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+Nabumetone_Arthritis_Rheumatoid,DBDB00461_MESH_D001172_1105,5,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+Phenacemide_Epilepsy,DBDB01121_MESH_D004827_1126,1,Phenacemide,DB01121,drug,16475,MESH:C005396
+Phenacemide_Epilepsy,DBDB01121_MESH_D004827_1126,2,Sodium channel protein type 1 subunit alpha,6323,gene/protein,10695,UniProt:P35498
+Phenacemide_Epilepsy,DBDB01121_MESH_D004827_1126,3,Epilepsy,5027,disease,35641,MESH:D004827
+Axitinib_Carcinoma_Renal_Cell,DBDB06626_MESH_D002292_1147,1,Axitinib,DB06626,drug,15020,MESH:D000077784
+Axitinib_Carcinoma_Renal_Cell,DBDB06626_MESH_D002292_1147,2,Vascular endothelial growth factor receptor 3,2324,gene/protein,2160,UniProt:P35916
+Axitinib_Carcinoma_Renal_Cell,DBDB06626_MESH_D002292_1147,3,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+Axitinib_Carcinoma_Renal_Cell,DBDB06626_MESH_D002292_1147,4,angiogenesis,1525,biological_process,51209,GO:0001525
+Axitinib_Carcinoma_Renal_Cell,DBDB06626_MESH_D002292_1147,5,Vascular endothelial growth factor receptor 1,2321,gene/protein,2850,UniProt:P17948
+Axitinib_Carcinoma_Renal_Cell,DBDB06626_MESH_D002292_1147,6,"Carcinoma, Renal Cell",5086,disease,33643,MESH:D002292
+Etanercept_Rheumatoid_arthritis,DBDB00005_MESH_D001172_1148,1,Etanercept,DB00005,drug,17583,MESH:D000068800
+Etanercept_Rheumatoid_arthritis,DBDB00005_MESH_D001172_1148,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+Etanercept_Rheumatoid_arthritis,DBDB00005_MESH_D001172_1148,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+Etanercept_Psoriasis_with_arthropathy,DBDB00005_MESH_D015535_1150,1,Etanercept,DB00005,drug,17583,MESH:D000068800
+Etanercept_Psoriasis_with_arthropathy,DBDB00005_MESH_D015535_1150,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+Etanercept_Psoriasis_with_arthropathy,DBDB00005_MESH_D015535_1150,3,Psoriasis with arthropathy,11849,disease,39524,MESH:D015535
+Enalapril_Congestive_heart_failure,DBDB00584_MESH_D006333_1166,1,Enalapril,DB00584,drug,14200,MESH:D004656
+Enalapril_Congestive_heart_failure,DBDB00584_MESH_D006333_1166,2,Angiotensin-converting enzyme,1636,gene/protein,13097,UniProt:P12821
+Enalapril_Congestive_heart_failure,DBDB00584_MESH_D006333_1166,3,Congestive heart failure,5252,disease,37659,MESH:D006333
+desloratadine_Vasomotor_rhinitis,DBDB00967_MESH_D012223_1236,1,desloratadine,DB00967,drug,17237,MESH:C121345
+desloratadine_Vasomotor_rhinitis,DBDB00967_MESH_D012223_1236,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+desloratadine_Vasomotor_rhinitis,DBDB00967_MESH_D012223_1236,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+enzalutamide_Malignant_tumor_of_prostate,DBDB08899_MESH_D011471_1243,1,enzalutamide,DB08899,drug,14408,MESH:C540278
+enzalutamide_Malignant_tumor_of_prostate,DBDB08899_MESH_D011471_1243,2,Androgen receptor,367,gene/protein,363,UniProt:P10275
+enzalutamide_Malignant_tumor_of_prostate,DBDB08899_MESH_D011471_1243,3,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+Aspirin_Arthritis_Rheumatoid,DBDB00945_MESH_D001172_1251,1,Aspirin,DB00945,drug,15781,MESH:D001241
+Aspirin_Arthritis_Rheumatoid,DBDB00945_MESH_D001172_1251,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Aspirin_Arthritis_Rheumatoid,DBDB00945_MESH_D001172_1251,3,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+Aspirin_Arthritis_Rheumatoid,DBDB00945_MESH_D001172_1251,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+Aspirin_Arthritis_Rheumatoid,DBDB00945_MESH_D001172_1251,5,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+lixisenatide_Diabetes_mellitus_type_2,DBDB09265_MESH_D003924_1281,1,lixisenatide,DB09265,drug,17951,MESH:C479460
+lixisenatide_Diabetes_mellitus_type_2,DBDB09265_MESH_D003924_1281,2,Glucagon-like peptide 1 receptor,2740,gene/protein,447,UniProt:P43220
+lixisenatide_Diabetes_mellitus_type_2,DBDB09265_MESH_D003924_1281,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+imatinib_Pdgfra-Associated_Chronic_Eosi,DBDB00619_MESH_C580364_1338,1,imatinib,DB00619,drug,14207,MESH:D000068877
+imatinib_Pdgfra-Associated_Chronic_Eosi,DBDB00619_MESH_C580364_1338,2,Platelet-derived growth factor receptor alpha,5156,gene/protein,3772,UniProt:P16234
+imatinib_Pdgfra-Associated_Chronic_Eosi,DBDB00619_MESH_C580364_1338,3,Pdgfra-Associated Chronic Eosinophilic Leukemia,15687,disease,84304,MESH:C580364
+imatinib_Hypereosinophilic_Syndrome,DBDB00619_MESH_D017681_1339,1,imatinib,DB00619,drug,14207,MESH:D000068877
+imatinib_Hypereosinophilic_Syndrome,DBDB00619_MESH_D017681_1339,2,Platelet-derived growth factor receptor alpha,5156,gene/protein,3772,UniProt:P16234
+imatinib_Hypereosinophilic_Syndrome,DBDB00619_MESH_D017681_1339,3,Hypereosinophilic Syndrome,15691,disease,37613,MESH:D017681
+imatinib_Gastrointestinal_stromal_tumor,DBDB00619_MESH_D046152_1340,1,imatinib,DB00619,drug,14207,MESH:D000068877
+imatinib_Gastrointestinal_stromal_tumor,DBDB00619_MESH_D046152_1340,2,Platelet-derived growth factor receptor alpha,5156,gene/protein,3772,UniProt:P16234
+imatinib_Gastrointestinal_stromal_tumor,DBDB00619_MESH_D046152_1340,3,Mast/stem cell growth factor receptor Kit,3815,gene/protein,2108,UniProt:P10721
+imatinib_Gastrointestinal_stromal_tumor,DBDB00619_MESH_D046152_1340,4,Gastrointestinal stromal tumor,11719,disease,29194,MESH:D046152
+Losartan_Hypertensive_disorder,DBDB00678_MESH_D006973_1355,1,Losartan,DB00678,drug,14215,MESH:D019808
+Losartan_Hypertensive_disorder,DBDB00678_MESH_D006973_1355,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+Losartan_Hypertensive_disorder,DBDB00678_MESH_D006973_1355,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+Gliclazide_Diabetes_mellitus_type_2,DBDB01120_MESH_D003924_1365,1,Gliclazide,DB01120,drug,14303,MESH:D005907
+Gliclazide_Diabetes_mellitus_type_2,DBDB01120_MESH_D003924_1365,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+Gliclazide_Diabetes_mellitus_type_2,DBDB01120_MESH_D003924_1365,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+Ranibizumab_Diabetic_retinopathy,DBDB01270_MESH_D003930_1366,1,Ranibizumab,DB01270,drug,16511,MESH:D000069579
+Ranibizumab_Diabetic_retinopathy,DBDB01270_MESH_D003930_1366,2,Vascular endothelial growth factor A,7422,gene/protein,749,UniProt:P15692
+Ranibizumab_Diabetic_retinopathy,DBDB01270_MESH_D003930_1366,3,Diabetic retinopathy,5266,disease,36325,MESH:D003930
+Troglitazone_Diabetes_Mellitus_Type_2,DBDB00197_MESH_D003924_1371,1,Troglitazone,DB00197,drug,14813,MESH:D000077288
+Troglitazone_Diabetes_Mellitus_Type_2,DBDB00197_MESH_D003924_1371,2,Peroxisome proliferator-activated receptor gamma,5468,gene/protein,989,UniProt:P37231
+Troglitazone_Diabetes_Mellitus_Type_2,DBDB00197_MESH_D003924_1371,3,Insulin resistance,855,effect/phenotype,22483,HP:0000855
+Troglitazone_Diabetes_Mellitus_Type_2,DBDB00197_MESH_D003924_1371,4,"Diabetes Mellitus, Type 2",5148,disease,28208,MESH:D003924
+temsirolimus_Carcinoma_Renal_Cell,DBDB06287_MESH_D002292_1375,1,temsirolimus,DB06287,drug,15012,MESH:C401859
+temsirolimus_Carcinoma_Renal_Cell,DBDB06287_MESH_D002292_1375,2,Serine/threonine-protein kinase mTOR,2475,gene/protein,1558,UniProt:P42345
+temsirolimus_Carcinoma_Renal_Cell,DBDB06287_MESH_D002292_1375,3,"Carcinoma, Renal Cell",5086,disease,33643,MESH:D002292
+Cerivastatin_Mixed_hyperlipidemia,DBDB00439_MESH_D006950_1394,1,Cerivastatin,DB00439,drug,14947,MESH:C086276
+Cerivastatin_Mixed_hyperlipidemia,DBDB00439_MESH_D006950_1394,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+Cerivastatin_Mixed_hyperlipidemia,DBDB00439_MESH_D006950_1394,3,Mixed hyperlipidemia,1807,disease,83898,MESH:D006950
+Dutasteride_Benign_prostatic_hyperplasia,DBDB01126_MESH_D011470_1395,1,Dutasteride,DB01126,drug,14305,MESH:D000068538
+Dutasteride_Benign_prostatic_hyperplasia,DBDB01126_MESH_D011470_1395,2,3-oxo-5-alpha-steroid 4-dehydrogenase 2,6716,gene/protein,12537,UniProt:P31213
+Dutasteride_Benign_prostatic_hyperplasia,DBDB01126_MESH_D011470_1395,3,Benign prostatic hyperplasia,10811,disease,31395,MESH:D011470
+dofetilide_Atrial_fibrillation,DBDB00204_MESH_D001281_1416,1,dofetilide,DB00204,drug,15418,MESH:C063533
+dofetilide_Atrial_fibrillation,DBDB00204_MESH_D001281_1416,2,ATP-sensitive inward rectifier potassium channel 12,3768,gene/protein,9281,UniProt:Q14500
+dofetilide_Atrial_fibrillation,DBDB00204_MESH_D001281_1416,3,cardiac conduction,61337,biological_process,46355,GO:0061337
+dofetilide_Atrial_fibrillation,DBDB00204_MESH_D001281_1416,4,Potassium voltage-gated channel subfamily H member 2,3757,gene/protein,4447,UniProt:Q12809
+dofetilide_Atrial_fibrillation,DBDB00204_MESH_D001281_1416,5,Atrial fibrillation,4981,disease,33618,MESH:D001281
+insulin_lispro_Diabetes_mellitus_type_2,DBDB00046_MESH_D003924_1423,1,insulin lispro,DB00046,drug,15282,MESH:D061268
+insulin_lispro_Diabetes_mellitus_type_2,DBDB00046_MESH_D003924_1423,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+insulin_lispro_Diabetes_mellitus_type_2,DBDB00046_MESH_D003924_1423,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+epirubicin_Breast_Neoplasms,DBDB00445_MESH_D001943_1424,1,epirubicin,DB00445,drug,14719,MESH:D015251
+epirubicin_Breast_Neoplasms,DBDB00445_MESH_D001943_1424,2,DNA topoisomerase 2-alpha,7153,gene/protein,6976,UniProt:P11388
+epirubicin_Breast_Neoplasms,DBDB00445_MESH_D001943_1424,3,Breast Neoplasm,21100,disease,35771,MESH:D001943
+brigatinib_Non-small_cell_lung_cancer,DBDB12267_MESH_D002289_1448,1,brigatinib,DB12267,drug,15683,MESH:C000598580
+brigatinib_Non-small_cell_lung_cancer,DBDB12267_MESH_D002289_1448,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+brigatinib_Non-small_cell_lung_cancer,DBDB12267_MESH_D002289_1448,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+insulin_glulisine_Diabetes_Mellitus,DBDB01309_MESH_D003920_1455,1,insulin glulisine,DB01309,drug,15332,MESH:C479079
+insulin_glulisine_Diabetes_Mellitus,DBDB01309_MESH_D003920_1455,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+insulin_glulisine_Diabetes_Mellitus,DBDB01309_MESH_D003920_1455,3,Diabetes Mellitus,5015,disease,33575,MESH:D003920
+Terfenadine_Rhinitis_Vasomotor,DBDB00342_MESH_D012223_1461,1,Terfenadine,DB00342,drug,14942,MESH:D016593
+Terfenadine_Rhinitis_Vasomotor,DBDB00342_MESH_D012223_1461,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+Terfenadine_Rhinitis_Vasomotor,DBDB00342_MESH_D012223_1461,3,fexofenadine,DB00950,drug,14266,MESH:C093230
+Terfenadine_Rhinitis_Vasomotor,DBDB00342_MESH_D012223_1461,4,"Rhinitis, Vasomotor",6004,disease,83791,MESH:D012223
+Piribedil_Parkinsonism,DBDB12478_MESH_D020734_1485,1,Piribedil,DB12478,drug,17414,MESH:D010891
+Piribedil_Parkinsonism,DBDB12478_MESH_D020734_1485,2,D(3) dopamine receptor,1814,gene/protein,8832,UniProt:P35462
+Piribedil_Parkinsonism,DBDB12478_MESH_D020734_1485,3,Dopamine,DB00988,drug,14641,MESH:D004298
+Piribedil_Parkinsonism,DBDB12478_MESH_D020734_1485,4,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+Piribedil_Parkinsonism,DBDB12478_MESH_D020734_1485,5,Parkinsonism,21095,disease,37706,MESH:D020734
+dexibuprofen_Rheumatoid_arthritis,DBDB09213_MESH_D001172_1489,1,dexibuprofen,DB09213,drug,14419,MESH:C539402
+dexibuprofen_Rheumatoid_arthritis,DBDB09213_MESH_D001172_1489,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+dexibuprofen_Rheumatoid_arthritis,DBDB09213_MESH_D001172_1489,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+dexibuprofen_Rheumatoid_arthritis,DBDB09213_MESH_D001172_1489,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+dexibuprofen_Rheumatoid_arthritis,DBDB09213_MESH_D001172_1489,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+Colecalciferol_Osteoporosis,DBDB00169_MESH_D010024_1509,1,Colecalciferol,DB00169,drug,14561,MESH:D002762
+Colecalciferol_Osteoporosis,DBDB00169_MESH_D010024_1509,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+Colecalciferol_Osteoporosis,DBDB00169_MESH_D010024_1509,3,Osteoporosis,5298,disease,29614,MESH:D010024
+Colecalciferol_Postmenopausal_osteoporosis,DBDB00169_MESH_D015663_1510,1,Colecalciferol,DB00169,drug,14561,MESH:D002762
+Colecalciferol_Postmenopausal_osteoporosis,DBDB00169_MESH_D015663_1510,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+Colecalciferol_Postmenopausal_osteoporosis,DBDB00169_MESH_D015663_1510,3,Postmenopausal osteoporosis,8159,disease,83776,MESH:D015663
+Colecalciferol_Rickets,DBDB00169_MESH_D012279_1513,1,Colecalciferol,DB00169,drug,14561,MESH:D002762
+Colecalciferol_Rickets,DBDB00169_MESH_D012279_1513,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+Colecalciferol_Rickets,DBDB00169_MESH_D012279_1513,3,Rickets,5520,disease,33626,MESH:D012279
+oxybutynin_Neurogenic_bladder,DBDB01062_MESH_D001750_1527,1,Oxybutynin,DB01062,drug,14292,MESH:C005419
+oxybutynin_Neurogenic_bladder,DBDB01062_MESH_D001750_1527,2,Muscarinic acetylcholine receptor M2,1129,gene/protein,4468,UniProt:P08172
+oxybutynin_Neurogenic_bladder,DBDB01062_MESH_D001750_1527,3,Neurogenic bladder,1445,disease,84212,MESH:D001750
+Ivacaftor_Cystic_fibrosis_of_the_lung,DBDB08820_MESH_D003550_1532,1,Ivacaftor,DB08820,drug,14400,MESH:C545203
+Ivacaftor_Cystic_fibrosis_of_the_lung,DBDB08820_MESH_D003550_1532,2,Cystic fibrosis transmembrane conductance regulator,1080,gene/protein,3384,UniProt:P13569
+Ivacaftor_Cystic_fibrosis_of_the_lung,DBDB08820_MESH_D003550_1532,3,Cystic fibrosis of the lung,9061,disease,28714,MESH:D003550
+diphenylpyraline_Rhinitis_Vasomotor,DBDB01146_MESH_D012223_1555,1,diphenylpyraline,DB01146,drug,17241,MESH:C009871
+diphenylpyraline_Rhinitis_Vasomotor,DBDB01146_MESH_D012223_1555,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+diphenylpyraline_Rhinitis_Vasomotor,DBDB01146_MESH_D012223_1555,3,"Rhinitis, Vasomotor",6004,disease,83791,MESH:D012223
+Bevacizumab_Glioblastoma_multiforme,DBDB00112_MESH_D005909_1583,1,Bevacizumab,DB00112,drug,16510,MESH:D000068258
+Bevacizumab_Glioblastoma_multiforme,DBDB00112_MESH_D005909_1583,2,Vascular endothelial growth factor A,7422,gene/protein,749,UniProt:P15692
+Bevacizumab_Glioblastoma_multiforme,DBDB00112_MESH_D005909_1583,3,Glioblastoma multiforme,18177,disease,32214,MESH:D005909
+metharbital_Epilepsy,DBDB00463_MESH_D004827_1602,1,Metharbital,DB00463,drug,17065,MESH:C084822
+metharbital_Epilepsy,DBDB00463_MESH_D004827_1602,2,Gamma-aminobutyric acid receptor subunit alpha-6,2559,gene/protein,7466,UniProt:Q16445
+metharbital_Epilepsy,DBDB00463_MESH_D004827_1602,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+metharbital_Epilepsy,DBDB00463_MESH_D004827_1602,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+metharbital_Epilepsy,DBDB00463_MESH_D004827_1602,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+metharbital_Epilepsy,DBDB00463_MESH_D004827_1602,6,Epilepsy,5027,disease,35641,MESH:D004827
+Pitavastatin_Mixed_hyperlipidemia,DBDB08860_MESH_D006950_1622,1,Pitavastatin,DB08860,drug,14402,MESH:C108475
+Pitavastatin_Mixed_hyperlipidemia,DBDB08860_MESH_D006950_1622,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+Pitavastatin_Mixed_hyperlipidemia,DBDB08860_MESH_D006950_1622,3,Mixed hyperlipidemia,1807,disease,83898,MESH:D006950
+Flecainide_Atrial_Fibrillation,DBDB01195_MESH_D001281_1631,1,Flecainide,DB01195,drug,14316,MESH:D005424
+Flecainide_Atrial_Fibrillation,DBDB01195_MESH_D001281_1631,2,Sodium channel protein type 5 subunit alpha,6331,gene/protein,10417,UniProt:Q14524
+Flecainide_Atrial_Fibrillation,DBDB01195_MESH_D001281_1631,3,Atrial Fibrillation,4981,disease,33618,MESH:D001281
+Insulin_Glargine_Diabetes_Mellitus_Type_2,DBDB00047_MESH_D003924_1633,1,Insulin Glargine,DB00047,drug,15283,MESH:D000069036
+Insulin_Glargine_Diabetes_Mellitus_Type_2,DBDB00047_MESH_D003924_1633,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+Insulin_Glargine_Diabetes_Mellitus_Type_2,DBDB00047_MESH_D003924_1633,3,"Diabetes Mellitus, Type 2",5148,disease,28208,MESH:D003924
+eptacog_alfa_activated_Factor_VII_deficiency,DBDB00036_MESH_D005168_1684,1,eptacog alfa (activated),DB00036,drug,16634,MESH:C103587
+eptacog_alfa_activated_Factor_VII_deficiency,DBDB00036_MESH_D005168_1684,2,Coagulation factor X,2159,gene/protein,2158,UniProt:P00742
+eptacog_alfa_activated_Factor_VII_deficiency,DBDB00036_MESH_D005168_1684,3,Extrinsic Pathway of Fibrin Clot Formation,R-HSA-140834,pathway,127717,reactome:R-HSA-140834
+eptacog_alfa_activated_Factor_VII_deficiency,DBDB00036_MESH_D005168_1684,4,Coagulation factor VII,2155,gene/protein,4640,UniProt:P08709
+eptacog_alfa_activated_Factor_VII_deficiency,DBDB00036_MESH_D005168_1684,5,Factor VII deficiency,2244,disease,38622,MESH:D005168
+erlotinib_Non-small_cell_lung_cancer,DBDB00530_MESH_D002289_1689,1,erlotinib,DB00530,drug,14187,MESH:D000069347
+erlotinib_Non-small_cell_lung_cancer,DBDB00530_MESH_D002289_1689,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+erlotinib_Non-small_cell_lung_cancer,DBDB00530_MESH_D002289_1689,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+etodolac_Rheumatoid_arthritis,DBDB00749_MESH_D001172_1694,1,etodolac,DB00749,drug,14227,MESH:D017308
+etodolac_Rheumatoid_arthritis,DBDB00749_MESH_D001172_1694,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+etodolac_Rheumatoid_arthritis,DBDB00749_MESH_D001172_1694,3,inflammatory response,6954,biological_process,39999,GO:0006954
+etodolac_Rheumatoid_arthritis,DBDB00749_MESH_D001172_1694,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+etodolac_Rheumatoid_arthritis,DBDB00749_MESH_D001172_1694,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+tripelennamine_Vasomotor_rhinitis,DBDB00792_MESH_D012223_1712,1,tripelennamine,DB00792,drug,15122,MESH:D014309
+tripelennamine_Vasomotor_rhinitis,DBDB00792_MESH_D012223_1712,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+tripelennamine_Vasomotor_rhinitis,DBDB00792_MESH_D012223_1712,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+triprolidine_Vasomotor_rhinitis,DBDB00427_MESH_D012223_1719,1,triprolidine,DB00427,drug,17232,MESH:D014311
+triprolidine_Vasomotor_rhinitis,DBDB00427_MESH_D012223_1719,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+triprolidine_Vasomotor_rhinitis,DBDB00427_MESH_D012223_1719,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+norepinephrine_Asthma,DBDB00368_MESH_D001249_1723,1,norepinephrine,DB00368,drug,16352,MESH:D009638
+norepinephrine_Asthma,DBDB00368_MESH_D001249_1723,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+norepinephrine_Asthma,DBDB00368_MESH_D001249_1723,3,Asthma,4979,disease,33675,MESH:D001249
+norepinephrine_Low_blood_pressure,DBDB00368_MESH_D007022_1724,1,norepinephrine,DB00368,drug,16352,MESH:D009638
+norepinephrine_Low_blood_pressure,DBDB00368_MESH_D007022_1724,2,Alpha-1D adrenergic receptor,146,gene/protein,1940,UniProt:P25100
+norepinephrine_Low_blood_pressure,DBDB00368_MESH_D007022_1724,3,Alpha-1A adrenergic receptor,148,gene/protein,1659,UniProt:P35348
+norepinephrine_Low_blood_pressure,DBDB00368_MESH_D007022_1724,4,Alpha-1B adrenergic receptor,147,gene/protein,6309,UniProt:P35368
+norepinephrine_Low_blood_pressure,DBDB00368_MESH_D007022_1724,5,Low blood pressure,5468,disease,33605,MESH:D007022
+aripiprazole_Infantile_autism,DBDB01238_MESH_D001321_1766,1,Aripiprazole,DB01238,drug,14323,MESH:D000068180
+aripiprazole_Infantile_autism,DBDB01238_MESH_D001321_1766,2,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+aripiprazole_Infantile_autism,DBDB01238_MESH_D001321_1766,3,Dopamine,DB00988,drug,14641,MESH:D004298
+aripiprazole_Infantile_autism,DBDB01238_MESH_D001321_1766,4,5-hydroxytryptamine receptor 1A,3350,gene/protein,9679,UniProt:P08908
+aripiprazole_Infantile_autism,DBDB01238_MESH_D001321_1766,5,5-hydroxytryptamine receptor 2A,3356,gene/protein,3417,UniProt:P28223
+aripiprazole_Infantile_autism,DBDB01238_MESH_D001321_1766,6,Infantile autism,5260,disease,84310,MESH:D001321
+lisinopril_Myocardial_infarction,DBDB00722_MESH_D009203_1820,1,lisinopril,DB00722,drug,16690,MESH:D017706
+lisinopril_Myocardial_infarction,DBDB00722_MESH_D009203_1820,2,Angiotensin-converting enzyme,1636,gene/protein,13097,UniProt:P12821
+lisinopril_Myocardial_infarction,DBDB00722_MESH_D009203_1820,3,Myocardial infarction,5068,disease,37180,MESH:D009203
+eptifibatide_Acute_coronary_syndrome,DBDB00063_MESH_D054058_1823,1,Eptifibatide,DB00063,drug,18695,MESH:C086648
+eptifibatide_Acute_coronary_syndrome,DBDB00063_MESH_D054058_1823,2,Integrin beta-3,3690,gene/protein,2515,UniProt:P05106
+eptifibatide_Acute_coronary_syndrome,DBDB00063_MESH_D054058_1823,3,Acute coronary syndrome,5542,disease,83812,MESH:D054058
+gefitinib_Non-small_cell_lung_cancer,DBDB00317_MESH_D002289_1828,1,Gefitinib,DB00317,drug,14155,MESH:C419708
+gefitinib_Non-small_cell_lung_cancer,DBDB00317_MESH_D002289_1828,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+gefitinib_Non-small_cell_lung_cancer,DBDB00317_MESH_D002289_1828,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+Eprosartan_Hypertensive_disorder,DBDB00876_MESH_D006973_1832,1,Eprosartan,DB00876,drug,16210,MESH:C068373
+Eprosartan_Hypertensive_disorder,DBDB00876_MESH_D006973_1832,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+Eprosartan_Hypertensive_disorder,DBDB00876_MESH_D006973_1832,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+Drostanolone_Breast_Neoplasms,DBDB00858_MESH_D001943_1853,1,Drostanolone,DB00858,drug,14526,MESH:C100263
+Drostanolone_Breast_Neoplasms,DBDB00858_MESH_D001943_1853,2,Androgen receptor,367,gene/protein,363,UniProt:P10275
+Drostanolone_Breast_Neoplasms,DBDB00858_MESH_D001943_1853,3,Breast Neoplasms,21100,disease,35771,MESH:D001943
+melevodopa_Parkinsonism,DBDB01235_MESH_D020734_1867,1,Melevodopa,DB01235,drug,14321,MESH:C035420
+melevodopa_Parkinsonism,DBDB01235_MESH_D020734_1867,2,D(3) dopamine receptor,1814,gene/protein,8832,UniProt:P35462
+melevodopa_Parkinsonism,DBDB01235_MESH_D020734_1867,3,Dopamine,DB00988,drug,14641,MESH:D004298
+melevodopa_Parkinsonism,DBDB01235_MESH_D020734_1867,4,D(4) dopamine receptor,1815,gene/protein,8999,UniProt:P21917
+melevodopa_Parkinsonism,DBDB01235_MESH_D020734_1867,5,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+melevodopa_Parkinsonism,DBDB01235_MESH_D020734_1867,6,Parkinsonism,21095,disease,37706,MESH:D020734
+tenofovir_alafenamide_Human_immunodeficiency_virus_i,DBDB09299_MESH_D015658_1880,1,Tenofovir alafenamide,DB09299,drug,14428,MESH:C442442
+tenofovir_alafenamide_Human_immunodeficiency_virus_i,DBDB09299_MESH_D015658_1880,2,Tenofovir,DB14126,drug,14484,MESH:D000068698
+tenofovir_alafenamide_Human_immunodeficiency_virus_i,DBDB09299_MESH_D015658_1880,3,Human immunodeficiency virus infection,5109,disease,37805,MESH:D015658
+Rofecoxib_Rheumatoid_arthritis,DBDB00533_MESH_D001172_1885,1,Rofecoxib,DB00533,drug,14600,MESH:C116926
+Rofecoxib_Rheumatoid_arthritis,DBDB00533_MESH_D001172_1885,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Rofecoxib_Rheumatoid_arthritis,DBDB00533_MESH_D001172_1885,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+promethazine_Vasomotor_rhinitis,DBDB01069_MESH_D012223_1909,1,promethazine,DB01069,drug,14295,MESH:D011398
+promethazine_Vasomotor_rhinitis,DBDB01069_MESH_D012223_1909,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+promethazine_Vasomotor_rhinitis,DBDB01069_MESH_D012223_1909,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+lobeglitazone_Diabetes_mellitus_type_2,DBDB09198_MESH_D003924_1923,1,lobeglitazone,DB09198,drug,15373,MESH:C546215
+lobeglitazone_Diabetes_mellitus_type_2,DBDB09198_MESH_D003924_1923,2,Peroxisome proliferator-activated receptor gamma,5468,gene/protein,989,UniProt:P37231
+lobeglitazone_Diabetes_mellitus_type_2,DBDB09198_MESH_D003924_1923,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+methoxamine_Low_blood_pressure,DBDB00723_MESH_D007022_1928,1,Methoxamine,DB00723,drug,17339,MESH:D008729
+methoxamine_Low_blood_pressure,DBDB00723_MESH_D007022_1928,2,Alpha-1A adrenergic receptor,148,gene/protein,1659,UniProt:P35348
+methoxamine_Low_blood_pressure,DBDB00723_MESH_D007022_1928,3,Alpha-1B adrenergic receptor,147,gene/protein,6309,UniProt:P35368
+methoxamine_Low_blood_pressure,DBDB00723_MESH_D007022_1928,4,Low blood pressure,5468,disease,33605,MESH:D007022
+golimumab_Ulcerative_colitis,DBDB06674_MESH_D003093_1930,1,Golimumab,DB06674,drug,17601,MESH:C529000
+golimumab_Ulcerative_colitis,DBDB06674_MESH_D003093_1930,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+golimumab_Ulcerative_colitis,DBDB06674_MESH_D003093_1930,3,Ulcerative colitis,5101,disease,37785,MESH:D003093
+golimumab_Psoriasis_with_arthropathy,DBDB06674_MESH_D015535_1931,1,Golimumab,DB06674,drug,17601,MESH:C529000
+golimumab_Psoriasis_with_arthropathy,DBDB06674_MESH_D015535_1931,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+golimumab_Psoriasis_with_arthropathy,DBDB06674_MESH_D015535_1931,3,Psoriasis with arthropathy,11849,disease,39524,MESH:D015535
+golimumab_Rheumatoid_arthritis,DBDB06674_MESH_D001172_1932,1,Golimumab,DB06674,drug,17601,MESH:C529000
+golimumab_Rheumatoid_arthritis,DBDB06674_MESH_D001172_1932,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+golimumab_Rheumatoid_arthritis,DBDB06674_MESH_D001172_1932,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+flurbiprofen_Rheumatoid_arthritis,DBDB00712_MESH_D001172_1955,1,flurbiprofen,DB00712,drug,14219,MESH:D005480
+flurbiprofen_Rheumatoid_arthritis,DBDB00712_MESH_D001172_1955,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+flurbiprofen_Rheumatoid_arthritis,DBDB00712_MESH_D001172_1955,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+flurbiprofen_Rheumatoid_arthritis,DBDB00712_MESH_D001172_1955,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+flurbiprofen_Rheumatoid_arthritis,DBDB00712_MESH_D001172_1955,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+eldecalcitol_Osteoporosis,DBDB05295_MESH_D010024_1964,1,eldecalcitol,DB05295,drug,17746,MESH:C547512
+eldecalcitol_Osteoporosis,DBDB05295_MESH_D010024_1964,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+eldecalcitol_Osteoporosis,DBDB05295_MESH_D010024_1964,3,Osteoporosis,5298,disease,29614,MESH:D010024
+Diphenhydramine_Rhinitis_Vasomotor,DBDB01075_MESH_D012223_1977,1,Diphenhydramine,DB01075,drug,14607,MESH:D004155
+Diphenhydramine_Rhinitis_Vasomotor,DBDB01075_MESH_D012223_1977,2,Histamine,DB05381,drug,15412,MESH:D006632
+Diphenhydramine_Rhinitis_Vasomotor,DBDB01075_MESH_D012223_1977,3,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+Diphenhydramine_Rhinitis_Vasomotor,DBDB01075_MESH_D012223_1977,4,"Rhinitis, Vasomotor",6004,disease,83791,MESH:D012223
+paclitaxel_Carcinoma_of_breast,DBDB01229_MESH_D001943_1985,1,Paclitaxel,DB01229,drug,14792,DB:DB01229
+paclitaxel_Carcinoma_of_breast,DBDB01229_MESH_D001943_1985,2,Apoptosis regulator Bcl-2,596,gene/protein,2429,UniProt:P10415
+paclitaxel_Carcinoma_of_breast,DBDB01229_MESH_D001943_1985,3,Carcinoma of breast,21100,disease,35771,MESH:D001943
+paclitaxel_Kaposi's_sarcoma,DBDB01229_MESH_D012514_1986,1,Paclitaxel,DB01229,drug,14792,DB:DB01229
+paclitaxel_Kaposi's_sarcoma,DBDB01229_MESH_D012514_1986,2,Apoptosis regulator Bcl-2,596,gene/protein,2429,UniProt:P10415
+paclitaxel_Kaposi's_sarcoma,DBDB01229_MESH_D012514_1986,3,Kaposi's sarcoma,5055,disease,32589,MESH:D012514
+vilanterol_Asthma,DBDB09082_MESH_D001249_1995,1,Vilanterol,DB09082,drug,15614,MESH:C550468
+vilanterol_Asthma,DBDB09082_MESH_D001249_1995,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+vilanterol_Asthma,DBDB09082_MESH_D001249_1995,3,Asthma,4979,disease,33675,MESH:D001249
+dexchlorpheniramine_Vasomotor_rhinitis,DBDB09555_MESH_D012223_2019,1,Dexchlorpheniramine,DB09555,drug,14575,MESH:C018904
+dexchlorpheniramine_Vasomotor_rhinitis,DBDB09555_MESH_D012223_2019,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+dexchlorpheniramine_Vasomotor_rhinitis,DBDB09555_MESH_D012223_2019,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+tolmetin_Rheumatoid_arthritis,DBDB00500_MESH_D001172_2032,1,Tolmetin,DB00500,drug,14183,MESH:D014046
+tolmetin_Rheumatoid_arthritis,DBDB00500_MESH_D001172_2032,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+tolmetin_Rheumatoid_arthritis,DBDB00500_MESH_D001172_2032,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+tolmetin_Rheumatoid_arthritis,DBDB00500_MESH_D001172_2032,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+tolmetin_Rheumatoid_arthritis,DBDB00500_MESH_D001172_2032,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+candesartan_cilexetil_Hypertensive_disorder,DBDB00796_MESH_D006973_2035,1,Candesartan cilexetil,DB00796,drug,14605,DB:DB00796
+candesartan_cilexetil_Hypertensive_disorder,DBDB00796_MESH_D006973_2035,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+candesartan_cilexetil_Hypertensive_disorder,DBDB00796_MESH_D006973_2035,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+calcitonin_salmon_synthetic_Postmenopausal_osteoporosis,DBDB00017_MESH_D015663_2073,1,Calcitonin (salmon synthetic),DB00017,drug,17215,MESH:C028815
+calcitonin_salmon_synthetic_Postmenopausal_osteoporosis,DBDB00017_MESH_D015663_2073,2,Calcitonin receptor,799,gene/protein,9320,UniProt:P30988
+calcitonin_salmon_synthetic_Postmenopausal_osteoporosis,DBDB00017_MESH_D015663_2073,3,Postmenopausal osteoporosis,8159,disease,83776,MESH:D015663
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,1,Sorafenib,DB00398,drug,14945,MESH:C471405
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,2,Serine/threonine-protein kinase B-raf,673,gene/protein,1980,UniProt:P15056
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,3,RAF proto-oncogene serine/threonine-protein kinase,5894,gene/protein,988,UniProt:P04049
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,4,Platelet-derived growth factor receptor beta,5159,gene/protein,490,UniProt:P09619
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,5,Positive regulation of cell population proliferation,8284,biological_process,40225,GO:0008284
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,6,Vascular endothelial growth factor receptor 1,2321,gene/protein,2850,UniProt:P17948
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,7,Positive regulation of angiogenesis,45766,biological_process,45118,GO:0045766
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,8,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,9,Vascular endothelial growth factor receptor 3,2324,gene/protein,2160,UniProt:P35916
+sorafenib_Renal_cell_carcinoma,DBDB00398_MESH_D002292_2074,10,Renal cell carcinoma,5086,disease,33643,MESH:D002292
+certolizumab_pegol_Rheumatoid_arthritis,DBDB08904_MESH_D001172_2088,1,Certolizumab pegol,DB08904,drug,15887,MESH:D000068582
+certolizumab_pegol_Rheumatoid_arthritis,DBDB08904_MESH_D001172_2088,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+certolizumab_pegol_Rheumatoid_arthritis,DBDB08904_MESH_D001172_2088,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+certolizumab_pegol_Psoriasis_with_arthropathy,DBDB08904_MESH_D015535_2089,1,Certolizumab pegol,DB08904,drug,15887,MESH:D000068582
+certolizumab_pegol_Psoriasis_with_arthropathy,DBDB08904_MESH_D015535_2089,2,Tumor necrosis factor,7124,gene/protein,2329,UniProt:P01375
+certolizumab_pegol_Psoriasis_with_arthropathy,DBDB08904_MESH_D015535_2089,3,Psoriasis with arthropathy,11849,disease,39524,MESH:D015535
+trifluridine_Malignant_tumor_of_colon,DBDB00432_MESH_D003110_2093,1,Trifluridine,DB00432,drug,14170,MESH:D014271
+trifluridine_Malignant_tumor_of_colon,DBDB00432_MESH_D003110_2093,2,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+trifluridine_Malignant_tumor_of_colon,DBDB00432_MESH_D003110_2093,3,Malignant tumor of colon,5401,disease,36581,MESH:D003110
+Meloxicam_Rheumatoid_arthritis,DBDB00814_MESH_D001172_2097,1,Meloxicam,DB00814,drug,14242,MESH:C065757
+Meloxicam_Rheumatoid_arthritis,DBDB00814_MESH_D001172_2097,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Meloxicam_Rheumatoid_arthritis,DBDB00814_MESH_D001172_2097,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+Alclofenac_Rheumatoid_arthritis,DBDB13167_MESH_D001172_2111,1,Alclofenac,DB13167,drug,16758,MESH:C084615
+Alclofenac_Rheumatoid_arthritis,DBDB13167_MESH_D001172_2111,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+Alclofenac_Rheumatoid_arthritis,DBDB13167_MESH_D001172_2111,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+midostaurin_Mast_cell_leukemia,DBDB06595_MESH_D007946_2131,1,midostaurin,DB06595,drug,15018,MESH:C059539
+midostaurin_Mast_cell_leukemia,DBDB06595_MESH_D007946_2131,2,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+midostaurin_Mast_cell_leukemia,DBDB06595_MESH_D007946_2131,3,angiogenesis,1525,biological_process,51209,GO:0001525
+midostaurin_Mast_cell_leukemia,DBDB06595_MESH_D007946_2131,4,Protein kinase C alpha type,5578,gene/protein,566,UniProt:P17252
+midostaurin_Mast_cell_leukemia,DBDB06595_MESH_D007946_2131,5,Mast/stem cell growth factor receptor Kit,3815,gene/protein,2108,UniProt:P10721
+midostaurin_Mast_cell_leukemia,DBDB06595_MESH_D007946_2131,6,Mast cell leukemia,20334,disease,39171,MESH:D007946
+sulfasalazine_Rheumatoid_arthritis,DBDB00795_MESH_D001172_2144,1,Sulfasalazine,DB00795,drug,15982,MESH:D012460
+sulfasalazine_Rheumatoid_arthritis,DBDB00795_MESH_D001172_2144,2,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+sulfasalazine_Rheumatoid_arthritis,DBDB00795_MESH_D001172_2144,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+sulfasalazine_Rheumatoid_arthritis,DBDB00795_MESH_D001172_2144,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+sulfasalazine_Rheumatoid_arthritis,DBDB00795_MESH_D001172_2144,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+loratadine_Vasomotor_rhinitis,DBDB00455_MESH_D012223_2156,1,loratadine,DB00455,drug,14950,MESH:D017336
+loratadine_Vasomotor_rhinitis,DBDB00455_MESH_D012223_2156,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+loratadine_Vasomotor_rhinitis,DBDB00455_MESH_D012223_2156,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+pegvisomant_Acromegaly,DBDB00082_MESH_D000172_2196,1,Pegvisomant,DB00082,drug,14695,MESH:C406545
+pegvisomant_Acromegaly,DBDB00082_MESH_D000172_2196,2,Growth hormone receptor,2690,gene/protein,2993,UniProt:P10912
+pegvisomant_Acromegaly,DBDB00082_MESH_D000172_2196,3,Somatotropin,2688,gene/protein,4221,UniProt:P01241
+pegvisomant_Acromegaly,DBDB00082_MESH_D000172_2196,4,Acromegaly,19933,disease,32847,MESH:D000172
+diclofenac_Rheumatoid_arthritis,DBDB00586_MESH_D001172_2200,1,Diclofenac,DB00586,drug,14061,DB:DB00586
+diclofenac_Rheumatoid_arthritis,DBDB00586_MESH_D001172_2200,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+diclofenac_Rheumatoid_arthritis,DBDB00586_MESH_D001172_2200,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+diclofenac_Rheumatoid_arthritis,DBDB00586_MESH_D001172_2200,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+diclofenac_Rheumatoid_arthritis,DBDB00586_MESH_D001172_2200,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+dihydrotachysterol_Rickets,DBDB01070_MESH_D012279_2210,1,Dihydrotachysterol,DB01070,drug,17739,MESH:D004097
+dihydrotachysterol_Rickets,DBDB01070_MESH_D012279_2210,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+dihydrotachysterol_Rickets,DBDB01070_MESH_D012279_2210,3,Rickets,5520,disease,33626,MESH:D012279
+sulindac_Rheumatoid_arthritis,DBDB00605_MESH_D001172_2233,1,Sulindac,DB00605,drug,14204,MESH:D013467
+sulindac_Rheumatoid_arthritis,DBDB00605_MESH_D001172_2233,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+sulindac_Rheumatoid_arthritis,DBDB00605_MESH_D001172_2233,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+sulindac_Rheumatoid_arthritis,DBDB00605_MESH_D001172_2233,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+sulindac_Rheumatoid_arthritis,DBDB00605_MESH_D001172_2233,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,1,sunitinib,DB01268,drug,15002,MESH:C473478
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,2,Vascular endothelial growth factor receptor 1,2321,gene/protein,2850,UniProt:P17948
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,3,positive regulation of angiogenesis,45766,biological_process,45118,GO:0045766
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,4,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,5,Vascular endothelial growth factor receptor 3,2324,gene/protein,2160,UniProt:P35916
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,6,positive regulation of cell population proliferation,8284,biological_process,40225,GO:0008284
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,7,Platelet-derived growth factor receptor beta,5159,gene/protein,490,UniProt:P09619
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,8,Platelet-derived growth factor receptor alpha,5156,gene/protein,3772,UniProt:P16234
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,9,Mast/stem cell growth factor receptor Kit,3815,gene/protein,2108,UniProt:P10721
+sunitinib_Gastrointestinal_stromal_tumor,DBDB01268_MESH_D046152_2255,10,Gastrointestinal stromal tumor,11719,disease,29194,MESH:D046152
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,1,sunitinib,DB01268,drug,15002,MESH:C473478
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,2,Platelet-derived growth factor receptor beta,5159,gene/protein,490,UniProt:P09619
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,3,Platelet-derived growth factor receptor alpha,5156,gene/protein,3772,UniProt:P16234
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,4,Mast/stem cell growth factor receptor Kit,3815,gene/protein,2108,UniProt:P10721
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,5,positive regulation of cell population proliferation,8284,biological_process,40225,GO:0008284
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,6,Vascular endothelial growth factor receptor 1,2321,gene/protein,2850,UniProt:P17948
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,7,positive regulation of angiogenesis,45766,biological_process,45118,GO:0045766
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,8,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,9,Vascular endothelial growth factor receptor 3,2324,gene/protein,2160,UniProt:P35916
+sunitinib_Renal_cell_carcinoma,DBDB01268_MESH_D002292_2256,10,Renal cell carcinoma,5086,disease,33643,MESH:D002292
+tipiracil_Malignant_tumor_of_colon,DBDB09343_MESH_D003110_2273,1,tipiracil,DB09343,drug,19217,MESH:C000613754
+tipiracil_Malignant_tumor_of_colon,DBDB09343_MESH_D003110_2273,2,Thymidine phosphorylase,1890,gene/protein,8725,UniProt:P19971
+tipiracil_Malignant_tumor_of_colon,DBDB09343_MESH_D003110_2273,3,Malignant tumor of colon,5401,disease,36581,MESH:D003110
+carbidopa_Parkinsonism,DBDB00190_MESH_D020734_2276,1,carbidopa,DB00190,drug,19207,MESH:D002230
+carbidopa_Parkinsonism,DBDB00190_MESH_D020734_2276,2,Aromatic-L-amino-acid decarboxylase,1644,gene/protein,9889,UniProt:P20711
+carbidopa_Parkinsonism,DBDB00190_MESH_D020734_2276,3,Parkinsonism,21095,disease,37706,MESH:D020734
+mephentermine_Low_blood_pressure,DBDB01365_MESH_D007022_2290,1,Mephentermine,DB01365,drug,20151,MESH:D008616
+mephentermine_Low_blood_pressure,DBDB01365_MESH_D007022_2290,2,Alpha-1D adrenergic receptor,146,gene/protein,1940,UniProt:P25100
+mephentermine_Low_blood_pressure,DBDB01365_MESH_D007022_2290,3,Alpha-1A adrenergic receptor,148,gene/protein,1659,UniProt:P35348
+mephentermine_Low_blood_pressure,DBDB01365_MESH_D007022_2290,4,Alpha-1B adrenergic receptor,147,gene/protein,6309,UniProt:P35368
+mephentermine_Low_blood_pressure,DBDB01365_MESH_D007022_2290,5,Low blood pressure,5468,disease,33605,MESH:D007022
+albiglutide_Diabetes_mellitus_type_2,DBDB09043_MESH_D003924_2292,1,Albiglutide,DB09043,drug,17949,MESH:C534611
+albiglutide_Diabetes_mellitus_type_2,DBDB09043_MESH_D003924_2292,2,Glucagon-like peptide 1 receptor,2740,gene/protein,447,UniProt:P43220
+albiglutide_Diabetes_mellitus_type_2,DBDB09043_MESH_D003924_2292,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+Phenindamine_Vasomotor_rhinitis,DBDB01619_MESH_D012223_2302,1,Phenindamine,DB01619,drug,17245,MESH:C005430
+Phenindamine_Vasomotor_rhinitis,DBDB01619_MESH_D012223_2302,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+Phenindamine_Vasomotor_rhinitis,DBDB01619_MESH_D012223_2302,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+norethindrone_acetate_Endometriosis,DBDB00717_MESH_D004715_2330,1,Norethindrone acetate,DB00717,drug,14221,MESH:C024262
+norethindrone_acetate_Endometriosis,DBDB00717_MESH_D004715_2330,2,Progesterone receptor,5241,gene/protein,7105,UniProt:P06401
+norethindrone_acetate_Endometriosis,DBDB00717_MESH_D004715_2330,3,Progesterone,DB00396,drug,14685,MESH:D011374
+norethindrone_acetate_Endometriosis,DBDB00717_MESH_D004715_2330,4,Endometriosis,5133,disease,33680,MESH:D004715
+chlorpropamide_Diabetes_mellitus_type_2,DBDB00672_MESH_D003924_2352,1,Chlorpropamide,DB00672,drug,14603,MESH:D002747
+chlorpropamide_Diabetes_mellitus_type_2,DBDB00672_MESH_D003924_2352,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+chlorpropamide_Diabetes_mellitus_type_2,DBDB00672_MESH_D003924_2352,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+denosumab_Postmenopausal_osteoporosis,DBDB06643_MESH_D015663_2377,1,denosumab,DB06643,drug,19671,MESH:D000069448
+denosumab_Postmenopausal_osteoporosis,DBDB06643_MESH_D015663_2377,2,Tumor necrosis factor ligand superfamily member 11,8600,gene/protein,4114,UniProt:O14788
+denosumab_Postmenopausal_osteoporosis,DBDB06643_MESH_D015663_2377,3,Postmenopausal osteoporosis,8159,disease,83776,MESH:D015663
+denosumab_Osteoporosis,DBDB06643_MESH_D010024_2378,1,denosumab,DB06643,drug,19671,MESH:D000069448
+denosumab_Osteoporosis,DBDB06643_MESH_D010024_2378,2,Tumor necrosis factor ligand superfamily member 11,8600,gene/protein,4114,UniProt:O14788
+denosumab_Osteoporosis,DBDB06643_MESH_D010024_2378,3,Osteoporosis,5298,disease,29614,MESH:D010024
+aceclofenac_Rheumatoid_arthritis,DBDB06736_MESH_D001172_2383,1,aceclofenac,DB06736,drug,15794,MESH:C056498
+aceclofenac_Rheumatoid_arthritis,DBDB06736_MESH_D001172_2383,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+aceclofenac_Rheumatoid_arthritis,DBDB06736_MESH_D001172_2383,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+aceclofenac_Rheumatoid_arthritis,DBDB06736_MESH_D001172_2383,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+aceclofenac_Rheumatoid_arthritis,DBDB06736_MESH_D001172_2383,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+celecoxib_Rheumatoid_arthritis,DBDB00482_MESH_D001172_2396,1,celecoxib,DB00482,drug,15101,MESH:D000068579
+celecoxib_Rheumatoid_arthritis,DBDB00482_MESH_D001172_2396,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+celecoxib_Rheumatoid_arthritis,DBDB00482_MESH_D001172_2396,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+methotrexate_Burkitt's_lymphoma,DBDB00563_MESH_D002051_2405,1,methotrexate,DB00563,drug,14194,MESH:D008727
+methotrexate_Burkitt's_lymphoma,DBDB00563_MESH_D002051_2405,2,Bifunctional purine biosynthesis protein ATIC,471,gene/protein,1691,UniProt:P31939
+methotrexate_Burkitt's_lymphoma,DBDB00563_MESH_D002051_2405,3,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+methotrexate_Burkitt's_lymphoma,DBDB00563_MESH_D002051_2405,4,Burkitt's lymphoma,7243,disease,30075,MESH:D002051
+methotrexate_Malignant_tumor_of_lung,DBDB00563_MESH_D008175_2406,1,methotrexate,DB00563,drug,14194,MESH:D008727
+methotrexate_Malignant_tumor_of_lung,DBDB00563_MESH_D008175_2406,2,Bifunctional purine biosynthesis protein ATIC,471,gene/protein,1691,UniProt:P31939
+methotrexate_Malignant_tumor_of_lung,DBDB00563_MESH_D008175_2406,3,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+methotrexate_Malignant_tumor_of_lung,DBDB00563_MESH_D008175_2406,4,Malignant tumor of lung,21117,disease,36812,MESH:D008175
+methotrexate_Rheumatoid_arthritis,DBDB00563_MESH_D001172_2410,1,methotrexate,DB00563,drug,14194,MESH:D008727
+methotrexate_Rheumatoid_arthritis,DBDB00563_MESH_D001172_2410,2,Bifunctional purine biosynthesis protein PURH,471,gene/protein,1691,UniProt:P31939
+methotrexate_Rheumatoid_arthritis,DBDB00563_MESH_D001172_2410,3,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+gabapentin_enacarbil_Restless_legs,DBDB08872_MESH_D012148_2425,1,Gabapentin enacarbil,DB08872,drug,17559,MESH:C493250
+gabapentin_enacarbil_Restless_legs,DBDB08872_MESH_D012148_2425,2,Voltage-dependent calcium channel subunit alpha-2/delta-2,9254,gene/protein,3077,UniProt:Q9NY47
+gabapentin_enacarbil_Restless_legs,DBDB08872_MESH_D012148_2425,3,Gabapentin,DB00996,drug,14709,CHEBI:42797
+gabapentin_enacarbil_Restless_legs,DBDB08872_MESH_D012148_2425,4,Restless legs,5391,disease,38121,MESH:D012148
+Progesterone_Endometriosis,DBDB00396_MESH_D004715_2429,1,Progesterone,DB00396,drug,14685,DB:DB00396
+Progesterone_Endometriosis,DBDB00396_MESH_D004715_2429,2,Progesterone receptor,5241,gene/protein,7105,UniProt:P06401
+Progesterone_Endometriosis,DBDB00396_MESH_D004715_2429,3,Endometriosis,5133,disease,33680,MESH:D004715
+Progesterone_Endometrial_carcinoma,DBDB00396_MESH_D016889_2431,1,Progesterone,DB00396,drug,14685,DB:DB00396
+Progesterone_Endometrial_carcinoma,DBDB00396_MESH_D016889_2431,2,Progesterone receptor,5241,gene/protein,7105,UniProt:P06401
+Progesterone_Endometrial_carcinoma,DBDB00396_MESH_D016889_2431,3,Endometrial carcinoma,21251,disease,37038,MESH:D016889
+migalastat_Fabry_Disease,DBDB05018_MESH_D000795_2469,1,migalastat,DB05018,drug,15858,MESH:C090092
+migalastat_Fabry_Disease,DBDB05018_MESH_D000795_2469,2,Alpha-galactosidase A,2717,gene/protein,11860,UniProt:P06280
+migalastat_Fabry_Disease,DBDB05018_MESH_D000795_2469,3,Fabry Disease,10526,disease,31384,MESH:D000795
+orciprenaline_Asthma,DBDB00816_MESH_D001249_2478,1,Orciprenaline,DB00816,drug,17560,MESH:D009921
+orciprenaline_Asthma,DBDB00816_MESH_D001249_2478,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+orciprenaline_Asthma,DBDB00816_MESH_D001249_2478,3,Asthma,4979,disease,33675,MESH:D001249
+ibuprofen_Rheumatoid_arthritis,DBDB01050_MESH_D001172_2487,1,Ibuprofen,DB01050,drug,14287,DB:DB01050
+ibuprofen_Rheumatoid_arthritis,DBDB01050_MESH_D001172_2487,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+ibuprofen_Rheumatoid_arthritis,DBDB01050_MESH_D001172_2487,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+ibuprofen_Rheumatoid_arthritis,DBDB01050_MESH_D001172_2487,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+ibuprofen_Rheumatoid_arthritis,DBDB01050_MESH_D001172_2487,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+docetaxel_Malignant_tumor_of_prostate,DBDB01248_MESH_D011471_2489,1,Docetaxel,DB01248,drug,14793,DB:DB01248
+docetaxel_Malignant_tumor_of_prostate,DBDB01248_MESH_D011471_2489,2,Apoptosis regulator Bcl-2,596,gene/protein,2429,UniProt:P10415
+docetaxel_Malignant_tumor_of_prostate,DBDB01248_MESH_D011471_2489,3,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+docetaxel_Carcinoma_of_breast,DBDB01248_MESH_D001943_2491,1,Docetaxel,DB01248,drug,14793,DB:DB01248
+docetaxel_Carcinoma_of_breast,DBDB01248_MESH_D001943_2491,2,Apoptosis regulator Bcl-2,596,gene/protein,2429,UniProt:P10415
+docetaxel_Carcinoma_of_breast,DBDB01248_MESH_D001943_2491,3,Carcinoma of breast,21100,disease,35771,MESH:D001943
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,1,Dexamfetamine,DB01576,drug,15173,MESH:D003913
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,2,Synaptic vesicular amine transporter,6571,gene/protein,9487,UniProt:Q05940
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,3,Dopamine,DB00988,drug,14641,MESH:D004298
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,4,Sodium-dependent noradrenaline transporter,6530,gene/protein,12489,UniProt:P23975
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,5,Dopamine uptake involved in synaptic transmission,51583,biological_process,112946,GO:0051583
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,6,Sodium-dependent dopamine transporter,6531,gene/protein,1311,UniProt:Q01959
+dexamfetamine_Attention_deficit_hyperactivit,DBDB01576_MESH_D001289_2496,7,Attention deficit hyperactivity disorder,5302,disease,84036,MESH:D001289
+diphenoxylate_Diarrhea,DBDB01081_MESH_D003967_2517,1,diphenoxylate,DB01081,drug,17153,MESH:D004157
+diphenoxylate_Diarrhea,DBDB01081_MESH_D003967_2517,2,Difenoxin,DB01501,drug,20312,DB:DB01501
+diphenoxylate_Diarrhea,DBDB01081_MESH_D003967_2517,3,Diarrhea,1673,disease,33594,MESH:D003967
+pirbuterol_Asthma,DBDB01291_MESH_D001249_2532,1,Pirbuterol,DB01291,drug,16532,MESH:C009118
+pirbuterol_Asthma,DBDB01291_MESH_D001249_2532,2,Beta-2 adrenergic receptor,154,gene/protein,1494,UniProt:P07550
+pirbuterol_Asthma,DBDB01291_MESH_D001249_2532,3,Asthma,4979,disease,33675,MESH:D001249
+Captopril_Diabetic_renal_disease,DBDB01197_MESH_D003928_2551,1,Captopril,DB01197,drug,14317,MESH:D002216
+Captopril_Diabetic_renal_disease,DBDB01197_MESH_D003928_2551,2,Angiotensin-converting enzyme,1636,gene/protein,13097,UniProt:P12821
+Captopril_Diabetic_renal_disease,DBDB01197_MESH_D003928_2551,3,Diabetic renal disease,5016,disease,36286,MESH:D003928
+mitiglinide_Diabetes_mellitus_type_2,DBDB01252_MESH_D003924_2593,1,mitiglinide,DB01252,drug,15878,MESH:C087255
+mitiglinide_Diabetes_mellitus_type_2,DBDB01252_MESH_D003924_2593,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+mitiglinide_Diabetes_mellitus_type_2,DBDB01252_MESH_D003924_2593,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+nateglinide_Diabetes_mellitus_type_2,DBDB00731_MESH_D003924_2611,1,Nateglinide,DB00731,drug,14222,MESH:C060142
+nateglinide_Diabetes_mellitus_type_2,DBDB00731_MESH_D003924_2611,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+nateglinide_Diabetes_mellitus_type_2,DBDB00731_MESH_D003924_2611,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+tretinoin_Acute_promyelocytic_leukemia_F,DBDB00755_MESH_D015473_2662,1,tretinoin,DB00755,drug,14229,MESH:D014212
+tretinoin_Acute_promyelocytic_leukemia_F,DBDB00755_MESH_D015473_2662,2,Retinoic acid receptor beta,5915,gene/protein,4585,UniProt:P10826
+tretinoin_Acute_promyelocytic_leukemia_F,DBDB00755_MESH_D015473_2662,3,Retinoic acid receptor alpha,5914,gene/protein,740,UniProt:P10276
+tretinoin_Acute_promyelocytic_leukemia_F,DBDB00755_MESH_D015473_2662,4,"Acute promyelocytic leukemia, FAB M3",12883,disease,29361,MESH:D015473
+thalidomide_Multiple_myeloma,DBDB01041_MESH_D009101_2666,1,thalidomide,DB01041,drug,14606,MESH:D013792
+thalidomide_Multiple_myeloma,DBDB01041_MESH_D009101_2666,2,Protein cereblon,51185,gene/protein,11458,UniProt:Q96SW2
+thalidomide_Multiple_myeloma,DBDB01041_MESH_D009101_2666,3,Multiple myeloma,9693,disease,30494,MESH:D009101
+secobarbital_Epilepsy,DBDB00418_MESH_D004827_2672,1,secobarbital,DB00418,drug,15297,MESH:D012631
+secobarbital_Epilepsy,DBDB00418_MESH_D004827_2672,2,Gamma-aminobutyric acid receptor subunit alpha-6,2559,gene/protein,7466,UniProt:Q16445
+secobarbital_Epilepsy,DBDB00418_MESH_D004827_2672,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+secobarbital_Epilepsy,DBDB00418_MESH_D004827_2672,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+secobarbital_Epilepsy,DBDB00418_MESH_D004827_2672,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+secobarbital_Epilepsy,DBDB00418_MESH_D004827_2672,6,Epilepsy,5027,disease,35641,MESH:D004827
+sirolimus_Renal_cell_carcinoma,DBDB00877_MESH_D002292_2673,1,Sirolimus,DB00877,drug,14975,MESH:D020123
+sirolimus_Renal_cell_carcinoma,DBDB00877_MESH_D002292_2673,2,Serine/threonine-protein kinase mTOR,2475,gene/protein,1558,UniProt:P42345
+sirolimus_Renal_cell_carcinoma,DBDB00877_MESH_D002292_2673,3,Renal cell carcinoma,5086,disease,33643,MESH:D002292
+Rosuvastatin_Mixed_hyperlipidemia,DBDB01098_MESH_D006950_2695,1,Rosuvastatin,DB01098,drug,14298,MESH:D000068718
+Rosuvastatin_Mixed_hyperlipidemia,DBDB01098_MESH_D006950_2695,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+Rosuvastatin_Mixed_hyperlipidemia,DBDB01098_MESH_D006950_2695,3,Mixed hyperlipidemia,1807,disease,83898,MESH:D006950
+alectinib_Non-small_cell_lung_cancer,DBDB11363_MESH_D002289_2706,1,Alectinib,DB11363,drug,17030,MESH:C582670
+alectinib_Non-small_cell_lung_cancer,DBDB11363_MESH_D002289_2706,2,ALK tyrosine kinase receptor,238,gene/protein,390,UniProt:Q9UM73
+alectinib_Non-small_cell_lung_cancer,DBDB11363_MESH_D002289_2706,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+insulin_degludec_Diabetes_mellitus,DBDB09564_MESH_D003920_2727,1,insulin degludec,DB09564,drug,14435,MESH:C571886
+insulin_degludec_Diabetes_mellitus,DBDB09564_MESH_D003920_2727,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+insulin_degludec_Diabetes_mellitus,DBDB09564_MESH_D003920_2727,3,Diabetes mellitus,5015,disease,33575,MESH:D003920
+tolbutamide_Diabetes_mellitus_type_2,DBDB01124_MESH_D003924_2737,1,Tolbutamide,DB01124,drug,14304,MESH:D014044
+tolbutamide_Diabetes_mellitus_type_2,DBDB01124_MESH_D003924_2737,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+tolbutamide_Diabetes_mellitus_type_2,DBDB01124_MESH_D003924_2737,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+ceritinib_Non-small_cell_lung_cancer,DBDB09063_MESH_D002289_2748,1,ceritinib,DB09063,drug,15613,MESH:C586847
+ceritinib_Non-small_cell_lung_cancer,DBDB09063_MESH_D002289_2748,2,ALK tyrosine kinase receptor,238,gene/protein,390,UniProt:Q9UM73
+ceritinib_Non-small_cell_lung_cancer,DBDB09063_MESH_D002289_2748,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+indomethacin_Rheumatoid_arthritis,DBDB00328_MESH_D001172_2754,1,indomethacin,DB00328,drug,14158,MESH:D007213
+indomethacin_Rheumatoid_arthritis,DBDB00328_MESH_D001172_2754,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+indomethacin_Rheumatoid_arthritis,DBDB00328_MESH_D001172_2754,3,Synthesis of Prostaglandins (PG) and Thromboxanes (TX),R-HSA-2162123,pathway,128126,reactome:R-HSA-2162123
+indomethacin_Rheumatoid_arthritis,DBDB00328_MESH_D001172_2754,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+indomethacin_Rheumatoid_arthritis,DBDB00328_MESH_D001172_2754,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+pravastatin_Mixed_hyperlipidemia,DBDB00175_MESH_D006950_2837,1,Pravastatin,DB00175,drug,17407,MESH:D017035
+pravastatin_Mixed_hyperlipidemia,DBDB00175_MESH_D006950_2837,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+pravastatin_Mixed_hyperlipidemia,DBDB00175_MESH_D006950_2837,3,Mixed hyperlipidemia,1807,disease,83898,MESH:D006950
+ruxolitinib_Polycythemia_vera,DBDB08877_MESH_D011087_2854,1,Ruxolitinib,DB08877,drug,15597,MESH:C540383
+ruxolitinib_Polycythemia_vera,DBDB08877_MESH_D011087_2854,2,Tyrosine-protein kinase JAK2,3717,gene/protein,1618,UniProt:O60674
+ruxolitinib_Polycythemia_vera,DBDB08877_MESH_D011087_2854,3,Interleukin-6-mediated signaling pathway,70102,biological_process,108960,GO:0070102
+ruxolitinib_Polycythemia_vera,DBDB08877_MESH_D011087_2854,4,Cytokine-mediated signaling pathway,19221,biological_process,47242,GO:0019221
+ruxolitinib_Polycythemia_vera,DBDB08877_MESH_D011087_2854,5,Tyrosine-protein kinase JAK1,3716,gene/protein,1410,UniProt:P23458
+ruxolitinib_Polycythemia_vera,DBDB08877_MESH_D011087_2854,6,Polycythemia vera,9891,disease,29118,MESH:D011087
+gimeracil_Malignant_tumor_of_stomach,DBDB09257_MESH_D013274_2855,1,Gimeracil,DB09257,drug,18195,MESH:C104201
+gimeracil_Malignant_tumor_of_stomach,DBDB09257_MESH_D013274_2855,2,Dihydropyrimidine dehydrogenase,1806,gene/protein,5354,UniProt:Q12882
+gimeracil_Malignant_tumor_of_stomach,DBDB09257_MESH_D013274_2855,3,Malignant tumor of stomach,21085,disease,36000,MESH:D013274
+insulin_human_Diabetes_mellitus_type_2,DBDB00030_MESH_D003924_2879,1,Insulin human,DB00030,drug,14799,MESH:D007328
+insulin_human_Diabetes_mellitus_type_2,DBDB00030_MESH_D003924_2879,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+insulin_human_Diabetes_mellitus_type_2,DBDB00030_MESH_D003924_2879,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+bupropion_Nicotine_dependence,DBDB01156_MESH_D014029_2911,1,bupropion,DB01156,drug,14544,MESH:D016642
+bupropion_Nicotine_dependence,DBDB01156_MESH_D014029_2911,2,Neuronal acetylcholine receptor subunit alpha-3,1136,gene/protein,4814,UniProt:P32297
+bupropion_Nicotine_dependence,DBDB01156_MESH_D014029_2911,3,Nicotine dependence,8575,disease,84229,MESH:D014029
+tiaprofenic_acid_Rheumatoid_arthritis,DBDB01600_MESH_D001172_2916,1,tiaprofenic acid,DB01600,drug,15989,MESH:C021270
+tiaprofenic_acid_Rheumatoid_arthritis,DBDB01600_MESH_D001172_2916,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+tiaprofenic_acid_Rheumatoid_arthritis,DBDB01600_MESH_D001172_2916,3,Inflammatory response,6954,biological_process,39999,GO:0006954
+tiaprofenic_acid_Rheumatoid_arthritis,DBDB01600_MESH_D001172_2916,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+tiaprofenic_acid_Rheumatoid_arthritis,DBDB01600_MESH_D001172_2916,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+brentuximab_vedotin_Hodgkin's_disease,DBDB08870_MESH_D006689_2917,1,brentuximab vedotin,DB08870,drug,15594,MESH:C547738
+brentuximab_vedotin_Hodgkin's_disease,DBDB08870_MESH_D006689_2917,2,Tumor necrosis factor receptor superfamily member 8,943,gene/protein,2466,UniProt:P28908
+brentuximab_vedotin_Hodgkin's_disease,DBDB08870_MESH_D006689_2917,3,Hodgkin's disease,4952,disease,33077,MESH:D006689
+Thiopental_Epilepsy,DBDB00599_MESH_D004827_2943,1,Thiopental,DB00599,drug,15834,MESH:D013874
+Thiopental_Epilepsy,DBDB00599_MESH_D004827_2943,2,Gamma-aminobutyric acid receptor subunit alpha-6,2559,gene/protein,7466,UniProt:Q16445
+Thiopental_Epilepsy,DBDB00599_MESH_D004827_2943,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+Thiopental_Epilepsy,DBDB00599_MESH_D004827_2943,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+Thiopental_Epilepsy,DBDB00599_MESH_D004827_2943,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+Thiopental_Epilepsy,DBDB00599_MESH_D004827_2943,6,Epilepsy,5027,disease,35641,MESH:D004827
+Finasteride_Benign_prostatic_hyperplasia,DBDB01126_MESH_D011470_2954,1,Finasteride,DB01126,drug,14305,MESH:D018120
+Finasteride_Benign_prostatic_hyperplasia,DBDB01126_MESH_D011470_2954,2,3-oxo-5-alpha-steroid 4-dehydrogenase 2,6716,gene/protein,12537,UniProt:P31213
+Finasteride_Benign_prostatic_hyperplasia,DBDB01126_MESH_D011470_2954,3,Benign prostatic hyperplasia,10811,disease,31395,MESH:D011470
+pazopanib_Renal_cell_carcinoma,DBDB06589_MESH_D002292_2958,1,pazopanib,DB06589,drug,15205,MESH:C516667
+pazopanib_Renal_cell_carcinoma,DBDB06589_MESH_D002292_2958,2,Vascular endothelial growth factor receptor 1,2321,gene/protein,2850,UniProt:P17948
+pazopanib_Renal_cell_carcinoma,DBDB06589_MESH_D002292_2958,3,Positive regulation of angiogenesis,45766,biological_process,45118,GO:0045766
+pazopanib_Renal_cell_carcinoma,DBDB06589_MESH_D002292_2958,4,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+pazopanib_Renal_cell_carcinoma,DBDB06589_MESH_D002292_2958,5,Vascular endothelial growth factor receptor 3,2324,gene/protein,2160,UniProt:P35916
+pazopanib_Renal_cell_carcinoma,DBDB06589_MESH_D002292_2958,6,Renal cell carcinoma,5086,disease,33643,MESH:D002292
+antazoline_Vasomotor_rhinitis_2,DBDB08799_MESH_D012223_2964,1,Antazoline,DB08799,drug,17252,MESH:D000865
+antazoline_Vasomotor_rhinitis_2,DBDB08799_MESH_D012223_2964,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+antazoline_Vasomotor_rhinitis_2,DBDB08799_MESH_D012223_2964,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+cetuximab_Malignant_tumor_of_colon,DBDB00002_MESH_D003110_2967,1,cetuximab,DB00002,drug,17605,MESH:D000068818
+cetuximab_Malignant_tumor_of_colon,DBDB00002_MESH_D003110_2967,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+cetuximab_Malignant_tumor_of_colon,DBDB00002_MESH_D003110_2967,3,Malignant tumor of colon,5401,disease,36581,MESH:D003110
+calcifediol_Renal_osteodystrophy,DBDB00146_MESH_D012080_2968,1,calcifediol,DB00146,drug,14704,MESH:D002112
+calcifediol_Renal_osteodystrophy,DBDB00146_MESH_D012080_2968,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+calcifediol_Renal_osteodystrophy,DBDB00146_MESH_D012080_2968,3,calcitriol,DB00136,drug,14559,MESH:D002117
+calcifediol_Renal_osteodystrophy,DBDB00146_MESH_D012080_2968,4,Renal osteodystrophy,6946,disease,84162,MESH:D012080
+calcifediol_Hypophosphatemia,DBDB00146_MESH_D017674_2970,1,calcifediol,DB00146,drug,14704,MESH:D002112
+calcifediol_Hypophosphatemia,DBDB00146_MESH_D017674_2970,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+calcifediol_Hypophosphatemia,DBDB00146_MESH_D017674_2970,3,calcitriol,DB00136,drug,14559,MESH:D002117
+calcifediol_Hypophosphatemia,DBDB00146_MESH_D017674_2970,4,Hypophosphatemia,313,disease,33625,MESH:D017674
+calcifediol_Rickets,DBDB00146_MESH_D012279_2971,1,calcifediol,DB00146,drug,14704,MESH:D002112
+calcifediol_Rickets,DBDB00146_MESH_D012279_2971,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+calcifediol_Rickets,DBDB00146_MESH_D012279_2971,3,calcitriol,DB00136,drug,14559,MESH:D002117
+calcifediol_Rickets,DBDB00146_MESH_D012279_2971,4,Rickets,5520,disease,33626,MESH:D012279
+lenalidomide_Multiple_myeloma,DBDB00480_MESH_D009101_2991,1,Lenalidomide,DB00480,drug,16753,MESH:C467567
+lenalidomide_Multiple_myeloma,DBDB00480_MESH_D009101_2991,2,Protein cereblon,51185,gene/protein,11458,UniProt:Q96SW2
+lenalidomide_Multiple_myeloma,DBDB00480_MESH_D009101_2991,3,Multiple myeloma,9693,disease,30494,MESH:D009101
+fluorouracil_Malignant_tumor_of_stomach,DBDB00544_MESH_D013274_3013,1,Fluorouracil,DB00544,drug,14190,MESH:D005472
+fluorouracil_Malignant_tumor_of_stomach,DBDB00544_MESH_D013274_3013,2,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+fluorouracil_Malignant_tumor_of_stomach,DBDB00544_MESH_D013274_3013,3,Malignant tumor of stomach,21085,disease,36000,MESH:D013274
+fluorouracil_Malignant_tumor_of_colon,DBDB00544_MESH_D003110_3014,1,Fluorouracil,DB00544,drug,14190,MESH:D005472
+fluorouracil_Malignant_tumor_of_colon,DBDB00544_MESH_D003110_3014,2,Thymidylate synthase,7298,gene/protein,3509,UniProt:P04818
+fluorouracil_Malignant_tumor_of_colon,DBDB00544_MESH_D003110_3014,3,Malignant tumor of colon,5401,disease,36581,MESH:D003110
+Medroxyprogesterone_Endometrial_carcinoma,DBDB00603_MESH_D016889_3015,1,Medroxyprogesterone,DB00603,drug,14203,DB:DB00603
+Medroxyprogesterone_Endometrial_carcinoma,DBDB00603_MESH_D016889_3015,2,Progesterone receptor,5241,gene/protein,7105,UniProt:P06401
+Medroxyprogesterone_Endometrial_carcinoma,DBDB00603_MESH_D016889_3015,3,Endometrial carcinoma,21251,disease,37038,MESH:D016889
+Medroxyprogesterone_Endometriosis,DBDB00603_MESH_D004715_3018,1,Medroxyprogesterone,DB00603,drug,14203,MESH:D008525
+Medroxyprogesterone_Endometriosis,DBDB00603_MESH_D004715_3018,2,Progesterone receptor,5241,gene/protein,7105,UniProt:P06401
+Medroxyprogesterone_Endometriosis,DBDB00603_MESH_D004715_3018,3,Endometriosis,5133,disease,33680,MESH:D004715
+telmisartan_Hypertensive_disorder,DBDB00966_MESH_D006973_3021,1,Telmisartan,DB00966,drug,15836,DB:DB00966
+telmisartan_Hypertensive_disorder,DBDB00966_MESH_D006973_3021,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+telmisartan_Hypertensive_disorder,DBDB00966_MESH_D006973_3021,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+vernakalant_Atrial_fibrillation,DBDB06217_MESH_D001281_3029,1,Vernakalant,DB06217,drug,15200,MESH:C524581
+vernakalant_Atrial_fibrillation,DBDB06217_MESH_D001281_3029,2,Potassium voltage-gated channel subfamily A member 5,3741,gene/protein,7324,UniProt:P22460
+vernakalant_Atrial_fibrillation,DBDB06217_MESH_D001281_3029,3,Heart,948,anatomy,63426,UBERON:0000948
+vernakalant_Atrial_fibrillation,DBDB06217_MESH_D001281_3029,4,Potassium voltage-gated channel subfamily D member 3,3752,gene/protein,5774,UniProt:Q9UK17
+vernakalant_Atrial_fibrillation,DBDB06217_MESH_D001281_3029,5,Atrial fibrillation,4981,disease,33618,MESH:D001281
+chlorphenamine_Vasomotor_rhinitis,DBDB01114_MESH_D012223_3039,1,Chlorphenamine,DB01114,drug,14990,MESH:D002744
+chlorphenamine_Vasomotor_rhinitis,DBDB01114_MESH_D012223_3039,2,Histamine,DB05381,drug,15412,MESH:D006632
+chlorphenamine_Vasomotor_rhinitis,DBDB01114_MESH_D012223_3039,3,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+chlorphenamine_Vasomotor_rhinitis,DBDB01114_MESH_D012223_3039,4,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+cabozantinib_Renal_cell_carcinoma,DBDB08875_MESH_D002292_3045,1,Cabozantinib,DB08875,drug,15596,MESH:C558660
+cabozantinib_Renal_cell_carcinoma,DBDB08875_MESH_D002292_3045,2,Proto-oncogene tyrosine-protein kinase receptor Ret,5979,gene/protein,6504,UniProt:P07949
+cabozantinib_Renal_cell_carcinoma,DBDB08875_MESH_D002292_3045,3,Transmembrane receptor protein tyrosine kinase signaling pathway,7169,biological_process,47241,GO:0007169
+cabozantinib_Renal_cell_carcinoma,DBDB08875_MESH_D002292_3045,4,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+cabozantinib_Renal_cell_carcinoma,DBDB08875_MESH_D002292_3045,5,Hepatocyte growth factor receptor,4233,gene/protein,67,UniProt:P08581
+cabozantinib_Renal_cell_carcinoma,DBDB08875_MESH_D002292_3045,6,Renal cell carcinoma,5086,disease,33643,MESH:D002292
+cetirizine_Vasomotor_rhinitis,DBDB00341_MESH_D012223_3081,1,cetirizine,DB00341,drug,17229,MESH:D017332
+cetirizine_Vasomotor_rhinitis,DBDB00341_MESH_D012223_3081,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+cetirizine_Vasomotor_rhinitis,DBDB00341_MESH_D012223_3081,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+lovastatin_Mixed_hyperlipidemia,DBDB00227_MESH_D006950_3101,1,lovastatin,DB00227,drug,14135,MESH:D008148
+lovastatin_Mixed_hyperlipidemia,DBDB00227_MESH_D006950_3101,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+lovastatin_Mixed_hyperlipidemia,DBDB00227_MESH_D006950_3101,3,Mixed hyperlipidemia,1807,disease,83898,MESH:D006950
+ustekinumab_Psoriasis,DBDB05679_MESH_D011565_3111,1,ustekinumab,DB05679,drug,18230,MESH:D000069549
+ustekinumab_Psoriasis,DBDB05679_MESH_D011565_3111,2,Interleukin-12 subunit beta,3593,gene/protein,6168,UniProt:P29460
+ustekinumab_Psoriasis,DBDB05679_MESH_D011565_3111,3,Psoriasis,5083,disease,38024,MESH:D011565
+ustekinumab_Psoriasis_with_arthropathy,DBDB05679_MESH_D015535_3112,1,ustekinumab,DB05679,drug,18230,MESH:D000069549
+ustekinumab_Psoriasis_with_arthropathy,DBDB05679_MESH_D015535_3112,2,Interleukin-12 subunit beta,3593,gene/protein,6168,UniProt:P29460
+ustekinumab_Psoriasis_with_arthropathy,DBDB05679_MESH_D015535_3112,3,Psoriasis with arthropathy,11849,disease,39524,MESH:D015535
+alirocumab_Atherosclerosis,DBDB09302_MESH_D050197_3113,1,alirocumab,DB09302,drug,20162,MESH:C571059
+alirocumab_Atherosclerosis,DBDB09302_MESH_D050197_3113,2,Proprotein convertase subtilisin/kexin type 9,255738,gene/protein,34247,UniProt:Q8NBP7
+alirocumab_Atherosclerosis,DBDB09302_MESH_D050197_3113,3,Atherosclerosis,5311,disease,35953,MESH:D050197
+piroxicam_Rheumatoid_arthritis,DBDB00554_MESH_D001172_3116,1,piroxicam,DB00554,drug,14191,MESH:D010894
+piroxicam_Rheumatoid_arthritis,DBDB00554_MESH_D001172_3116,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+piroxicam_Rheumatoid_arthritis,DBDB00554_MESH_D001172_3116,3,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+piroxicam_Rheumatoid_arthritis,DBDB00554_MESH_D001172_3116,4,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+valsartan_Hypertensive_disorder,DBDB00177_MESH_D006973_3126,1,valsartan,DB00177,drug,15769,MESH:D000068756
+valsartan_Hypertensive_disorder,DBDB00177_MESH_D006973_3126,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+valsartan_Hypertensive_disorder,DBDB00177_MESH_D006973_3126,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+salicylic_acid_Rheumatoid_arthritis,DBDB00936_MESH_D001172_3163,1,salicylic acid,DB00936,drug,14262,MESH:D020156
+salicylic_acid_Rheumatoid_arthritis,DBDB00936_MESH_D001172_3163,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+salicylic_acid_Rheumatoid_arthritis,DBDB00936_MESH_D001172_3163,3,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+salicylic_acid_Rheumatoid_arthritis,DBDB00936_MESH_D001172_3163,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+salicylic_acid_Rheumatoid_arthritis,DBDB00936_MESH_D001172_3163,5,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+glipizide_Diabetes_mellitus_type_2,DBDB01067_MESH_D003924_3174,1,glipizide,DB01067,drug,14293,MESH:D005913
+glipizide_Diabetes_mellitus_type_2,DBDB01067_MESH_D003924_3174,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+glipizide_Diabetes_mellitus_type_2,DBDB01067_MESH_D003924_3174,3,ATP-sensitive inward rectifier potassium channel 11,3767,gene/protein,7568,UniProt:Q14654
+glipizide_Diabetes_mellitus_type_2,DBDB01067_MESH_D003924_3174,4,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+ramipril_Cerebrovascular_accident,DBDB00178_MESH_D020521_3185,1,ramipril,DB00178,drug,14836,MESH:D017257
+ramipril_Cerebrovascular_accident,DBDB00178_MESH_D020521_3185,2,Angiotensin-converting enzyme,1636,gene/protein,13097,UniProt:P12821
+ramipril_Cerebrovascular_accident,DBDB00178_MESH_D020521_3185,3,Cerebrovascular accident,5098,disease,33598,MESH:D020521
+doxylamine_Vasomotor_rhinitis,DBDB00366_MESH_D012223_3208,1,doxylamine,DB00366,drug,17230,MESH:D004319
+doxylamine_Vasomotor_rhinitis,DBDB00366_MESH_D012223_3208,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+doxylamine_Vasomotor_rhinitis,DBDB00366_MESH_D012223_3208,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+fluvastatin_Mixed_hyperlipidemia,DBDB01095_MESH_D006950_3214,1,fluvastatin,DB01095,drug,14987,MESH:C065180
+fluvastatin_Mixed_hyperlipidemia,DBDB01095_MESH_D006950_3214,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+fluvastatin_Mixed_hyperlipidemia,DBDB01095_MESH_D006950_3214,3,Mixed hyperlipidemia,1807,disease,83898,MESH:D006950
+tamibarotene_Acute_promyelocytic_leukemia_F,DBDB04942_MESH_D015473_3223,1,tamibarotene,DB04942,drug,14113,MESH:C061133
+tamibarotene_Acute_promyelocytic_leukemia_F,DBDB04942_MESH_D015473_3223,2,Retinoic acid receptor beta,5915,gene/protein,4585,UniProt:P10826
+tamibarotene_Acute_promyelocytic_leukemia_F,DBDB04942_MESH_D015473_3223,3,Retinoic acid receptor alpha,5914,gene/protein,740,UniProt:P10276
+tamibarotene_Acute_promyelocytic_leukemia_F,DBDB04942_MESH_D015473_3223,4,"Acute promyelocytic leukemia, FAB M3",12883,disease,29361,MESH:D015473
+repaglinide_Diabetes_mellitus_type_2,DBDB00912_MESH_D003924_3243,1,repaglinide,DB00912,drug,14259,MESH:C072379
+repaglinide_Diabetes_mellitus_type_2,DBDB00912_MESH_D003924_3243,2,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+repaglinide_Diabetes_mellitus_type_2,DBDB00912_MESH_D003924_3243,3,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+fenoprofen_Rheumatoid_arthritis,DBDB00573_MESH_D001172_3265,1,fenoprofen,DB00573,drug,14197,MESH:D005279
+fenoprofen_Rheumatoid_arthritis,DBDB00573_MESH_D001172_3265,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+fenoprofen_Rheumatoid_arthritis,DBDB00573_MESH_D001172_3265,3,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+fenoprofen_Rheumatoid_arthritis,DBDB00573_MESH_D001172_3265,4,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+loxoprofen_Rheumatoid_arthritis,DBDB09212_MESH_D001172_3275,1,loxoprofen,DB09212,drug,15816,MESH:C040656
+loxoprofen_Rheumatoid_arthritis,DBDB09212_MESH_D001172_3275,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+loxoprofen_Rheumatoid_arthritis,DBDB09212_MESH_D001172_3275,3,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+loxoprofen_Rheumatoid_arthritis,DBDB09212_MESH_D001172_3275,4,Rheumatoid arthritis,8383,disease,29078,MESH:D001172
+primidone_Simple_partial_seizure,DBDB00794_MESH_D004828_3290,1,primidone,DB00794,drug,15311,MESH:D011324
+primidone_Simple_partial_seizure,DBDB00794_MESH_D004828_3290,2,phenobarbital,DB01174,drug,14993,CHEBI:8069
+primidone_Simple_partial_seizure,DBDB00794_MESH_D004828_3290,3,Simple partial seizure,5384,disease,36743,MESH:D004828
+primidone_Epilepsy,DBDB00794_MESH_D004827_3291,1,primidone,DB00794,drug,15311,MESH:D011324
+primidone_Epilepsy,DBDB00794_MESH_D004827_3291,2,phenobarbital,DB01174,drug,14993,CHEBI:8069
+primidone_Epilepsy,DBDB00794_MESH_D004827_3291,3,Epilepsy,5027,disease,35641,MESH:D004827
+primidone_Tonic-clonic_seizure,DBDB00794_MESH_D012640_3292,1,primidone,DB00794,drug,15311,MESH:D011324
+primidone_Tonic-clonic_seizure,DBDB00794_MESH_D012640_3292,2,phenobarbital,DB01174,drug,14993,CHEBI:8069
+primidone_Tonic-clonic_seizure,DBDB00794_MESH_D012640_3292,3,Tonic-clonic seizure,1386,disease,39815,MESH:D012640
+primidone_Lennox-Gastaut_syndrome,DBDB00794_MESH_D065768_3293,1,primidone,DB00794,drug,15311,MESH:D011324
+primidone_Lennox-Gastaut_syndrome,DBDB00794_MESH_D065768_3293,2,phenobarbital,DB01174,drug,14993,CHEBI:8069
+primidone_Lennox-Gastaut_syndrome,DBDB00794_MESH_D065768_3293,3,Lennox-Gastaut syndrome,16532,disease,29865,MESH:D065768
+primidone_Tonic-clonic_epilepsy,DBDB00794_MESH_D004830_3294,1,primidone,DB00794,drug,15311,MESH:D011324
+primidone_Tonic-clonic_epilepsy,DBDB00794_MESH_D004830_3294,2,phenobarbital,DB01174,drug,14993,CHEBI:8069
+primidone_Tonic-clonic_epilepsy,DBDB00794_MESH_D004830_3294,3,Tonic-clonic epilepsy,5754,disease,83761,MESH:D004830
+doxepin_Anxiety,DBDB01142_MESH_D001007_3302,1,doxepin,DB01142,drug,14310,MESH:D004316
+doxepin_Anxiety,DBDB01142_MESH_D001007_3302,2,Serotonin,DB08839,drug,16359,MESH:D012701
+doxepin_Anxiety,DBDB01142_MESH_D001007_3302,3,Sodium-dependent serotonin transporter,6532,gene/protein,2591,UniProt:P31645
+doxepin_Anxiety,DBDB01142_MESH_D001007_3302,4,Anxiety,11918,disease,84019,MESH:D001007
+megestrol_acetate_Endometrial_carcinoma,DBDB00351_MESH_D016889_3308,1,megestrol acetate,DB00351,drug,15435,MESH:D008535
+megestrol_acetate_Endometrial_carcinoma,DBDB00351_MESH_D016889_3308,2,Progesterone receptor,5241,gene/protein,7105,UniProt:P06401
+megestrol_acetate_Endometrial_carcinoma,DBDB00351_MESH_D016889_3308,3,Endometrial carcinoma,21251,disease,37038,MESH:D016889
+azatadine_Vasomotor_rhinitis,DBDB00719_MESH_D012223_3314,1,azatadine,DB00719,drug,15460,MESH:C006656
+azatadine_Vasomotor_rhinitis,DBDB00719_MESH_D012223_3314,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+azatadine_Vasomotor_rhinitis,DBDB00719_MESH_D012223_3314,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+tasosartan_Hypertensive_disorder,DBDB01349_MESH_D006973_3318,1,tasosartan,DB01349,drug,15505,MESH:C086167
+tasosartan_Hypertensive_disorder,DBDB01349_MESH_D006973_3318,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+tasosartan_Hypertensive_disorder,DBDB01349_MESH_D006973_3318,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+olmutinib_Non-small_cell_lung_cancer,DBDB13164_MESH_D002289_3324,1,olmutinib,DB13164,drug,17720,MESH:C000617753
+olmutinib_Non-small_cell_lung_cancer,DBDB13164_MESH_D002289_3324,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+olmutinib_Non-small_cell_lung_cancer,DBDB13164_MESH_D002289_3324,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+flutamide_Malignant_tumor_of_prostate,DBDB00499_MESH_D011471_3327,1,flutamide,DB00499,drug,14787,MESH:D005485
+flutamide_Malignant_tumor_of_prostate,DBDB00499_MESH_D011471_3327,2,Androgen receptor,367,gene/protein,363,UniProt:P10275
+flutamide_Malignant_tumor_of_prostate,DBDB00499_MESH_D011471_3327,3,Malignant tumor of prostate,8315,disease,35966,MESH:D011471
+glibenclamide_Diabetes_mellitus_type_2,DBDB01016_MESH_D003924_3340,1,glibenclamide,DB01016,drug,14280,MESH:D005905
+glibenclamide_Diabetes_mellitus_type_2,DBDB01016_MESH_D003924_3340,2,ATP-sensitive inward rectifier potassium channel 11,3767,gene/protein,7568,UniProt:Q14654
+glibenclamide_Diabetes_mellitus_type_2,DBDB01016_MESH_D003924_3340,3,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+glibenclamide_Diabetes_mellitus_type_2,DBDB01016_MESH_D003924_3340,4,Diabetes mellitus type 2,5148,disease,28208,MESH:D003924
+insulin_aspart_Diabetes_mellitus,DBDB01306_MESH_D003920_3361,1,insulin detemir,DB01306,drug,15331,MESH:D061267
+insulin_aspart_Diabetes_mellitus,DBDB01306_MESH_D003920_3361,2,Insulin receptor,3643,gene/protein,4536,UniProt:P06213
+insulin_aspart_Diabetes_mellitus,DBDB01306_MESH_D003920_3361,3,Diabetes mellitus,5015,disease,33575,MESH:D003920
+phenobarbital_Epilepsy,DBDB01174_MESH_D004827_3380,1,Phenobarbital,DB01174,drug,14993,MESH:D010634
+phenobarbital_Epilepsy,DBDB01174_MESH_D004827_3380,2,Gamma-aminobutyric acid receptor subunit alpha-1,2554,gene/protein,6808,UniProt:P14867
+phenobarbital_Epilepsy,DBDB01174_MESH_D004827_3380,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+phenobarbital_Epilepsy,DBDB01174_MESH_D004827_3380,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+phenobarbital_Epilepsy,DBDB01174_MESH_D004827_3380,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+phenobarbital_Epilepsy,DBDB01174_MESH_D004827_3380,6,Epilepsy,5027,disease,35641,MESH:D004827
+phenobarbital_Tonic-clonic_seizure,DBDB01174_MESH_D012640_3382,1,Phenobarbital,DB01174,drug,14993,MESH:D010634
+phenobarbital_Tonic-clonic_seizure,DBDB01174_MESH_D012640_3382,2,Gamma-aminobutyric acid receptor subunit alpha-1,2554,gene/protein,6808,UniProt:P14867
+phenobarbital_Tonic-clonic_seizure,DBDB01174_MESH_D012640_3382,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+phenobarbital_Tonic-clonic_seizure,DBDB01174_MESH_D012640_3382,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+phenobarbital_Tonic-clonic_seizure,DBDB01174_MESH_D012640_3382,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+phenobarbital_Tonic-clonic_seizure,DBDB01174_MESH_D012640_3382,6,Tonic-clonic seizure,1386,disease,39815,MESH:D012640
+phenobarbital_Simple_partial_seizure,DBDB01174_MESH_D004828_3383,1,Phenobarbital,DB01174,drug,14993,MESH:D010634
+phenobarbital_Simple_partial_seizure,DBDB01174_MESH_D004828_3383,2,Gamma-aminobutyric acid receptor subunit alpha-1,2554,gene/protein,6808,UniProt:P14867
+phenobarbital_Simple_partial_seizure,DBDB01174_MESH_D004828_3383,3,GABA-gated chloride ion channel activity,22851,molecular_function,119482,GO:0022851
+phenobarbital_Simple_partial_seizure,DBDB01174_MESH_D004828_3383,4,Gamma-aminobutyric acid receptor subunit alpha-3,2556,gene/protein,928,UniProt:P34903
+phenobarbital_Simple_partial_seizure,DBDB01174_MESH_D004828_3383,5,Gamma-aminobutyric acid receptor subunit alpha-5,2558,gene/protein,7615,UniProt:P31644
+phenobarbital_Simple_partial_seizure,DBDB01174_MESH_D004828_3383,6,Simple partial seizure,5384,disease,36743,MESH:D004828
+dronedarone_Atrial_fibrillation,DBDB04855_MESH_D001281_3403,1,dronedarone,DB04855,drug,14368,MESH:C118667
+dronedarone_Atrial_fibrillation,DBDB04855_MESH_D001281_3403,2,Inward rectifier potassium channel 2,3759,gene/protein,8919,UniProt:P63252
+dronedarone_Atrial_fibrillation,DBDB04855_MESH_D001281_3403,3,Atrial fibrillation,4981,disease,33618,MESH:D001281
+ramucirumab_Non-small_cell_lung_cancer,DBDB05578_MESH_D002289_3404,1,ramucirumab,DB05578,drug,17042,MESH:C543333
+ramucirumab_Non-small_cell_lung_cancer,DBDB05578_MESH_D002289_3404,2,Vascular endothelial growth factor receptor 2,3791,gene/protein,4985,UniProt:P35968
+ramucirumab_Non-small_cell_lung_cancer,DBDB05578_MESH_D002289_3404,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+allopurinol_Gout,DBDB00437_MESH_D006073_3412,1,allopurinol,DB00437,drug,14911,MESH:D000493
+allopurinol_Gout,DBDB00437_MESH_D006073_3412,2,Xanthine dehydrogenase/oxidase,7498,gene/protein,7034,UniProt:P47989
+allopurinol_Gout,DBDB00437_MESH_D006073_3412,3,Gout,5393,disease,83790,MESH:D006073
+allopurinol_Hyperuricemia,DBDB00437_MESH_D033461_3414,1,allopurinol,DB00437,drug,14911,MESH:D000493
+allopurinol_Hyperuricemia,DBDB00437_MESH_D033461_3414,2,Xanthine dehydrogenase/oxidase,7498,gene/protein,7034,UniProt:P47989
+allopurinol_Hyperuricemia,DBDB00437_MESH_D033461_3414,3,Hyperuricemia,2144,disease,83802,MESH:D033461
+clomifene_Female_infertility,DBDB00882_MESH_D007247_3436,1,Clomifene,DB00882,drug,14686,MESH:D002996
+clomifene_Female_infertility,DBDB00882_MESH_D007247_3436,2,Estrogen receptor,2099,gene/protein,375,UniProt:P03372
+clomifene_Female_infertility,DBDB00882_MESH_D007247_3436,3,Female infertility,21124,disease,38512,MESH:D007247
+icotinib_Non-small_cell_lung_cancer,DBDB11737_MESH_D002289_3455,1,Icotinib,DB11737,drug,15046,MESH:C531470
+icotinib_Non-small_cell_lung_cancer,DBDB11737_MESH_D002289_3455,2,Epidermal growth factor receptor,1956,gene/protein,125,UniProt:P00533
+icotinib_Non-small_cell_lung_cancer,DBDB11737_MESH_D002289_3455,3,Non-small cell lung cancer,5233,disease,33688,MESH:D002289
+metirosine_Pheochromocytoma,DBDB00765_MESH_D010673_3467,1,metirosine,DB00765,drug,17437,MESH:D019805
+metirosine_Pheochromocytoma,DBDB00765_MESH_D010673_3467,2,Dopamine,DB00988,drug,14641,CHEBI:18243
+metirosine_Pheochromocytoma,DBDB00765_MESH_D010673_3467,3,Pheochromocytoma,8233,disease,31122,MESH:D010673
+cyclizine_Vasomotor_rhinitis,DBDB01176_MESH_D012223_3495,1,cyclizine,DB01176,drug,15783,MESH:D003501
+cyclizine_Vasomotor_rhinitis,DBDB01176_MESH_D012223_3495,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+cyclizine_Vasomotor_rhinitis,DBDB01176_MESH_D012223_3495,3,Vasomotor rhinitis,6004,disease,83791,MESH:D012223
+carbinoxamine_Rhinitis_Vasomotor,DBDB00748_MESH_D012223_3508,1,carbinoxamine,DB00748,drug,17233,MESH:C004649
+carbinoxamine_Rhinitis_Vasomotor,DBDB00748_MESH_D012223_3508,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+carbinoxamine_Rhinitis_Vasomotor,DBDB00748_MESH_D012223_3508,3,"Rhinitis, Vasomotor",6004,disease,83791,MESH:D012223
+risperidone_Autistic_Disorder,DBDB00734_MESH_D001321_3536,1,risperidone,DB00734,drug,14223,MESH:D018967
+risperidone_Autistic_Disorder,DBDB00734_MESH_D001321_3536,2,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+risperidone_Autistic_Disorder,DBDB00734_MESH_D001321_3536,3,5-hydroxytryptamine receptor 2A,3356,gene/protein,3417,UniProt:P28223
+risperidone_Autistic_Disorder,DBDB00734_MESH_D001321_3536,4,Autistic Disorder,5260,disease,84310,MESH:D001321
+salicylsalicylic_acid_Arthritis_Rheumatoid,DBDB01399_MESH_D001172_3538,1,salicylsalicylic acid,DB01399,drug,15986,MESH:C014182
+salicylsalicylic_acid_Arthritis_Rheumatoid,DBDB01399_MESH_D001172_3538,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+salicylsalicylic_acid_Arthritis_Rheumatoid,DBDB01399_MESH_D001172_3538,3,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+salicylsalicylic_acid_Arthritis_Rheumatoid,DBDB01399_MESH_D001172_3538,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+salicylsalicylic_acid_Arthritis_Rheumatoid,DBDB01399_MESH_D001172_3538,5,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+tolazamide_Diabetes_Mellitus_Type_2,DBDB00839_MESH_D003924_3540,1,tolazamide,DB00839,drug,15778,MESH:D014042
+tolazamide_Diabetes_Mellitus_Type_2,DBDB00839_MESH_D003924_3540,2,ATP-sensitive inward rectifier potassium channel 11,3767,gene/protein,7568,UniProt:Q14654
+tolazamide_Diabetes_Mellitus_Type_2,DBDB00839_MESH_D003924_3540,3,ATP-binding cassette sub-family C member 8,6833,gene/protein,13257,UniProt:Q09428
+tolazamide_Diabetes_Mellitus_Type_2,DBDB00839_MESH_D003924_3540,4,"Diabetes Mellitus, Type 2",5148,disease,28208,MESH:D003924
+octatropine_methylbromide_Stomach_Ulcer,DBDB00517_MESH_D013276_3561,1,octatropine methylbromide,DB00517,drug,16060,MESH:C100237
+octatropine_methylbromide_Stomach_Ulcer,DBDB00517_MESH_D013276_3561,2,Peptic Ulcer,4247,disease,36048,MESH:D010437
+octatropine_methylbromide_Stomach_Ulcer,DBDB00517_MESH_D013276_3561,3,Stomach Ulcer,1126,disease,37564,MESH:D013276
+atorvastatin_Hyperlipidemia_Familial_Combin,DBDB01076_MESH_D006950_3570,1,atorvastatin,DB01076,drug,14297,MESH:D000069059
+atorvastatin_Hyperlipidemia_Familial_Combin,DBDB01076_MESH_D006950_3570,2,3-hydroxy-3-methylglutaryl-coenzyme A reductase,3156,gene/protein,4143,UniProt:P04035
+atorvastatin_Hyperlipidemia_Familial_Combin,DBDB01076_MESH_D006950_3570,3,"Hyperlipidemia, Familial Combined",1807,disease,83898,MESH:D006950
+ergocalciferol_Postmenopausal_osteoporosis,DBDB00153_MESH_D015663_3673,1,ergocalciferol,DB00153,drug,14560,DB:DB00153
+ergocalciferol_Postmenopausal_osteoporosis,DBDB00153_MESH_D015663_3673,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+ergocalciferol_Postmenopausal_osteoporosis,DBDB00153_MESH_D015663_3673,3,Postmenopausal osteoporosis,8159,disease,83776,MESH:D015663
+ergocalciferol_Rickets,DBDB00153_MESH_D012279_3677,1,ergocalciferol,DB00153,drug,14560,DB:DB00153
+ergocalciferol_Rickets,DBDB00153_MESH_D012279_3677,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+ergocalciferol_Rickets,DBDB00153_MESH_D012279_3677,3,Rickets,5520,disease,33626,MESH:D012279
+ergocalciferol_Osteoporosis,DBDB00153_MESH_D010024_3680,1,ergocalciferol,DB00153,drug,14560,DB:DB00153
+ergocalciferol_Osteoporosis,DBDB00153_MESH_D010024_3680,2,Vitamin D3 receptor,7421,gene/protein,2017,UniProt:P11473
+ergocalciferol_Osteoporosis,DBDB00153_MESH_D010024_3680,3,Osteoporosis,5298,disease,29614,MESH:D010024
+carbimazole_Hyperthyroidism,DBDB00389_MESH_D006980_3682,1,carbimazole,DB00389,drug,14815,MESH:D002231
+carbimazole_Hyperthyroidism,DBDB00389_MESH_D006980_3682,2,Thyroid peroxidase,7173,gene/protein,34594,UniProt:P07202
+carbimazole_Hyperthyroidism,DBDB00389_MESH_D006980_3682,3,methimazole,DB00763,drug,15121,CHEBI:50673
+carbimazole_Hyperthyroidism,DBDB00389_MESH_D006980_3682,4,Hyperthyroidism,4425,disease,36034,MESH:D006980
+carbimazole_Graves'_disease,DBDB00389_MESH_D006111_3683,1,carbimazole,DB00389,drug,14815,MESH:D002231
+carbimazole_Graves'_disease,DBDB00389_MESH_D006111_3683,2,Thyroid peroxidase,7173,gene/protein,34594,UniProt:P07202
+carbimazole_Graves'_disease,DBDB00389_MESH_D006111_3683,3,methimazole,DB00763,drug,15121,CHEBI:50673
+carbimazole_Graves'_disease,DBDB00389_MESH_D006111_3683,4,Graves' disease,5364,disease,38784,MESH:D006111
+Olmesartan_Medoxomil_Hypertensive_disorder,DBDB00275_MESH_D006973_3689,1,Olmesartan Medoxomil,DB00275,drug,16209,MESH:D000068557
+Olmesartan_Medoxomil_Hypertensive_disorder,DBDB00275_MESH_D006973_3689,2,Type-1 angiotensin II receptor,185,gene/protein,2667,UniProt:P30556
+Olmesartan_Medoxomil_Hypertensive_disorder,DBDB00275_MESH_D006973_3689,3,Hypertensive disorder,5044,disease,33577,MESH:D006973
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,1,lisdexamfetamine,DB01255,drug,15159,MESH:D000069478
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,2,Dopamine,DB00988,drug,14641,MESH:D004298
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,3,Synaptic vesicular amine transporter,6571,gene/protein,9487,UniProt:Q05940
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,4,Dextroamphetamine,DB01576,drug,15173,MESH:D003913
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,5,Sodium-dependent noradrenaline transporter,6530,gene/protein,12489,UniProt:P23975
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,6,Dopamine uptake involved in synaptic transmission,51583,biological_process,112946,GO:0051583
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,7,Sodium-dependent dopamine transporter,6531,gene/protein,1311,UniProt:Q01959
+lisdexamfetamine_Attention_deficit_hyperactivit,DBDB01255_MESH_D001289_3793,8,Attention deficit hyperactivity disorder,5302,disease,84036,MESH:D001289
+doxorubicin_Breast_Neoplasms,DBDB00997_MESH_D001943_3971,1,doxorubicin,DB00997,drug,14275,MESH:D004317
+doxorubicin_Breast_Neoplasms,DBDB00997_MESH_D001943_3971,2,DNA topoisomerase 2-alpha,7153,gene/protein,6976,UniProt:P11388
+doxorubicin_Breast_Neoplasms,DBDB00997_MESH_D001943_3971,3,Breast Neoplasms,21100,disease,35771,MESH:D001943
+doxorubicin_Neuroblastoma,DBDB00997_MESH_D009447_3980,1,doxorubicin,DB00997,drug,14275,MESH:D004317
+doxorubicin_Neuroblastoma,DBDB00997_MESH_D009447_3980,2,DNA topoisomerase 2-alpha,7153,gene/protein,6976,UniProt:P11388
+doxorubicin_Neuroblastoma,DBDB00997_MESH_D009447_3980,3,Neuroblastoma,5072,disease,33188,MESH:D009447
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,2,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,3,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,4,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,5,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,6,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,7,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,8,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Arthritis_Rheumatoid,DBDB00741_MESH_D001172_3995,10,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,3,bronchus,2185,anatomy,64621,UBERON:0002185
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,8,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Asthma,DBDB00741_MESH_D001249_3996,10,Asthma,4979,disease,33675,MESH:D001249
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,3,bronchus,2185,anatomy,64621,UBERON:0002185
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,7,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,8,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,9,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,10,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Berylliosis,DBDB00741_MESH_D001607_3998,11,Berylliosis,15274,disease,83795,MESH:D001607
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,4,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,5,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,6,brain,955,anatomy,63430,UBERON:0000955
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,7,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,8,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,9,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,10,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Brain_Edema,DBDB00741_MESH_D001929_3999,11,Brain Edema,6684,disease,83775,MESH:D001929
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,4,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,5,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,7,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,8,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,9,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Bursitis,DBDB00741_MESH_D002062_4000,10,Bursitis,2471,disease,36272,MESH:D002062
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,2,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,3,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,5,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,6,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,7,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,8,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,9,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Dermatitis_Atopic,DBDB00741_MESH_D003876_4005,10,"Dermatitis, Atopic",4980,disease,36129,MESH:D003876
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,2,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,3,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,5,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,6,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,7,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,8,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,9,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Dermatitis_Contact,DBDB00741_MESH_D003877_4006,10,"Dermatitis, Contact",5480,disease,37770,MESH:D003877
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,4,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,5,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,7,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,8,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,9,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Eye_Diseases,DBDB00741_MESH_D005128_4012,10,Eye Diseases,5328,disease,35823,MESH:D005128
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,2,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,3,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,4,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,5,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,6,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,7,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,8,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,9,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Lupus_Erythematosus_Systemic,DBDB00741_MESH_D008180_4023,10,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,4,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,5,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,7,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,8,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,9,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Pemphigus,DBDB00741_MESH_D010392_4032,10,Pemphigus,6594,disease,38016,MESH:D010392
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,1,hydrocortisone,DB00741,drug,14028,MESH:D006854
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,4,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,5,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,7,inflammatory response,6954,biological_process,39999,GO:0006954
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,8,Annexin A1,301,gene/protein,2319,UniProt:P04083
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,9,hydrocortisone acetate,DB14539,drug,14042,MESH:C021650
+hydrocortisone_Serum_Sickness,DBDB00741_MESH_D012713_4042,10,Serum Sickness,43789,disease,83789,MESH:D012713
+naproxen_Arthritis_Rheumatoid,DBDB00788_MESH_D001172_4107,1,naproxen,DB00788,drug,14238,MESH:D009288
+naproxen_Arthritis_Rheumatoid,DBDB00788_MESH_D001172_4107,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+naproxen_Arthritis_Rheumatoid,DBDB00788_MESH_D001172_4107,3,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+naproxen_Arthritis_Rheumatoid,DBDB00788_MESH_D001172_4107,4,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+naproxen_Arthritis_Rheumatoid,DBDB00788_MESH_D001172_4107,5,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+pheniramine_Rhinitis_Vasomotor,DBDB01620_MESH_D012223_4144,1,pheniramine,DB01620,drug,16490,MESH:D010632
+pheniramine_Rhinitis_Vasomotor,DBDB01620_MESH_D012223_4144,2,Histamine H1 receptor,3269,gene/protein,8354,UniProt:P35367
+pheniramine_Rhinitis_Vasomotor,DBDB01620_MESH_D012223_4144,3,"Rhinitis, Vasomotor",6004,disease,83791,MESH:D012223
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,1,promazine,DB00420,drug,15098,MESH:D011395
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,2,Serotonin,DB08839,drug,16359,MESH:D012701
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,3,5-hydroxytryptamine receptor 2A,3356,gene/protein,3417,UniProt:P28223
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,4,D(2) dopamine receptor,1813,gene/protein,2401,UniProt:P14416
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,5,Dopamine,DB00988,drug,14641,MESH:D004298
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,6,Histamine,DB05381,drug,15412,MESH:D006632
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,7,Nausea,2018,effect/phenotype,84409,HP:0002018
+promazine_Porphyria_Acute_Intermittent,DBDB00420_MESH_D017118_4161,8,"Porphyria, Acute Intermittent",8294,disease,27843,MESH:D017118
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,1,methylprednisolone,DB00959,drug,14269,MESH:D008775
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,5,inflammatory response,6954,biological_process,39999,GO:0006954
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,6,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,8,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+methylprednisolone_Arthritis_Rheumatoid,DBDB00959_MESH_D001172_4200,9,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,1,methylprednisolone,DB00959,drug,14269,MESH:D008775
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,3,bronchus,2185,anatomy,64621,UBERON:0002185
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,8,inflammatory response,6954,biological_process,39999,GO:0006954
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+methylprednisolone_Asthma,DBDB00959_MESH_D001249_4201,10,Asthma,4979,disease,33675,MESH:D001249
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,1,methylprednisolone,DB00959,drug,14269,MESH:D008775
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,5,inflammatory response,6954,biological_process,39999,GO:0006954
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,8,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+methylprednisolone_Lupus_Erythematosus_Systemic,DBDB00959_MESH_D008180_4221,9,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,1,triamcinolone,DB00620,drug,14023,MESH:D014221
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,5,inflammatory response,6954,biological_process,39999,GO:0006954
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,6,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,8,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+triamcinolone_Arthritis_Rheumatoid,DBDB00620_MESH_D001172_4256,9,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,1,triamcinolone,DB00620,drug,14023,MESH:D014221
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,2,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,3,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,4,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,5,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,6,bronchus,2185,anatomy,64621,UBERON:0002185
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,8,inflammatory response,6954,biological_process,39999,GO:0006954
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+triamcinolone_Asthma,DBDB00620_MESH_D001249_4257,10,Asthma,4979,disease,33675,MESH:D001249
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,1,triamcinolone,DB00620,drug,14023,MESH:D014221
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,5,inflammatory response,6954,biological_process,39999,GO:0006954
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,8,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+triamcinolone_Lupus_Erythematosus_Systemic,DBDB00620_MESH_D008180_4264,9,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,1,cortisone acetate,DB01380,drug,15003,MESH:D003348
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,5,inflammatory response,6954,biological_process,39999,GO:0006954
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,6,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,8,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+cortisone_acetate_Arthritis_Rheumatoid,DBDB01380_MESH_D001172_4469,9,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,1,cortisone acetate,DB01380,drug,15003,MESH:D003348
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,3,bronchus,2185,anatomy,64621,UBERON:0002185
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,8,inflammatory response,6954,biological_process,39999,GO:0006954
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+cortisone_acetate_Asthma,DBDB01380_MESH_D001249_4470,10,Asthma,4979,disease,33675,MESH:D001249
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,1,cortisone acetate,DB01380,drug,15003,MESH:D003348
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,5,inflammatory response,6954,biological_process,39999,GO:0006954
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,8,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+cortisone_acetate_Lupus_Erythematosus_Systemic,DBDB01380_MESH_D008180_4497,9,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,1,prednisolone,DB00860,drug,14030,MESH:D011239
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,5,inflammatory response,6954,biological_process,39999,GO:0006954
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,6,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,8,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+prednisolone_Arthritis_Rheumatoid,DBDB00860_MESH_D001172_4540,9,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,1,prednisolone,DB00860,drug,14030,MESH:D011239
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,3,bronchus,2185,anatomy,64621,UBERON:0002185
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,8,inflammatory response,6954,biological_process,39999,GO:0006954
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+prednisolone_Asthma,DBDB00860_MESH_D001249_4542,10,Asthma,4979,disease,33675,MESH:D001249
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,1,prednisolone,DB00860,drug,14030,MESH:D011239
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,5,inflammatory response,6954,biological_process,39999,GO:0006954
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,8,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+prednisolone_Lupus_Erythematosus_Systemic,DBDB00860_MESH_D008180_4570,9,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,1,betamethasone,DB00443,drug,14019,MESH:D001623
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,5,inflammatory response,6954,biological_process,39999,GO:0006954
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,6,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,8,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+betamethasone_Arthritis_Rheumatoid,DBDB00443_MESH_D001172_4607,9,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,1,betamethasone,DB00443,drug,14019,MESH:D001623
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,3,bronchus,2185,anatomy,64621,UBERON:0002185
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,4,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,5,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,6,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,7,Annexin A1,301,gene/protein,2319,UniProt:P04083
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,8,inflammatory response,6954,biological_process,39999,GO:0006954
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+betamethasone_Asthma,DBDB00443_MESH_D001249_4608,10,Asthma,4979,disease,33675,MESH:D001249
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,1,betamethasone,DB00443,drug,14019,MESH:D001623
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,3,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,4,Annexin A1,301,gene/protein,2319,UniProt:P04083
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,5,inflammatory response,6954,biological_process,39999,GO:0006954
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,6,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,7,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,8,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+betamethasone_Lupus_Erythematosus_Systemic,DBDB00443_MESH_D008180_4621,9,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+prednisone_Adrenal_Insufficiency,DBDB00635_MESH_D000309_4665,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Adrenal_Insufficiency,DBDB00635_MESH_D000309_4665,2,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Adrenal_Insufficiency,DBDB00635_MESH_D000309_4665,3,Adrenal Insufficiency,4,disease,38666,MESH:D000309
+prednisone_Angioedema,DBDB00635_MESH_D000799_4668,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Angioedema,DBDB00635_MESH_D000799_4668,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Angioedema,DBDB00635_MESH_D000799_4668,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Angioedema,DBDB00635_MESH_D000799_4668,4,Angioedema,10481,disease,39540,MESH:D000799
+prednisone_Arthritis_Psoriatic,DBDB00635_MESH_D015535_4671,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Arthritis_Psoriatic,DBDB00635_MESH_D015535_4671,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Arthritis_Psoriatic,DBDB00635_MESH_D015535_4671,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Arthritis_Psoriatic,DBDB00635_MESH_D015535_4671,4,"Arthritis, Psoriatic",11849,disease,39524,MESH:D015535
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,2,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,3,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,4,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,5,Annexin A1,301,gene/protein,2319,UniProt:P04083
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,6,inflammatory response,6954,biological_process,39999,GO:0006954
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,7,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,8,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,9,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+prednisone_Arthritis_Rheumatoid,DBDB00635_MESH_D001172_4672,10,"Arthritis, Rheumatoid",8383,disease,29078,MESH:D001172
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,2,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,3,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,4,bronchus,2185,anatomy,64621,UBERON:0002185
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,5,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,6,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,7,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,8,Annexin A1,301,gene/protein,2319,UniProt:P04083
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,9,inflammatory response,6954,biological_process,39999,GO:0006954
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,10,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+prednisone_Asthma,DBDB00635_MESH_D001249_4673,11,Asthma,4979,disease,33675,MESH:D001249
+prednisone_Autoimmune_Diseases,DBDB00635_MESH_D001327_4674,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Autoimmune_Diseases,DBDB00635_MESH_D001327_4674,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Autoimmune_Diseases,DBDB00635_MESH_D001327_4674,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Autoimmune_Diseases,DBDB00635_MESH_D001327_4674,4,Autoimmune Diseases,7179,disease,28478,MESH:D001327
+prednisone_Berylliosis,DBDB00635_MESH_D001607_4675,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Berylliosis,DBDB00635_MESH_D001607_4675,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Berylliosis,DBDB00635_MESH_D001607_4675,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Berylliosis,DBDB00635_MESH_D001607_4675,4,Berylliosis,15274,disease,83795,MESH:D001607
+prednisone_Dermatitis_Atopic,DBDB00635_MESH_D003876_4677,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Dermatitis_Atopic,DBDB00635_MESH_D003876_4677,2,Inflammatory abnormality of the skin,11123,effect/phenotype,22539,HP:0011123
+prednisone_Dermatitis_Atopic,DBDB00635_MESH_D003876_4677,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Dermatitis_Atopic,DBDB00635_MESH_D003876_4677,4,"Dermatitis, Atopic",4980,disease,36129,MESH:D003876
+prednisone_Dermatitis_Contact,DBDB00635_MESH_D003877_4678,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Dermatitis_Contact,DBDB00635_MESH_D003877_4678,2,Inflammatory abnormality of the skin,11123,effect/phenotype,22539,HP:0011123
+prednisone_Dermatitis_Contact,DBDB00635_MESH_D003877_4678,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Dermatitis_Contact,DBDB00635_MESH_D003877_4678,4,"Dermatitis, Contact",5480,disease,37770,MESH:D003877
+prednisone_Dermatitis_Exfoliative,DBDB00635_MESH_D003873_4679,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Dermatitis_Exfoliative,DBDB00635_MESH_D003873_4679,2,Inflammatory abnormality of the skin,11123,effect/phenotype,22539,HP:0011123
+prednisone_Dermatitis_Exfoliative,DBDB00635_MESH_D003873_4679,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Dermatitis_Exfoliative,DBDB00635_MESH_D003873_4679,4,"Dermatitis, Exfoliative",43233,disease,83782,MESH:D003873
+prednisone_Hodgkin_Disease,DBDB00635_MESH_D006689_4682,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Hodgkin_Disease,DBDB00635_MESH_D006689_4682,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Hodgkin_Disease,DBDB00635_MESH_D006689_4682,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Hodgkin_Disease,DBDB00635_MESH_D006689_4682,4,Hodgkin Disease,4952,disease,33077,MESH:D006689
+prednisone_Humoral_Hypercalcemia_Of_Malig,DBDB00635_MESH_C562390_4683,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Humoral_Hypercalcemia_Of_Malig,DBDB00635_MESH_C562390_4683,2,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Humoral_Hypercalcemia_Of_Malig,DBDB00635_MESH_C562390_4683,3,Humoral Hypercalcemia Of Malignancy,43455,disease,83767,MESH:C562390
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,2,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,3,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,4,Cytosolic phospholipase A2,5321,gene/protein,8077,UniProt:P47712
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,5,Annexin A1,301,gene/protein,2319,UniProt:P04083
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,6,inflammatory response,6954,biological_process,39999,GO:0006954
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,7,Prostaglandin G/H synthase 1,5742,gene/protein,9031,UniProt:P23219
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,8,prostaglandin biosynthetic process,1516,biological_process,53443,GO:0001516
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,9,Prostaglandin G/H synthase 2,5743,gene/protein,4425,UniProt:P35354
+prednisone_Lupus_Erythematosus_Systemic,DBDB00635_MESH_D008180_4687,10,"Lupus Erythematosus, Systemic",7915,disease,29182,MESH:D008180
+prednisone_Lymphoma_Follicular,DBDB00635_MESH_D008224_4688,1,prednisolone,DB00635,drug,14024,MESH:D011241
+prednisone_Lymphoma_Follicular,DBDB00635_MESH_D008224_4688,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Lymphoma_Follicular,DBDB00635_MESH_D008224_4688,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Lymphoma_Follicular,DBDB00635_MESH_D008224_4688,4,"Lymphoma, Follicular",18906,disease,33294,MESH:D008224
+prednisone_Lymphoma_T-Cell_Cutaneous,DBDB00635_MESH_D016410_4691,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Lymphoma_T-Cell_Cutaneous,DBDB00635_MESH_D016410_4691,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Lymphoma_T-Cell_Cutaneous,DBDB00635_MESH_D016410_4691,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Lymphoma_T-Cell_Cutaneous,DBDB00635_MESH_D016410_4691,4,"Lymphoma, T-Cell, Cutaneous",607,disease,38708,MESH:D016410
+prednisone_Multiple_Sclerosis,DBDB00635_MESH_D009103_4692,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Multiple_Sclerosis,DBDB00635_MESH_D009103_4692,2,Paresthesia,3401,effect/phenotype,25644,HP:0003401
+prednisone_Multiple_Sclerosis,DBDB00635_MESH_D009103_4692,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Multiple_Sclerosis,DBDB00635_MESH_D009103_4692,4,Multiple Sclerosis,5301,disease,37722,MESH:D009103
+prednisone_Musculoskeletal_Diseases,DBDB00635_MESH_D009140_4693,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Musculoskeletal_Diseases,DBDB00635_MESH_D009140_4693,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Musculoskeletal_Diseases,DBDB00635_MESH_D009140_4693,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Musculoskeletal_Diseases,DBDB00635_MESH_D009140_4693,4,Musculoskeletal Diseases,2081,disease,35750,MESH:D009140
+prednisone_Nephrotic_Syndrome,DBDB00635_MESH_D009404_4695,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Nephrotic_Syndrome,DBDB00635_MESH_D009404_4695,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Nephrotic_Syndrome,DBDB00635_MESH_D009404_4695,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Nephrotic_Syndrome,DBDB00635_MESH_D009404_4695,4,Nephrotic Syndrome,5377,disease,36604,MESH:D009404
+prednisone_Pemphigus,DBDB00635_MESH_D010392_4696,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Pemphigus,DBDB00635_MESH_D010392_4696,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Pemphigus,DBDB00635_MESH_D010392_4696,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Pemphigus,DBDB00635_MESH_D010392_4696,4,Pemphigus,6594,disease,38016,MESH:D010392
+prednisone_Psoriasis,DBDB00635_MESH_D011565_4697,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Psoriasis,DBDB00635_MESH_D011565_4697,2,Inflammatory abnormality of the skin,11123,effect/phenotype,22539,HP:0011123
+prednisone_Psoriasis,DBDB00635_MESH_D011565_4697,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Psoriasis,DBDB00635_MESH_D011565_4697,4,Psoriasis,5083,disease,38024,MESH:D011565
+prednisone_Pulmonary_Eosinophilia,DBDB00635_MESH_D011657_4698,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Pulmonary_Eosinophilia,DBDB00635_MESH_D011657_4698,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Pulmonary_Eosinophilia,DBDB00635_MESH_D011657_4698,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Pulmonary_Eosinophilia,DBDB00635_MESH_D011657_4698,4,Pulmonary Eosinophilia,4802,disease,39506,MESH:D011657
+prednisone_Rheumatic_Heart_Disease,DBDB00635_MESH_D012214_4699,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Rheumatic_Heart_Disease,DBDB00635_MESH_D012214_4699,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Rheumatic_Heart_Disease,DBDB00635_MESH_D012214_4699,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Rheumatic_Heart_Disease,DBDB00635_MESH_D012214_4699,4,Rheumatic Heart Disease,6955,disease,36433,MESH:D012214
+prednisone_Sarcoidosis,DBDB00635_MESH_D012507_4701,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Sarcoidosis,DBDB00635_MESH_D012507_4701,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Sarcoidosis,DBDB00635_MESH_D012507_4701,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Sarcoidosis,DBDB00635_MESH_D012507_4701,4,Sarcoidosis,19338,disease,32967,MESH:D012507
+prednisone_Serum_Sickness,DBDB00635_MESH_D012713_4702,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Serum_Sickness,DBDB00635_MESH_D012713_4702,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Serum_Sickness,DBDB00635_MESH_D012713_4702,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Serum_Sickness,DBDB00635_MESH_D012713_4702,4,Serum Sickness,43789,disease,83789,MESH:D012713
+prednisone_Skin_Diseases,DBDB00635_MESH_D012871_4703,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Skin_Diseases,DBDB00635_MESH_D012871_4703,2,Inflammatory abnormality of the skin,11123,effect/phenotype,22539,HP:0011123
+prednisone_Skin_Diseases,DBDB00635_MESH_D012871_4703,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Skin_Diseases,DBDB00635_MESH_D012871_4703,4,Skin Diseases,5093,disease,36644,MESH:D012871
+prednisone_Tennis_Elbow,DBDB00635_MESH_D013716_4705,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Tennis_Elbow,DBDB00635_MESH_D013716_4705,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Tennis_Elbow,DBDB00635_MESH_D013716_4705,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Tennis_Elbow,DBDB00635_MESH_D013716_4705,4,Tennis Elbow,1875,disease,84040,MESH:D013716
+prednisone_Thyroiditis,DBDB00635_MESH_D013966_4706,1,prednisone,DB00635,drug,14024,MESH:D011241
+prednisone_Thyroiditis,DBDB00635_MESH_D013966_4706,2,Glucocorticoid receptor,2908,gene/protein,509,UniProt:P04150
+prednisone_Thyroiditis,DBDB00635_MESH_D013966_4706,3,Prednisolone,DB00860,drug,14030,MESH:D011239
+prednisone_Thyroiditis,DBDB00635_MESH_D013966_4706,4,Thyroiditis,4126,disease,33576,MESH:D013966
+everolimus_Renal_cell_carcinoma,DBDB01590_MESH_D002292_4767,1,everolimus,DB01590,drug,15176,MESH:D000068338
+everolimus_Renal_cell_carcinoma,DBDB01590_MESH_D002292_4767,2,Serine/threonine-protein kinase mTOR,2475,gene/protein,1558,UniProt:P42345
+everolimus_Renal_cell_carcinoma,DBDB01590_MESH_D002292_4767,3,Renal cell carcinoma,5086,disease,33643,MESH:D002292
+everolimus_Breast_Neoplasms,DBDB01590_MESH_D001943_4768,1,everolimus,DB01590,drug,15176,MESH:D000068338
+everolimus_Breast_Neoplasms,DBDB01590_MESH_D001943_4768,2,Serine/threonine-protein kinase mTOR,2475,gene/protein,1558,UniProt:P42345
+everolimus_Breast_Neoplasms,DBDB01590_MESH_D001943_4768,3,Breast Neoplasms,21100,disease,35771,MESH:D001943
+Acebutolol_Hypertension,DBDB01193_MESH_D006973_4780,1,Acebutolol,DB01193,drug,15153,MESH:D000070
+Acebutolol_Hypertension,DBDB01193_MESH_D006973_4780,2,Beta-1 adrenergic receptor,153,gene/protein,7188,UniProt:P08588
+Acebutolol_Hypertension,DBDB01193_MESH_D006973_4780,3,Epinephrine,DB00668,drug,14807,MESH:D004837
+Acebutolol_Hypertension,DBDB01193_MESH_D006973_4780,4,Hypertension,5044,disease,33577,MESH:D006973
