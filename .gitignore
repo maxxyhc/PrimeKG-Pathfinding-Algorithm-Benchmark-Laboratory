@@ -5,3 +5,4 @@ __pycache__/
 data/raw/
 data/processed/edges_cleaned.csv
 data/processed/nodes_cleaned.csv
+data
