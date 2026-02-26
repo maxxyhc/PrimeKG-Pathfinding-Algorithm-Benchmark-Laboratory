@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeKG Pathfinding Benchmark – Overview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+  <div class="container">
+    <h1>PrimeKG Pathfinding Algorithm Benchmark Laboratory</h1>
+    <p class="subtitle">Benchmarking Graph Algorithms for Drug Repurposing Discovery</p>
+
+    <nav class="main-nav" style="margin-top: 20px;">
+      <a href="index.html" class="active">Overview</a>
+      <a href="groundtruths.html">Ground Truths & Methods</a>
+      <a href="results.html">Results</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <!-- Project Overview -->
+    <section id="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This project investigates and benchmarks pathfinding algorithms on the 
+        <strong>PrimeKG</strong> (Precision Medicine Knowledge Graph) to evaluate their 
+        effectiveness in discovering mechanistically plausible drug repurposing candidates.
+      </p>
+      <p>
+        We aim to answer a critical question: <em>Can standard graph algorithms find 
+        biologically meaningful pathways, or do they fall into "shortcut traps" that 
+        produce statistically short but mechanistically meaningless paths?</em>
+      </p>
+    </section>
+
+    <!-- Motivation -->
+    <section id="motivation">
+      <h2>Motivation</h2>
+      <div class="motivation-grid">
+        <div class="motivation-card">
+          <h3>The Hub Trap</h3>
+          <p>
+            High-degree nodes like TP53 or UBC act as "shortcuts" that algorithms prefer, 
+            but these paths lack biological specificity and explanatory power.
+          </p>
+        </div>
+        <div class="motivation-card">
+          <h3>The Drug Trap</h3>
+          <p>
+            Naive algorithms often route through other drugs as intermediates, 
+            producing paths like "Drug A → Drug B → Disease" that are pharmacologically meaningless.
+          </p>
+        </div>
+        <div class="motivation-card">
+          <h3>The Disease Trap</h3>
+          <p>
+            Paths may jump through unrelated diseases that share genetic risk factors, 
+            creating spurious associations without mechanistic basis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dataset -->
+    <section id="dataset">
+      <h2>The Dataset: PrimeKG</h2>
+      <p>
+        <a href="https://github.com/mims-harvard/PrimeKG" target="_blank">PrimeKG</a> is a 
+        precision medicine knowledge graph that integrates 20+ biomedical resources.
+      </p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">8.1M+</span>
+          <span class="stat-label">Edges (Relationships)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">129K+</span>
+          <span class="stat-label">Nodes (Entities)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">10</span>
+          <span class="stat-label">Entity Types</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">18</span>
+          <span class="stat-label">Relationship Types</span>
+        </div>
+      </div>
+
+      <h3>Entity Types</h3>
+      <div class="entity-types">
+        <span class="entity-tag drug">Drug</span>
+        <span class="entity-tag gene">Gene/Protein</span>
+        <span class="entity-tag disease">Disease</span>
+        <span class="entity-tag anatomy">Anatomy</span>
+        <span class="entity-tag pathway">Pathway</span>
+        <span class="entity-tag phenotype">Effect/Phenotype</span>
+        <span class="entity-tag bp">Biological Process</span>
+        <span class="entity-tag mf">Molecular Function</span>
+        <span class="entity-tag cc">Cellular Component</span>
+        <span class="entity-tag exposure">Exposure</span>
+      </div>
+    </section>
+
+    <!-- Key Pathway: Tirofiban → Acute Coronary Syndrome -->
+    <section id="pathway">
+      <h2>Example: Tirofiban → Acute Coronary Syndrome</h2>
+      <p>
+        Below is a mechanistically grounded drug–disease pathway showing how 
+        <strong>Tirofiban</strong> treats <strong>Acute Coronary Syndrome</strong> 
+        by inhibiting platelet aggregation via integrin receptors.
+      </p>
+
+      <div class="pathway-container">
+        <div class="pathway-visualization">
+          <!-- Node 1: Tirofiban -->
+          <div class="pathway-node drug">
+            <div class="node-icon">💊</div>
+            <div class="node-name">Tirofiban</div>
+            <div class="node-meta">DB00775 | Drug</div>
+          </div>
+
+          <div class="pathway-edge">
+            <div class="edge-line"></div>
+            <div class="edge-label">targets</div>
+          </div>
+
+          <!-- Node 2: Integrin alpha-IIb -->
+          <div class="pathway-node gene">
+            <div class="node-icon">🧬</div>
+            <div class="node-name">Integrin αIIb</div>
+            <div class="node-meta">3674 | Gene/Protein</div>
+          </div>
+
+          <div class="pathway-edge">
+            <div class="edge-line"></div>
+            <div class="edge-label">participates in</div>
+          </div>
+
+          <!-- Node 3: Platelet aggregation -->
+          <div class="pathway-node pathway">
+            <div class="node-icon">🔄</div>
+            <div class="node-name">Platelet aggregation</div>
+            <div class="node-meta">70527 | Biological Process</div>
+          </div>
+
+          <div class="pathway-edge">
+            <div class="edge-line"></div>
+            <div class="edge-label">mediated by</div>
+          </div>
+
+          <!-- Node 4: Integrin beta-3 -->
+          <div class="pathway-node gene">
+            <div class="node-icon">🧬</div>
+            <div class="node-name">Integrin β3</div>
+            <div class="node-meta">3690 | Gene/Protein</div>
+          </div>
+
+          <div class="pathway-edge">
+            <div class="edge-line"></div>
+            <div class="edge-label">implicated in</div>
+          </div>
+
+          <!-- Node 5: Acute Coronary Syndrome -->
+          <div class="pathway-node disease">
+            <div class="node-icon">🏥</div>
+            <div class="node-name">Acute Coronary Syndrome</div>
+            <div class="node-meta">D054058 | Disease</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pathway-explanation">
+        <h3>Mechanistic Explanation</h3>
+        <ol>
+          <li><strong>Tirofiban</strong> is a small‑molecule inhibitor of platelet glycoprotein IIb/IIIa complexes.</li>
+          <li>The drug binds to <strong>Integrin αIIb/β3</strong> on platelets, blocking fibrinogen binding.</li>
+          <li>This directly suppresses <strong>platelet aggregation</strong>, a key step in thrombus formation.</li>
+          <li>By reducing thrombus formation in coronary arteries, Tirofiban helps prevent and treat 
+              <strong>Acute Coronary Syndrome</strong>.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>PrimeKG Pathfinding Algorithm Benchmark Laboratory</p>
+      <p>
+        <a href="https://github.com/maxxyhc/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory" target="_blank">
+          View on GitHub
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

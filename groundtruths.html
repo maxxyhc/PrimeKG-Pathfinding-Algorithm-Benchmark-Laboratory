@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeKG – Ground Truths & Methods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="container">
+    <h1>PrimeKG Pathfinding Algorithm Benchmark Laboratory</h1>
+    <p class="subtitle">Benchmarking Graph Algorithms for Drug Repurposing Discovery</p>
+
+    <nav class="main-nav" style="margin-top: 20px;">
+      <a href="index.html">Overview</a>
+      <a href="groundtruths.html" class="active">Ground Truths & Methods</a>
+      <a href="results.html">Results</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container">
+    <!-- Ground Truth Graph -->
+    <section id="groundtruth-graph">
+      <h2>Ground Truth Pathways</h2>
+      <p>
+        We curate mechanistically validated drug–mechanism–disease pathways from literature and 
+        pharmacological databases. Each pathway is represented as a sequence of nodes 
+        (drug → targets → pathways / processes → disease) in PrimeKG.
+      </p>
+      <p>
+        Below is a placeholder for an interactive graph visualization of all curated ground truth pathways.
+      </p>
+
+      <div class="pathway-container" style="min-height: 300px;">
+        <!-- TODO: insert interactive visualization (e.g., D3, Cytoscape, or iframe) -->
+        <p style="text-align:center; color:#888; margin-top: 80px;">
+          Interactive ground truth graph visualization coming soon.
+        </p>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section id="methodology">
+      <h2>Methodology</h2>
+      <ol class="methodology-list">
+        <li>
+          <strong>Curate Ground Truth Pathways:</strong> Collect validated drug–mechanism–disease 
+          pathways from literature and pharmacological databases.
+        </li>
+        <li>
+          <strong>Implement Pathfinding Algorithms:</strong> Benchmark BFS, Dijkstra, A*, 
+          PageRank‑inverse, and learned‑edge‑weight algorithms on PrimeKG.
+        </li>
+        <li>
+          <strong>Benchmark Against Ground Truth:</strong> Evaluate how often algorithms 
+          recover the mechanistically correct pathway vs. taking hub‑driven shortcuts.
+        </li>
+        <li>
+          <strong>Develop Quality Metrics:</strong> Score paths based on biological plausibility, 
+          hub avoidance, and mechanistic coherence, not just shortest distance.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Repository Structure -->
+    <section id="repository">
+      <h2>Repository Structure</h2>
+      <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
+├── data/
+│   └── ground_truths/
+│       ├── ground_truth_final.csv    # Validated pathway nodes
+│       └── pathway_edges_final.csv   # Pathway edge relationships
+├── notebooks/
+│   └── exploration.ipynb             # EDA and algorithm development
+├── src/
+│   └── prepare_primekg.py            # Data preprocessing scripts
+└── README.md</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>PrimeKG Pathfinding Algorithm Benchmark Laboratory</p>
+      <p>
+        <a href="https://github.com/maxxyhc/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory" target="_blank">
+          View on GitHub
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
