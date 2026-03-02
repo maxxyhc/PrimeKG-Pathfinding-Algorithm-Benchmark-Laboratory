@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -22,7 +22,7 @@
 
 
   <main class="container">
-    <!-- Ground Truth Graph -->
+    
     <section id="groundtruth-graph">
       <h2>Ground Truth Pathways</h2>
       <p>
@@ -35,10 +35,108 @@
       </p>
 
       <div class="pathway-container" style="min-height: 300px;">
-        <!-- TODO: insert interactive visualization (e.g., D3, Cytoscape, or iframe) -->
+        
         <p style="text-align:center; color:#888; margin-top: 80px;">
           Interactive ground truth graph visualization coming soon.
         </p>
+      </div>
+        
+
+
+      
+    </section>
+
+    
+    <section id="methodology">
+      <h2>Methodology</h2>
+      <ol class="methodology-list">
+        <li>
+          <strong>Curate Ground Truth Pathways:</strong> Collect validated drug–mechanism–disease 
+          pathways from literature and pharmacological databases.
+        </li>
+        <li>
+          <strong>Implement Pathfinding Algorithms:</strong> Benchmark BFS, Dijkstra, A*, 
+          PageRank‑inverse, and learned‑edge‑weight algorithms on PrimeKG.
+        </li>
+        <li>
+          <strong>Benchmark Against Ground Truth:</strong> Evaluate how often algorithms 
+          recover the mechanistically correct pathway vs. taking hub‑driven shortcuts.
+        </li>
+        <li>
+          <strong>Develop Quality Metrics:</strong> Score paths based on biological plausibility, 
+          hub avoidance, and mechanistic coherence, not just shortest distance.
+        </li>
+      </ol>
+    </section>
+
+   
+    <section id="repository">
+      <h2>Repository Structure</h2>
+      <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
+├── data/
+│   └── ground_truths/
+│       ├── ground_truth_final.csv    # Validated pathway nodes
+│       └── pathway_edges_final.csv   # Pathway edge relationships
+├── notebooks/
+│   └── exploration.ipynb             # EDA and algorithm development
+├── src/
+│   └── prepare_primekg.py            # Data preprocessing scripts
+└── README.md</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>PrimeKG Pathfinding Algorithm Benchmark Laboratory</p>
+      <p>
+        <a href="https://github.com/maxxyhc/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory" target="_blank">
+          View on GitHub
+        </a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeKG – Ground Truths & Methods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>PrimeKG Pathfinding Algorithm Benchmark Laboratory</h1>
+      <p class="subtitle">Benchmarking Graph Algorithms for Drug Repurposing Discovery</p>
+
+      <nav class="main-nav" style="margin-top: 20px;">
+        <a href="index.html">Overview</a>
+        <a href="groundtruths.html" class="active">Ground Truths & Methods</a>
+        <a href="results.html">Results</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Ground Truth Graph -->
+    <section id="groundtruth-graph">
+      <h2>Ground Truth Pathways</h2>
+      <p>
+        We curate mechanistically validated drug–mechanism–disease pathways from literature and 
+        pharmacological databases. Each pathway is represented as a sequence of nodes 
+        (drug → targets → pathways / processes → disease) in PrimeKG.
+      </p>
+      <p>
+        Below is an interactive graph visualization of all curated ground truth pathways.
+      </p>
+
+      <div class="pathway-container" style="min-height: 300px;">
+        <div id="groundtruth-graph-viz" style="width: 100%; height: 600px;"></div>
       </div>
     </section>
 
@@ -91,5 +189,119 @@
       </p>
     </div>
   </footer>
+
+  <!-- D3 force-directed graph -->
+  <script type="module">
+    import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+    // Load subgraph data (nodes + links) – create this JSON from your CSVs
+    const graphData = await d3.json("subgraph.json");
+
+    const width = document.getElementById("groundtruth-graph-viz").clientWidth;
+    const height = 600;
+
+    const svgRoot = d3.select("#groundtruth-graph-viz")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    const g = svgRoot.append("g");
+
+    const zoomBehavior = d3.zoom()
+      .scaleExtent([0.2, 5])
+      .on("zoom", (event) => {
+        g.attr("transform", event.transform);
+      });
+
+    svgRoot.call(zoomBehavior);
+
+    const link = g.selectAll("line")
+      .data(graphData.links)
+      .enter().append("line")
+      .style("stroke", "#bbb")
+      .style("stroke-width", 1.5)
+      .style("opacity", 0.9);
+
+    const node = g.selectAll("circle")
+      .data(graphData.nodes)
+      .enter().append("circle")
+      .attr("r", 6)
+      .style("fill", (d) => {
+        if (d.type === "drug") return "#0077b6";
+        if (d.type === "disease") return "#d62828";
+        if (d.type === "gene") return "#2a9d8f";
+        return "#666";
+      })
+      .style("stroke", "#fff")
+      .style("stroke-width", 1)
+      .call(d3.drag()
+         .on("start", dragstarted)
+         .on("drag", dragged)
+         .on("end", dragended))
+      .on("click", highlightPath)
+      .append("title")
+      .text(d => d.name || d.id);
+
+    const simulation = d3.forceSimulation(graphData.nodes)
+      .force("link", d3.forceLink(graphData.links).distance(80).id(d => d.id))
+      .force("charge", d3.forceManyBody().strength(-200))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .on("tick", () => {
+        link
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
+
+        g.selectAll("circle")
+          .attr("cx", d => d.x)
+          .attr("cy", d => d.y);
+      });
+
+    function highlightPath(event, d) {
+      // Collect nodes connected to clicked node
+      const connectedIds = new Set([d.id]);
+      graphData.links.forEach(l => {
+        const s = l.source.id ?? l.source;
+        const t = l.target.id ?? l.target;
+        if (s === d.id) connectedIds.add(t);
+        if (t === d.id) connectedIds.add(s);
+      });
+
+      g.selectAll("circle")
+        .style("opacity", n => connectedIds.has(n.id) ? 1 : 0.1);
+      link
+        .style("opacity", l => {
+          const s = l.source.id ?? l.source;
+          const t = l.target.id ?? l.target;
+          return (connectedIds.has(s) && connectedIds.has(t)) ? 1 : 0.1;
+        });
+
+      // Smooth zoom to clicked node
+      svgRoot.transition().duration(750).call(
+        zoomBehavior.transform,
+        d3.zoomIdentity
+          .translate(width / 2 - d.x, height / 2 - d.y)
+          .scale(1.5)
+      );
+    }
+
+    function dragstarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragended(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+  </script>
 </body>
 </html>
