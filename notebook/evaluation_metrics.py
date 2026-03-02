@@ -56,19 +56,27 @@ def precision(predicted_ids, ground_truth_ids):
 # ============================================
 # 2. RECALL @ 6 HOPS
 # ============================================
-def recall_at_k_hops(predicted_ids, ground_truth_ids, k=6):
+def recall_at_k_hops(predicted_ids, ground_truth_ids, k=None):
     """
-    What fraction of ground truth nodes are found within first k hops?
+    What fraction of ground truth nodes are found in the predicted path?
+    If k is None, uses the full predicted path (standard recall).
+    If k is provided, only considers first k nodes of prediction.
     
     Formula: |predicted[:k] ∩ ground_truth| / |ground_truth|
     """
     if not is_valid_prediction(predicted_ids):
         return 0.0
     
-    truncated = predicted_ids[:k]
-    gt_set = set(ground_truth_ids)
+    # Use full prediction if k not specified
+    if k is None:
+        truncated = predicted_ids
+    else:
+        truncated = predicted_ids[:k]
     
-    return len(set(truncated) & gt_set) / len(gt_set)
+    gt_set = set(ground_truth_ids)
+    overlap = len(set(truncated) & gt_set)
+    
+    return overlap / len(gt_set) if len(gt_set) > 0 else 0.0
 
 
 # ============================================
@@ -147,18 +155,25 @@ def hub_node_ratio(predicted_indices, degree_count, hub_threshold):
 # ============================================
 def mrr(predicted_ids, ground_truth_ids):
     """
-    Mean Reciprocal Rank - how early does the first correct node appear?
-    
-    Formula: 1 / rank_of_first_correct_node
-    
-    Higher is better (1.0 = first node is correct)
+    Mean Reciprocal Rank - how early does the first correct INTERMEDIATE node appear?
+    Excludes source (first) and target (last) nodes since they're guaranteed correct.
+    Formula: 1 / rank_of_first_correct_intermediate_node
+    Higher is better (1.0 = first intermediate node is correct)
     """
     if not is_valid_prediction(predicted_ids):
         return 0.0
     
+    # Need at least 3 nodes (source, intermediate, target)
+    if len(predicted_ids) < 3:
+        return 0.0
+    
+    # Extract intermediate nodes only (skip first and last)
+    intermediate_predicted = predicted_ids[1:-1]
+    
+    # Also exclude source and target from ground truth
     gt_set = set(ground_truth_ids)
     
-    for rank, node in enumerate(predicted_ids, start=1):
+    for rank, node in enumerate(intermediate_predicted, start=1):
         if node in gt_set:
             return 1 / rank
     

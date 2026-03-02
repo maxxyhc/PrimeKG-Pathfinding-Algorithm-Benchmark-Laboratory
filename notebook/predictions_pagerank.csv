@@ -1,0 +1,151 @@
+pathway_id,predicted_node_indices,predicted_node_ids,predicted_node_names,predicted_relations,predicted_length,ground_truth_length
+diflunisal_Rheumatoid_arthritis,"14062,9031,29078","DB00861,5742,8383","Diflunisal,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+bromocriptine_Hyperprolactinemia,"15493,2401,39081","DB01200,1813,5804","Bromocriptine,DRD2,hyperprolactinemia (disease)","drug_protein,disease_protein",3,5
+amobarbital_Epilepsy,"17066,7615,35641","DB01351,2558,5027","Amobarbital,GABRA5,epilepsy","drug_protein,disease_protein",3,6
+capecitabine_Malignant_tumor_of_stomach,"14758,8725,36000","DB01101,1890,21085","Capecitabine,TYMP,gastric neoplasm","drug_protein,disease_protein",3,4
+oxaprozin_Rheumatoid_arthritis,"15984,23956,29078","DB00991,2633,8383","Oxaprozin,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+regorafenib_Gastrointestinal_stromal_tumor,"15599,3772,29194","DB08896,5156,11719","Regorafenib,PDGFRA,gastrointestinal stromal tumor","drug_protein,disease_protein",3,5
+abiraterone_acetate_Malignant_tumor_of_prostate,"14376,7697,35966","DB05812,6822,8315","Abiraterone,SULT2A1,prostate cancer","drug_protein,disease_protein",3,7
+abiraterone_acetate_Malignant_tumor_of_prostate_2,"14376,7697,35966","DB05812,6822,8315","Abiraterone,SULT2A1,prostate cancer","drug_protein,disease_protein",3,5
+abiraterone_acetate_Malignant_tumor_of_prostate_4,"14376,7697,35966","DB05812,6822,8315","Abiraterone,SULT2A1,prostate cancer","drug_protein,disease_protein",3,7
+alfacalcidol_Chronic_Kidney_Disease-Mineral,"14562,12371,33626,84162","DB01436,1594,5520,6946","Alfacalcidol,CYP27B1,rickets (disease),renal osteodystrophy","drug_protein,disease_protein,disease_disease",4,5
+alfacalcidol_Chronic_Kidney_Disease-Mineral_2,"14562,12371,33626,84162","DB01436,1594,5520,6946","Alfacalcidol,CYP27B1,rickets (disease),renal osteodystrophy","drug_protein,disease_protein,disease_disease",4,5
+alfacalcidol_Chronic_Kidney_Disease-Mineral_3,"14562,12371,33626,84162","DB01436,1594,5520,6946","Alfacalcidol,CYP27B1,rickets (disease),renal osteodystrophy","drug_protein,disease_protein,disease_disease",4,5
+Dyphylline_Asthma,"15956,8130,33675","DB00651,5142,4979","Dyphylline,PDE4B,asthma","drug_protein,disease_protein",3,4
+Tirofiban_Acute_Coronary_Syndrome,"17226,2515,83812","DB00775,3690,5542","Tirofiban,ITGB3,acute coronary syndrome","drug_protein,disease_protein",3,5
+Cilastatin_Pneumonia_Pneumococcal,"18687,5573,84131,2978,83926","DB01597,9376,7027,3576,5972","Cilastatin,SLC22A8,non-alcoholic steatohepatitis,CXCL8,streptococcal pneumonia","drug_protein,disease_protein,disease_protein,disease_protein",5,4
+Cilastatin_Pneumonia_Bacterial,"18687,5573,37766,61812,35552,37574","DB01597,9376,5812,D013458,5249,4652","Cilastatin,SLC22A8,influenza,Sulfur Dioxide,pneumonia,bacterial pneumonia","drug_protein,disease_protein,exposure_disease,exposure_disease,disease_disease",6,4
+Magnesium_salicylate_Rheumatoid_arthritis,"14340,9031,29078","DB01397,5742,8383","Magnesium salicylate,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+baricitinib_Arthritis_Rheumatoid,"15666,3183,29078","DB11817,9429,8383","Baricitinib,ABCG2,rheumatoid arthritis","drug_protein,disease_protein",3,7
+Budesonide_Asthma,"14034,27007,23175,33675","DB01222,100845,100326,4979","Budesonide,Anaphylactic shock,Immunologic hypersensitivity,asthma","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,10
+ketoprofen_Rheumatoid_arthritis,"14278,3901,29078","DB01009,10257,8383","Ketoprofen,ABCC4,rheumatoid arthritis","drug_protein,disease_protein",3,5
+Tegafur_Stomach_Neoplasms,"14516,10412,36000","DB09256,1548,21085","Tegafur,CYP2A6,gastric neoplasm","drug_protein,disease_protein",3,4
+nintedanib_Carcinoma_Non-Small-Cell_Lung,"14413,4152,33688","DB09079,5243,5233","Nintedanib,ABCB1,non-small cell lung carcinoma (disease)","drug_protein,disease_protein",3,4
+Naloxone_Opioid-Related_Disorders,"14314,6541,37753","DB01183,1066,5530","Naloxone,CES1,opiate dependence","drug_protein,disease_protein",3,6
+Meclofenamic_acid_Rheumatoid_arthritis,"14509,9031,29078","DB00939,5742,8383","Meclofenamic acid,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+methyltestosterone_Eunuchism,"14387,2756,36453,84093","DB06710,1588,2146,5758","Methyltestosterone,CYP19A1,hypogonadism,eunuchism","drug_protein,disease_protein,disease_disease",4,4
+Choline_magnesium_trisalicylate_Rheumatoid_arthritis,"15987,9031,29078","DB01401,5742,8383","Choline magnesium trisalicylate,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+Amantadine_Basal_Ganglia_Diseases,"14830,2401,38003","DB00915,1813,3996","Amantadine,DRD2,basal ganglia disease","drug_protein,disease_protein",3,4
+Amantadine_Parkinsonian_Disorders,"14830,9889,37706","DB00915,1644,21095","Amantadine,DDC,parkinsonian disorder","drug_protein,disease_protein",3,4
+methylphenidate_Attention_deficit_hyperactivit,"16855,1311,84036","DB00422,6531,5302","Methylphenidate,SLC6A3,attention deficit hyperactivity disorder, inattentive type","drug_protein,disease_protein",3,5
+fosphenytoin_Epilepsy,"14330,4315,35641","DB01320,213,5027","Fosphenytoin,ALB,epilepsy","drug_protein,disease_protein",3,4
+fosphenytoin_Status_Epilepticus,"14330,25276,21982,83906","DB01320,10867,6334,2125","Fosphenytoin,Dyssynergia,SCN8A,status epilepticus","drug_effect,phenotype_protein,disease_protein",4,4
+Nabumetone_Arthritis_Rheumatoid,"14175,23956,29078","DB00461,2633,8383","Nabumetone,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+Axitinib_Carcinoma_Renal_Cell,"15020,2160,33643","DB06626,2324,5086","Axitinib,FLT4,renal cell carcinoma (disease)","drug_protein,disease_protein",3,6
+Aspirin_Arthritis_Rheumatoid,"15781,9031,29078","DB00945,5742,8383","Acetylsalicylic acid,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+imatinib_Gastrointestinal_stromal_tumor,"14207,93522,29194","DB00619,100723,11719","Imatinib,Gastrointestinal stroma tumor,gastrointestinal stromal tumor","drug_effect,disease_phenotype_positive",3,4
+Troglitazone_Diabetes_Mellitus_Type_2,"14813,1122,28208","DB00197,5465,5148","Troglitazone,PPARA,type 2 diabetes mellitus","drug_protein,disease_protein",3,4
+dofetilide_Atrial_fibrillation,"15418,4447,33618","DB00204,3757,4981","Dofetilide,KCNH2,atrial fibrillation (disease)","drug_protein,disease_protein",3,5
+Terfenadine_Rhinitis_Vasomotor,"14942,8354,83791","DB00342,3269,6004","Terfenadine,HRH1,vasomotor rhinitis","drug_protein,disease_protein",3,4
+Piribedil_Parkinsonism,"17414,2401,37706","DB12478,1813,21095","Piribedil,DRD2,parkinsonian disorder","drug_protein,disease_protein",3,5
+dexibuprofen_Rheumatoid_arthritis,"14419,23956,29078","DB09213,2633,8383","Dexibuprofen,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+metharbital_Epilepsy,"17065,7615,35641","DB00463,2558,5027","Metharbital,GABRA5,epilepsy","drug_protein,disease_protein",3,6
+eptacog_alfa_activated_Factor_VII_deficiency,"16634,4640,38622","DB00036,2155,2244","Coagulation factor VIIa Recombinant Human,F7,factor VII deficiency","drug_protein,disease_protein",3,5
+etodolac_Rheumatoid_arthritis,"14227,23956,29078","DB00749,2633,8383","Etodolac,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+norepinephrine_Low_blood_pressure,"16352,6309,33605","DB00368,147,5468","Norepinephrine,ADRA1B,hypotensive disorder","drug_protein,disease_protein",3,5
+aripiprazole_Infantile_autism,"14323,12364,84310","DB01238,3361,5260","Aripiprazole,HTR5A,autism (disease)","drug_protein,disease_protein",3,6
+melevodopa_Parkinsonism,"14321,9889,37706","DB01235,1644,21095","Levodopa,DDC,parkinsonian disorder","drug_protein,disease_protein",3,6
+methoxamine_Low_blood_pressure,"17339,6309,33605","DB00723,147,5468","Methoxamine,ADRA1B,hypotensive disorder","drug_protein,disease_protein",3,4
+flurbiprofen_Rheumatoid_arthritis,"14219,23956,29078","DB00712,2633,8383","Flurbiprofen,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+Diphenhydramine_Rhinitis_Vasomotor,"14607,8354,83791","DB01075,3269,6004","Diphenhydramine,HRH1,vasomotor rhinitis","drug_protein,disease_protein",3,4
+tolmetin_Rheumatoid_arthritis,"14183,4818,29078","DB00500,4353,8383","Tolmetin,MPO,rheumatoid arthritis","drug_protein,disease_protein",3,5
+sorafenib_Renal_cell_carcinoma,"14945,2160,33643","DB00398,2324,5086","Sorafenib,FLT4,renal cell carcinoma (disease)","drug_protein,disease_protein",3,10
+midostaurin_Mast_cell_leukemia,"15018,2108,39171","DB06595,3815,20334","Midostaurin,KIT,mast cell leukemia","drug_protein,disease_protein",3,6
+sulfasalazine_Rheumatoid_arthritis,"15982,23956,29078","DB00795,2633,8383","Sulfasalazine,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+pegvisomant_Acromegaly,"14695,2993,4221,32847","DB00082,2690,2688,19933","Pegvisomant,GHR,GH1,acromegaly","drug_protein,protein_protein,disease_protein",4,4
+diclofenac_Rheumatoid_arthritis,"14061,24045,29078","DB00586,1370,8383","Diclofenac,Rheumatoid arthritis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+sulindac_Rheumatoid_arthritis,"14204,9031,29078","DB00605,5742,8383","Sulindac,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+sunitinib_Gastrointestinal_stromal_tumor,"15002,3772,29194","DB01268,5156,11719","Sunitinib,PDGFRA,gastrointestinal stromal tumor","drug_protein,disease_protein",3,10
+sunitinib_Renal_cell_carcinoma,"15002,2160,33643","DB01268,2324,5086","Sunitinib,FLT4,renal cell carcinoma (disease)","drug_protein,disease_protein",3,10
+mephentermine_Low_blood_pressure,"20151,6309,33605","DB01365,147,5468","Mephentermine,ADRA1B,hypotensive disorder","drug_protein,disease_protein",3,5
+norethindrone_acetate_Endometriosis,"14221,12537,33680","DB00717,6716,5133","Norethisterone,SRD5A2,endometriosis (disease)","drug_protein,disease_protein",3,4
+aceclofenac_Rheumatoid_arthritis,"15794,9031,29078","DB06736,5742,8383","Aceclofenac,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+methotrexate_Burkitt's_lymphoma,"14194,90237,30075","DB00563,30080,7243","Methotrexate,Burkitt lymphoma,Burkitt lymphoma","drug_effect,disease_phenotype_positive",3,4
+methotrexate_Malignant_tumor_of_lung,"14194,33894,36812","DB00563,28234,21117","Methotrexate,SLCO1B3,lung neoplasm","drug_protein,disease_protein",3,4
+gabapentin_enacarbil_Restless_legs,"17559,7383,125958,4003,38121","DB08872,8884,9925,7018,5391","Gabapentin enacarbil,SLC5A6,basal plasma membrane,TF,restless legs syndrome","drug_protein,cellcomp_protein,cellcomp_protein,disease_protein",5,4
+ibuprofen_Rheumatoid_arthritis,"14287,23956,29078","DB01050,2633,8383","Ibuprofen,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+dexamfetamine_Attention_deficit_hyperactivit,"15173,1311,84036","DB01576,6531,5302","Dextroamphetamine,SLC6A3,attention deficit hyperactivity disorder, inattentive type","drug_protein,disease_protein",3,7
+tretinoin_Acute_promyelocytic_leukemia_F,"14229,24015,29361","DB00755,5521,12883","Tretinoin,Disseminated intravascular coagulation,acute promyelocytic leukemia","drug_effect,disease_phenotype_positive",3,4
+secobarbital_Epilepsy,"15297,7615,35641","DB00418,2558,5027","Secobarbital,GABRA5,epilepsy","drug_protein,disease_protein",3,6
+indomethacin_Rheumatoid_arthritis,"14158,13259,29078","DB00328,8714,8383","Indomethacin,ABCC3,rheumatoid arthritis","drug_protein,disease_protein",3,5
+ruxolitinib_Polycythemia_vera,"15597,1410,29118","DB08877,3716,9891","Ruxolitinib,JAK1,acquired polycythemia vera","drug_protein,disease_protein",3,6
+tiaprofenic_acid_Rheumatoid_arthritis,"15989,9031,29078","DB01600,5742,8383","Tiaprofenic acid,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+Thiopental_Epilepsy,"15834,7615,35641","DB00599,2558,5027","Thiopental,GABRA5,epilepsy","drug_protein,disease_protein",3,6
+pazopanib_Renal_cell_carcinoma,"15205,2160,33643","DB06589,2324,5086","Pazopanib,FLT4,renal cell carcinoma (disease)","drug_protein,disease_protein",3,6
+calcifediol_Renal_osteodystrophy,"14704,12371,33626,84162","DB00146,1594,5520,6946","Calcifediol,CYP27B1,rickets (disease),renal osteodystrophy","drug_protein,disease_protein,disease_disease",4,4
+calcifediol_Hypophosphatemia,"14704,12371,35583,33625","DB00146,1594,2319,313","Calcifediol,CYP27B1,phosphorus metabolism disease,hypophosphatemia (disease)","drug_protein,disease_protein,disease_disease",4,4
+calcifediol_Rickets,"14704,12371,33626","DB00146,1594,5520","Calcifediol,CYP27B1,rickets (disease)","drug_protein,disease_protein",3,4
+vernakalant_Atrial_fibrillation,"15200,5774,33618","DB06217,3752,4981","Vernakalant,KCND3,atrial fibrillation (disease)","drug_protein,disease_protein",3,5
+chlorphenamine_Vasomotor_rhinitis,"14990,8354,83791","DB01114,3269,6004","Chlorpheniramine,HRH1,vasomotor rhinitis","drug_protein,disease_protein",3,4
+cabozantinib_Renal_cell_carcinoma,"15596,4985,33643","DB08875,3791,5086","Cabozantinib,KDR,renal cell carcinoma (disease)","drug_protein,disease_protein",3,6
+piroxicam_Rheumatoid_arthritis,"14191,23956,29078","DB00554,2633,8383","Piroxicam,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,4
+salicylic_acid_Rheumatoid_arthritis,"14262,9031,29078","DB00936,5742,8383","Salicylic acid,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+glipizide_Diabetes_mellitus_type_2,"14293,13257,28208","DB01067,6833,5148","Glipizide,ABCC8,type 2 diabetes mellitus","drug_protein,disease_protein",3,4
+tamibarotene_Acute_promyelocytic_leukemia_F,"14113,740,29361","DB04942,5914,12883","Tamibarotene,RARA,acute promyelocytic leukemia","drug_protein,disease_protein",3,4
+fenoprofen_Rheumatoid_arthritis,"14197,9031,29078","DB00573,5742,8383","Fenoprofen,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,4
+loxoprofen_Rheumatoid_arthritis,"15816,9031,29078","DB09212,5742,8383","Loxoprofen,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,4
+doxepin_Anxiety,"14310,2591,84019","DB01142,6532,11918","Doxepin,SLC6A4,anxiety","drug_protein,disease_protein",3,4
+glibenclamide_Diabetes_mellitus_type_2,"14280,7568,28208","DB01016,3767,5148","Glyburide,KCNJ11,type 2 diabetes mellitus","drug_protein,disease_protein",3,4
+phenobarbital_Epilepsy,"14993,8136,35641","DB01174,1137,5027","Phenobarbital,CHRNA4,epilepsy","drug_protein,disease_protein",3,6
+phenobarbital_Tonic-clonic_seizure,"14993,8136,39815","DB01174,1137,1386","Phenobarbital,CHRNA4,visual epilepsy","drug_protein,disease_protein",3,6
+phenobarbital_Simple_partial_seizure,"14993,8136,36743","DB01174,1137,5384","Phenobarbital,CHRNA4,partial epilepsy","drug_protein,disease_protein",3,6
+risperidone_Autistic_Disorder,"14223,33913,84310","DB00734,3352,5260","Risperidone,HTR1D,autism (disease)","drug_protein,disease_protein",3,4
+salicylsalicylic_acid_Arthritis_Rheumatoid,"15986,9031,29078","DB01399,5742,8383","Salsalate,PTGS1,rheumatoid arthritis","drug_protein,disease_protein",3,5
+tolazamide_Diabetes_Mellitus_Type_2,"15778,7568,28208","DB00839,3767,5148","Tolazamide,KCNJ11,type 2 diabetes mellitus","drug_protein,disease_protein",3,4
+carbimazole_Hyperthyroidism,"14815,24475,6175,36034","DB00389,2910,4524,4425","Carbimazole,Elevated hepatic transaminase,MTHFR,hyperthyroidism","drug_effect,phenotype_protein,disease_protein",4,4
+carbimazole_Graves'_disease,"14815,34594,33657,38784","DB00389,7173,5397,5364","Carbimazole,TPO,goiter (disease),Graves disease","drug_protein,disease_protein,disease_disease",4,4
+lisdexamfetamine_Attention_deficit_hyperactivit,"15159,13617,129257,10319,84036","DB01255,134864,R-HSA-9660821,1816,5302","Lisdexamfetamine,TAAR1,ADORA2B mediated anti-inflammatory cytokines production,DRD5,attention deficit hyperactivity disorder, inattentive type","drug_protein,pathway_protein,pathway_protein,disease_protein",5,8
+hydrocortisone_Arthritis_Rheumatoid,"14028,84874,29078","DB00741,1386,8383","Hydrocortisone,Joint swelling,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,10
+hydrocortisone_Asthma,"14028,13122,33675","DB00741,3291,4979","Hydrocortisone,HSD11B2,asthma","drug_protein,disease_protein",3,10
+hydrocortisone_Berylliosis,"14028,22786,13097,83795","DB00741,4324,1636,15274","Hydrocortisone,Increased body weight,ACE,chronic beryllium disease","drug_effect,phenotype_protein,disease_protein",4,11
+hydrocortisone_Brain_Edema,"14028,23113,32306,35465,83775","DB00741,738,19371,5560,6684","Hydrocortisone,Hallucinations,narcolepsy without cataplexy,brain disease,brain edema","drug_effect,disease_phenotype_positive,disease_disease,disease_disease",5,11
+hydrocortisone_Bursitis,"14028,84373,381,36209,36272","DB00741,100598,3605,6816,2471","Hydrocortisone,Pulmonary edema,IL17A,arthropathy,bursitis","drug_effect,phenotype_protein,disease_protein,disease_disease",5,10
+hydrocortisone_Dermatitis_Atopic,"14028,22550,31731,36129","DB00741,964,7817,4980","Hydrocortisone,Eczema,IgE responsiveness, atopic,atopic eczema","drug_effect,disease_phenotype_positive,disease_disease",4,10
+hydrocortisone_Dermatitis_Contact,"14028,12769,37770","DB00741,1545,5480","Hydrocortisone,CYP1B1,contact dermatitis","drug_protein,disease_protein",3,10
+hydrocortisone_Eye_Diseases,"14028,87212,32496,35823","DB00741,7906,16205,5328","Hydrocortisone,Ocular hypertension,IRVAN syndrome,eye disease","drug_effect,disease_phenotype_positive,disease_disease",4,10
+hydrocortisone_Lupus_Erythematosus_Systemic,"14028,23000,29182","DB00741,1250,7915","Hydrocortisone,Seizure,systemic lupus erythematosus (disease)","drug_effect,disease_phenotype_positive",3,10
+hydrocortisone_Pemphigus,"14028,22581,32154,38016","DB00741,10783,8218,6594","Hydrocortisone,Erythema,Hailey-Hailey disease,pemphigus","drug_effect,disease_phenotype_positive,disease_disease",4,10
+hydrocortisone_Serum_Sickness,"14028,22982,4315,83789","DB00741,12531,213,43789","Hydrocortisone,Pain,ALB,serum sickness","drug_effect,phenotype_protein,disease_protein",4,10
+naproxen_Arthritis_Rheumatoid,"14238,23956,29078","DB00788,2633,8383","Naproxen,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,5
+promazine_Porphyria_Acute_Intermittent,"15098,10106,24284,27843","DB00420,1128,2354,8294","Promazine,CHRM1,Memory impairment,acute intermittent porphyria","drug_protein,phenotype_protein,disease_phenotype_positive",4,8
+methylprednisolone_Arthritis_Rheumatoid,"14269,23956,29078","DB00959,2633,8383","Methylprednisolone,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,9
+methylprednisolone_Asthma,"14269,27007,23175,33675","DB00959,100845,100326,4979","Methylprednisolone,Anaphylactic shock,Immunologic hypersensitivity,asthma","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,10
+methylprednisolone_Lupus_Erythematosus_Systemic,"14269,23000,29182","DB00959,1250,7915","Methylprednisolone,Seizure,systemic lupus erythematosus (disease)","drug_effect,disease_phenotype_positive",3,9
+triamcinolone_Arthritis_Rheumatoid,"14023,23956,29078","DB00620,2633,8383","Triamcinolone,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,9
+triamcinolone_Asthma,"14023,27007,23175,33675","DB00620,100845,100326,4979","Triamcinolone,Anaphylactic shock,Immunologic hypersensitivity,asthma","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,10
+triamcinolone_Lupus_Erythematosus_Systemic,"14023,4425,29182","DB00620,5743,7915","Triamcinolone,PTGS2,systemic lupus erythematosus (disease)","drug_protein,disease_protein",3,9
+cortisone_acetate_Arthritis_Rheumatoid,"15003,509,9376,29078","DB01380,2908,9052,8383","Cortisone acetate,NR3C1,GPRC5A,rheumatoid arthritis","drug_protein,protein_protein,disease_protein",4,9
+cortisone_acetate_Asthma,"15003,509,4738,33675","DB01380,2908,3567,4979","Cortisone acetate,NR3C1,IL5,asthma","drug_protein,protein_protein,disease_protein",4,10
+cortisone_acetate_Lupus_Erythematosus_Systemic,"15003,509,567,29182","DB01380,2908,7332,7915","Cortisone acetate,NR3C1,UBE2L3,systemic lupus erythematosus (disease)","drug_protein,protein_protein,disease_protein",4,9
+prednisolone_Arthritis_Rheumatoid,"14030,23956,29078","DB00860,2633,8383","Prednisolone,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,9
+prednisolone_Asthma,"14030,27007,23175,33675","DB00860,100845,100326,4979","Prednisolone,Anaphylactic shock,Immunologic hypersensitivity,asthma","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,10
+prednisolone_Lupus_Erythematosus_Systemic,"14030,23000,29182","DB00860,1250,7915","Prednisolone,Seizure,systemic lupus erythematosus (disease)","drug_effect,disease_phenotype_positive",3,9
+betamethasone_Arthritis_Rheumatoid,"14019,23956,29078","DB00443,2633,8383","Betamethasone,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,9
+betamethasone_Asthma,"14019,27007,23175,33675","DB00443,100845,100326,4979","Betamethasone,Anaphylactic shock,Immunologic hypersensitivity,asthma","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,10
+betamethasone_Lupus_Erythematosus_Systemic,"14019,22934,29182","DB00443,1873,7915","Betamethasone,Thrombocytopenia,systemic lupus erythematosus (disease)","drug_effect,disease_phenotype_positive",3,9
+prednisone_Angioedema,"14024,4315,39540","DB00635,213,10481","Prednisone,ALB,angioedema","drug_protein,disease_protein",3,4
+prednisone_Arthritis_Psoriatic,"14024,23956,29078,39524","DB00635,2633,8383,11849","Prednisone,Vasculitis,rheumatoid arthritis,psoriatic arthritis","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Arthritis_Rheumatoid,"14024,23956,29078","DB00635,2633,8383","Prednisone,Vasculitis,rheumatoid arthritis","drug_effect,disease_phenotype_positive",3,10
+prednisone_Asthma,"14024,27007,23175,33675","DB00635,100845,100326,4979","Prednisone,Anaphylactic shock,Immunologic hypersensitivity,asthma","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,11
+prednisone_Autoimmune_Diseases,"14024,84771,31511,28478","DB00635,967,8558_19098,7179","Prednisone,Petechiae,autoimmune thrombocytopenic,autoimmune disease","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Berylliosis,"14024,24284,8432,83795","DB00635,2354,3115,15274","Prednisone,Memory impairment,HLA-DPB1,chronic beryllium disease","drug_effect,phenotype_protein,disease_protein",4,4
+prednisone_Dermatitis_Atopic,"14024,84789,29709,36129","DB00635,1041,11292,4980","Prednisone,Facial erythema,dermatitis, atopic,atopic eczema","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Dermatitis_Contact,"14024,12769,37770","DB00635,1545,5480","Prednisone,CYP1B1,contact dermatitis","drug_protein,disease_protein",3,4
+prednisone_Dermatitis_Exfoliative,"14024,23956,28745,36924,83782","DB00635,2633,8054_16367_1907,2406,43233","Prednisone,Vasculitis,dermatomyositis,dermatitis,exfoliative dermatitis","drug_effect,disease_phenotype_positive,disease_disease,disease_disease",5,4
+prednisone_Hodgkin_Disease,"14024,22594,33077","DB00635,975,4952","Prednisone,Hyperhidrosis,Hodgkins lymphoma","drug_effect,disease_phenotype_positive",3,4
+prednisone_Lupus_Erythematosus_Systemic,"14024,23000,29182","DB00635,1250,7915","Prednisone,Seizure,systemic lupus erythematosus (disease)","drug_effect,disease_phenotype_positive",3,10
+prednisone_Lymphoma_Follicular,"14024,25620,33294","DB00635,12378,18906","Prednisone,Fatigue,follicular lymphoma","drug_effect,disease_phenotype_positive",3,4
+prednisone_Lymphoma_T-Cell_Cutaneous,"14024,84767,30990,38708","DB00635,958,9691_15821_45071,607","Prednisone,Dry skin,mycosis fungoides and variants,primary cutaneous T-cell non-Hodgkin lymphoma","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Multiple_Sclerosis,"14024,26954,33400,37722","DB00635,100653,19100,5301","Prednisone,Optic neuritis,neuromyelitis optica,multiple sclerosis","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Musculoskeletal_Diseases,"14024,84441,1760,35750","DB00635,3228,5443,2081","Prednisone,Hypernatremia,POMC,musculoskeletal system disease","drug_effect,phenotype_protein,disease_protein",4,4
+prednisone_Nephrotic_Syndrome,"14024,4315,37756,36604","DB00635,213,2331,5377","Prednisone,ALB,nephrosis,nephrotic syndrome","drug_protein,disease_protein,disease_disease",4,4
+prednisone_Pemphigus,"14024,22581,32154,38016","DB00635,10783,8218,6594","Prednisone,Erythema,Hailey-Hailey disease,pemphigus","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Psoriasis,"14024,25882,30128,38024","DB00635,40189,11269,5083","Prednisone,Scaling skin,psoriasis 2,psoriasis","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Pulmonary_Eosinophilia,"14024,23544,33206,39506","DB00635,3326,19122_5749_44972_15927_4806_17363,4802","Prednisone,Myalgia,eosinophilic pneumonia,pulmonary eosinophilia","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Rheumatic_Heart_Disease,"14024,93451,32052,35669,36433","DB00635,100550,9159,5267,6955","Prednisone,Tendon rupture,Ehlers-Danlos syndrome, cardiac valvular type,heart disease,rheumatic heart disease","drug_effect,disease_phenotype_positive,disease_disease,disease_disease",5,4
+prednisone_Sarcoidosis,"14024,25488,32967","DB00635,836,19338","Prednisone,Hyperthyroidism,sarcoidosis","drug_effect,disease_phenotype_positive",3,4
+prednisone_Serum_Sickness,"14024,4315,83789","DB00635,213,43789","Prednisone,ALB,serum sickness","drug_protein,disease_protein",3,4
+prednisone_Skin_Diseases,"14024,94211,33711,36644","DB00635,100578,6573,5093","Prednisone,Lipoatrophy,lipodystrophy (disease),skin disease","drug_effect,disease_phenotype_positive,disease_disease",4,4
+prednisone_Tennis_Elbow,"14024,22952,27926,35834,84040","DB00635,1945,7244,2614,1875","Prednisone,Fever,Caffey disease,bone inflammation disease,epicondylitis","drug_effect,disease_phenotype_positive,disease_disease,disease_disease",5,4
+prednisone_Thyroiditis,"14024,23950,22173,33576","DB00635,1733,12649,4126","Prednisone,Pancreatitis,Increased inflammatory response,thyroiditis (disease)","drug_effect,phenotype_phenotype,disease_phenotype_positive",4,4
+Acebutolol_Hypertension,"15153,22786,4757,33577","DB01193,4324,2784,5044","Acebutolol,Increased body weight,GNB3,hypertensive disorder","drug_effect,phenotype_protein,disease_protein",4,4
