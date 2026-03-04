@@ -6,6 +6,40 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
+# ── Canonical metric list (used across all functions) ──────────────────────
+METRICS = [
+    'precision',
+    'recall_at_6_hops',
+    'f1_score',
+    'path_length_accuracy',
+    'hub_node_ratio',
+    'edit_distance',
+    'relation_accuracy',
+]
+LOWER_IS_BETTER = {'hub_node_ratio', 'edit_distance'}
+
+ALGO_COLORS = {
+    'Dijkstra':          '#ef4444',
+    'Hub-Penalized':     '#3b82f6',
+    'Meta-Path':         '#8b5cf6',
+    'PageRank-Inverse':  '#f59e0b',
+    'Semantic-Bridging': '#10b981',
+    'Learned A*':        '#ec4899',
+}
+_DEFAULT_COLORS = ['#ef4444', '#3b82f6', '#8b5cf6', '#f59e0b', '#10b981', '#ec4899']
+
+
+def _get_algo_colors(index):
+    return {
+        algo: ALGO_COLORS.get(algo, _DEFAULT_COLORS[i % len(_DEFAULT_COLORS)])
+        for i, algo in enumerate(index)
+    }
+
+
+def _filter_metrics(df):
+    """Return only the canonical METRICS that actually exist in df."""
+    return [m for m in METRICS if m in df.columns]
+
 
 def create_summary_table(summary: pd.DataFrame) -> pd.DataFrame:
     """
@@ -40,17 +74,15 @@ def plot_comparison_heatmap(summary: pd.DataFrame, save_path: str = None):
         save_path: Optional path to save the figure
     """
     # Prepare data
-    lower_is_better = ['hub_node_ratio', 'edit_distance']
-    
     df = summary.copy()
     if 'n_pathways' in df.columns:
         df = df.drop(columns=['n_pathways'])
-    
+    df = df[_filter_metrics(df)]
+
     # Normalize data for coloring (0-1 scale, higher = better)
     normalized = df.copy()
     for col in df.columns:
-        if col in lower_is_better:
-            # Invert so that lower values get higher scores
+        if col in LOWER_IS_BETTER:
             normalized[col] = 1 - (df[col] - df[col].min()) / (df[col].max() - df[col].min() + 1e-10)
         else:
             normalized[col] = (df[col] - df[col].min()) / (df[col].max() - df[col].min() + 1e-10)
@@ -76,7 +108,7 @@ def plot_comparison_heatmap(summary: pd.DataFrame, save_path: str = None):
             
             # Add marker for best value
             is_best = False
-            if df.columns[j] in lower_is_better:
+            if df.columns[j] in LOWER_IS_BETTER:
                 is_best = value == df.iloc[:, j].min()
             else:
                 is_best = value == df.iloc[:, j].max()
@@ -97,7 +129,7 @@ def plot_comparison_heatmap(summary: pd.DataFrame, save_path: str = None):
                 fontsize=14, fontweight='bold', pad=20)
     
     # Add note about lower-is-better metrics
-    ax.text(0.5, -0.15, '* hub_node_ratio and edit_distance: lower is better (colors inverted)', 
+    ax.text(0.5, -0.15, '* hub_node_ratio and edit_distance: lower is better (colors inverted)',
            transform=ax.transAxes, ha='center', fontsize=9, style='italic', color='gray')
     
     plt.tight_layout()
@@ -112,62 +144,40 @@ def plot_comparison_heatmap(summary: pd.DataFrame, save_path: str = None):
 def plot_radar_chart(summary: pd.DataFrame, save_path: str = None):
     """
     Create a radar/spider chart comparing algorithms.
-    
-    Args:
-        summary: DataFrame from generate_summary()
-        save_path: Optional path to save the figure
+    Uses all canonical metrics except lower-is-better ones for a cleaner chart.
     """
-    # Select key metrics for radar chart
-    metrics = ['precision', 'recall_at_6_hops', 'f1_score', 
-               'path_length_accuracy', 'relation_accuracy', 'mrr']
-    
     df = summary.copy()
-    
-    # Filter to available metrics
-    metrics = [m for m in metrics if m in df.columns]
-    
-    # Number of variables
+    if 'n_pathways' in df.columns:
+        df = df.drop(columns=['n_pathways'])
+
+    metrics = [m for m in _filter_metrics(df) if m not in LOWER_IS_BETTER]
+    algo_colors = _get_algo_colors(df.index)
+
     num_vars = len(metrics)
-    
-    # Compute angle for each metric
     angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
-    angles += angles[:1]  # Complete the loop
-    
-    # Create figure
+    angles += angles[:1]
+
     fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(polar=True))
-    
-    # Colors for each algorithm
-    colors = ['#e74c3c', '#3498db', '#2ecc71', '#9b59b6', '#f39c12']
-    
-    # Plot each algorithm
-    for idx, (algo_name, row) in enumerate(df.iterrows()):
-        values = [row[m] for m in metrics]
-        values += values[:1]  # Complete the loop
-        
-        ax.plot(angles, values, 'o-', linewidth=2, label=algo_name, color=colors[idx % len(colors)])
-        ax.fill(angles, values, alpha=0.15, color=colors[idx % len(colors)])
-    
-    # Set labels
+
+    for algo_name, row in df.iterrows():
+        values = [row[m] for m in metrics] + [row[metrics[0]]]
+        color = algo_colors[algo_name]
+        ax.plot(angles, values, 'o-', linewidth=2, label=algo_name, color=color)
+        ax.fill(angles, values, alpha=0.15, color=color)
+
     ax.set_xticks(angles[:-1])
     ax.set_xticklabels(metrics, fontsize=11)
-    
-    # Set y-axis limits
     ax.set_ylim(0, 1.1)
-    
-    # Add legend
     ax.legend(loc='upper right', bbox_to_anchor=(1.3, 1.0), fontsize=11)
-    
-    # Title
-    ax.set_title('Algorithm Performance Radar Chart\n(Higher = Better)', 
+    ax.set_title('Algorithm Performance Radar Chart\n(Higher = Better)',
                 fontsize=14, fontweight='bold', pad=20)
-    
+
     plt.tight_layout()
-    
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
         print(f"✓ Saved: {save_path}")
-    
     plt.show()
+
 
 
 def plot_metric_bars(summary: pd.DataFrame, save_path: str = None):
@@ -181,18 +191,16 @@ def plot_metric_bars(summary: pd.DataFrame, save_path: str = None):
     df = summary.copy()
     if 'n_pathways' in df.columns:
         df = df.drop(columns=['n_pathways'])
-    
-    # Define metric groups
+
+    # Define metric groups (only from canonical METRICS, no mrr)
     metric_groups = {
-        'Node Accuracy': ['precision', 'recall_at_6_hops', 'f1_score'],
-        'Path Quality': ['path_length_accuracy', 'mrr'],
-        'Structural Similarity': ['edit_distance', 'relation_accuracy'],
-        'Hub Avoidance': ['hub_node_ratio']
+        'Node Accuracy':        ['precision', 'recall_at_6_hops', 'f1_score'],
+        'Path Quality':         ['path_length_accuracy'],
+        'Structural Similarity':['edit_distance', 'relation_accuracy'],
+        'Hub Avoidance':        ['hub_node_ratio'],
     }
-    
-    # Colors for algorithms
-    colors = ['#e74c3c', '#3498db', '#2ecc71', '#9b59b6', '#f39c12']
-    algo_colors = {algo: colors[i % len(colors)] for i, algo in enumerate(df.index)}
+
+    algo_colors = _get_algo_colors(df.index)
     
     # Create subplots
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -231,7 +239,7 @@ def plot_metric_bars(summary: pd.DataFrame, save_path: str = None):
         ax.grid(axis='y', alpha=0.3)
         
         # Add note for lower-is-better metrics
-        lower_better = [m for m in metrics if m in ['hub_node_ratio', 'edit_distance']]
+        lower_better = [m for m in metrics if m in LOWER_IS_BETTER]
         if lower_better:
             ax.text(0.5, -0.25, f'* {", ".join(lower_better)}: lower is better',
                    transform=ax.transAxes, ha='center', fontsize=8, style='italic', color='gray')
@@ -254,17 +262,18 @@ def plot_best_algorithm_summary(summary: pd.DataFrame, save_path: str = None):
         summary: DataFrame from generate_summary()
         save_path: Optional path to save the figure
     """
-    lower_is_better = ['hub_node_ratio', 'edit_distance']
-    
     df = summary.copy()
     if 'n_pathways' in df.columns:
         df = df.drop(columns=['n_pathways'])
-    
+    df = df[_filter_metrics(df)]
+
+    algo_colors = _get_algo_colors(df.index)
+
     # Find best algorithm for each metric
     best_algos = {}
     best_values = {}
     for col in df.columns:
-        if col in lower_is_better:
+        if col in LOWER_IS_BETTER:
             best_algos[col] = df[col].idxmin()
             best_values[col] = df[col].min()
         else:
@@ -273,14 +282,10 @@ def plot_best_algorithm_summary(summary: pd.DataFrame, save_path: str = None):
     
     # Count wins per algorithm
     win_counts = pd.Series(best_algos.values()).value_counts()
-    
-    # Create figure with two subplots
+
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
-    
+
     # Plot 1: Best algorithm per metric
-    colors = ['#e74c3c', '#3498db', '#2ecc71', '#9b59b6', '#f39c12']
-    algo_colors = {algo: colors[i % len(colors)] for i, algo in enumerate(df.index)}
-    
     metrics = list(best_algos.keys())
     y_pos = np.arange(len(metrics))
     
@@ -295,7 +300,7 @@ def plot_best_algorithm_summary(summary: pd.DataFrame, save_path: str = None):
     # Add algorithm names on bars
     for i, (bar, metric) in enumerate(zip(bars, metrics)):
         algo = best_algos[metric]
-        note = ' (↓)' if metric in lower_is_better else ''
+        note = ' (↓)' if metric in LOWER_IS_BETTER else ''
         ax1.text(bar.get_width() + 0.02, bar.get_y() + bar.get_height()/2,
                 f'{algo}{note}', ha='left', va='center', fontsize=10, fontweight='bold')
     
@@ -373,12 +378,12 @@ def generate_full_report(summary: pd.DataFrame, save_prefix: str = 'algorithm_co
 def display_summary_table(summary: pd.DataFrame):
     """
     Print a nicely formatted summary table in the terminal.
+    Only shows the 7 canonical metrics; no mrr.
     """
-    lower_is_better = ['hub_node_ratio', 'edit_distance']
-    
     df = summary.copy()
     if 'n_pathways' in df.columns:
         df = df.drop(columns=['n_pathways'])
+    df = df[_filter_metrics(df)]
     
     print("\n" + "="*100)
     print("ALGORITHM COMPARISON SUMMARY")
@@ -396,7 +401,7 @@ def display_summary_table(summary: pd.DataFrame):
         print(f"{col:<25}", end='')
         
         # Find best
-        if col in lower_is_better:
+        if col in LOWER_IS_BETTER:
             best_val = df[col].min()
             best_algo = df[col].idxmin()
         else:
@@ -408,7 +413,7 @@ def display_summary_table(summary: pd.DataFrame):
             marker = "★" if val == best_val else " "
             print(f"{marker}{val:>16.4f}", end='')
         
-        note = " (↓)" if col in lower_is_better else ""
+        note = " (↓)" if col in LOWER_IS_BETTER else ""
         print(f"{best_algo:>14}{note}")
     
     print("="*100)
