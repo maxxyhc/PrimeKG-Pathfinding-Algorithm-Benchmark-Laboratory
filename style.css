@@ -63,9 +63,9 @@ header .subtitle {
 
 .main-nav a {
     display: inline-block;
-    padding: 8px 18px;
+    padding: 10px 22px;          /* larger pill */
     border-radius: 999px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;          /* slightly larger text */
     font-weight: 500;
     color: #f5f0ff;
     text-decoration: none;
@@ -77,6 +77,17 @@ header .subtitle {
         box-shadow 0.2s ease,
         transform 0.1s ease;
 }
+
+/* NO underlines ever */
+.main-nav a,
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a:active,
+.main-nav a:visited {
+    text-decoration: none !important;
+}
+
+
 
 .main-nav a:hover {
     background-color: rgba(255,255,255,0.15);
@@ -91,6 +102,8 @@ header .subtitle {
     border-color: rgba(255,255,255,0.7);
     box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
+
+
 
 /* Main Content */
 main {
@@ -448,72 +461,113 @@ footer a {
     box-shadow: 0 1px 6px rgba(0,0,0,0.18);
 }
 
-/* Tooltip styling */
+/* Tooltip styling - much larger with scrolling */
 .graph-tooltip {
     background: #111827;
     color: #f9fafb;
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-size: 0.78rem;
-    max-width: 260px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    padding: 16px 18px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    max-width: 480px;        /* much wider */
+    min-width: 320px;        /* minimum size */
+    max-height: 400px;       /* height limit */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     z-index: 9999;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;        /* ensure container clips scrollable content */
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .graph-tooltip .tooltip-title {
-    font-weight: 600;
-    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 8px;
     color: #e5e7eb;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .graph-tooltip .tooltip-meta {
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
 }
 
 .graph-tooltip .tooltip-meta div {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .graph-tooltip .tooltip-section-label {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     color: #9ca3af;
-    margin-top: 4px;
-    margin-bottom: 2px;
+    margin: 8px 0 4px 0;
+    font-weight: 600;
 }
 
 .graph-tooltip .tooltip-rel-container {
-    max-height: 120px;
-    overflow-y: auto;
+    max-height: 220px;       /* much taller scrollable area */
+    overflow-y: auto;        /* scrollable! */
+    padding-right: 4px;      /* room for scrollbar */
+    scrollbar-width: thin;   /* Firefox */
+    scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+.graph-tooltip .tooltip-rel-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.graph-tooltip .tooltip-rel-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.graph-tooltip .tooltip-rel-container::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 3px;
 }
 
 .graph-tooltip .tooltip-rel {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px 4px;
-    margin-bottom: 2px;
+    gap: 4px 6px;
+    margin-bottom: 4px;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.graph-tooltip .tooltip-rel:last-child {
+    border-bottom: none;
 }
 
 .graph-tooltip .tooltip-rel-name {
-    font-weight: 500;
+    font-weight: 600;
     color: #e5e7eb;
+    flex: 1;
+    min-width: 0;           /* allow shrinking */
 }
 
 .graph-tooltip .tooltip-rel-type {
     color: #a5b4fc;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 .graph-tooltip .tooltip-rel-edge {
     color: #fbbf24;
-    font-size: 0.72rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 .graph-tooltip .tooltip-empty {
     color: #9ca3af;
     font-style: italic;
+    padding: 12px;
+    text-align: center;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
