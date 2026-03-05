@@ -1,39 +1,27 @@
-# PrimeKG Pathfinding Algorithm Benchmark Laboratory
+PrimeKG Pathfinding Algorithm Benchmark Laboratory
+A benchmarking framework for evaluating graph pathfinding algorithms on the task of drug mechanism-of-action (MoA) discovery using the PrimeKG biomedical knowledge graph.
+Given a drug and a disease, can a graph algorithm recover the mechanistic pathway — the chain of proteins, biological processes, and anatomical structures that explains how the drug treats the disease?
+Overview
+We evaluate 8 pathfinding algorithms across 2 phases against 150 curated ground truth pathways (4–11 nodes each) extracted from DrugMechDB and mapped onto PrimeKG.
+Algorithms
+Phase 1 — Edge Weighting
+#AlgorithmStrategyAvg Time/Pathway1DijkstraUnweighted baseline0.03 ms2Hub-PenalizedPenalizes high-degree hub nodes (w = 1 + α·log(degree))2,049 ms3PageRank-InversePrefers low-centrality nodes (w = 1/(1 + PageRank))4,929 ms4Learned A*Spectral embeddings + MLP-learned edge weights + A* search38,072 ms5Semantic BridgingTF-IDF cosine similarity edge weighting3,394 ms
+Phase 2 — Search Strategy
+#AlgorithmStrategy6Bidirectional ★Forward + backward Dijkstra; meets in the middle7K-Shortest + Biok=4 candidate paths, re-ranked by biological plausibility8Bidir + Relation WeightingBidirectional search with enrichment-informed edge weights
+Key Results (150 pathways, ≥ 4 nodes)
+Phase 1 — Edge Weighting
+MetricDijkstraHub-PenalizedPageRank-InverseLearned A*Semantic BridgingF1 Score ↑0.5450.5400.5470.4600.557Edit Distance ↓0.6150.5510.5440.6170.537
 
-A benchmarking framework for evaluating graph pathfinding algorithms on the task of **drug mechanism-of-action (MoA) discovery** using the [PrimeKG](https://github.com/mims-harvard/PrimeKG) biomedical knowledge graph.
+Phase 1 F1 spread = 0.023. Edge weighting alone does not significantly differentiate algorithms — graph topology dominates.
 
-Given a drug and a disease, can a graph algorithm recover the *mechanistic pathway* — the chain of proteins, biological processes, and anatomical structures that explains *how* the drug treats the disease?
+Phase 2 — Search Strategy
+MetricBidirectional ★K-Shortest + BioBidir + Rel. WtF1 Score ↑0.5710.5550.549Edit Distance ↓0.4290.4450.451
 
-## Overview
+Bidirectional search produces the first statistically significant improvement. Edit distance gain vs. Dijkstra: −0.186 (p < 0.000001, Cohen's d = −1.334).
 
-We evaluate **5 pathfinding algorithms** against **150 curated ground truth pathways** (4–11 nodes each) extracted from [DrugMechDB](https://drugmechdb.github.io/) and mapped onto PrimeKG.
+Full results: algos_/evaluation_results_all_algorithms.csv
 
-### Algorithms
-
-| # | Algorithm | Strategy | Avg Time/Pathway |
-|---|-----------|----------|-----------------|
-| 1 | **Shortest Path** | Unweighted BFS baseline | 0.03 ms |
-| 2 | **Hub-Penalized** | Penalizes high-degree hub nodes (`w = 1 + α·log(degree)`) | 2,049 ms |
-| 3 | **PageRank-Inverse** | Prefers low-centrality nodes (`w = 1/(1 + PageRank)`) | 4,929 ms |
-| 4 | **Learned A\*** | Spectral embeddings + MLP-learned edge weights + A* search | 38,072 ms |
-| 5 | **Semantic Bridging** | TF-IDF cosine similarity edge weighting | 3,394 ms |
-
-### Key Results (150 pathways, ≥ 4 nodes)
-
-| Metric | Shortest Path | Hub-Penalized | PageRank-Inverse | Learned A* | Semantic Bridging |
-|--------|:---:|:---:|:---:|:---:|:---:|
-| **F1 Score** ↑ | 0.545 | 0.540 | 0.547 | 0.460 | **0.565** |
-| **Recall** ↑ | 0.385 | 0.454 | 0.462 | **0.504** | 0.474 |
-| **Relation Accuracy** ↑ | 0.307 | 0.546 | 0.477 | 0.583 | **0.629** |
-| **Edit Distance** ↓ | 0.615 | 0.551 | 0.544 | 0.617 | **0.531** |
-| **Hub Ratio** ↓ | 0.693 | **0.594** | 0.763 | 0.782 | 0.700 |
-| **Path Length MAE** ↓ | 3.827 | 2.553 | 2.553 | **2.427** | 2.553 |
-
-**Semantic Bridging** is the best overall performer. Full analysis is in `algos_/evaluation_results_all_algorithms.csv`.
-
-## Repository Structure
-
-```
+Repository Structure
 .
 ├── algos_/                          ← Main benchmark (run from here)
 │   ├── primekg_benchmark_.ipynb     ← Self-contained benchmark notebook
@@ -45,13 +33,13 @@ We evaluate **5 pathfinding algorithms** against **150 curated ground truth path
 │   └── timing_comparison.png
 │
 ├── data/
-│   ├── raw/                         ← PrimeKG source files (NOT in repo — see Setup)
+│   ├── raw/                         ← PrimeKG source files (NOT in repo — download below)
 │   │   ├── nodes.csv
 │   │   ├── edges.csv
 │   │   └── ...
-│   └── processed/                   ← Ground truth + cleaned data
-│       ├── benchmark_pathways_nodes.csv   ← 150 curated pathways (in repo)
-│       ├── benchmark_pathways_edges.csv   ← Pathway edge annotations (in repo)
+│   └── processed/                   ← Ground truth pathways (included in repo)
+│       ├── benchmark_pathways_nodes.csv   ← 150 curated pathways
+│       ├── benchmark_pathways_edges.csv   ← Pathway edge annotations
 │       └── ...
 │
 ├── notebook/                        ← Legacy multi-file version (kept for reference)
@@ -70,132 +58,95 @@ We evaluate **5 pathfinding algorithms** against **150 curated ground truth path
 │
 ├── requirements.txt
 └── README.md
-```
 
-### A note on `notebook/`
+Note on notebook/: An earlier multi-file version where algorithms, metrics, and helpers lived in separate .py files. Kept for reference only. The primary notebook is algos_/primekg_benchmark_.ipynb, which is fully self-contained.
 
-The `notebook/` directory contains an earlier multi-file version of the benchmark where algorithms, evaluation helpers, and metrics lived in separate `.py` files. It is kept for reference and testing purposes. **The primary notebook is `algos_/primekg_benchmark_.ipynb`**, which is fully self-contained — all algorithms, metrics, and helpers are defined inline with no external imports required.
 
-## Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory.git
+Setup
+1. Clone the repository
+bashgit clone https://github.com/maxxyhc/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory.git
 cd PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory
-```
+2. Install dependencies
+bashpip install -r requirements.txt
+Requires Python 3.9+. Core dependencies: pandas, numpy, networkx, scikit-learn, scipy, matplotlib.
+3. Download PrimeKG data
+The raw PrimeKG files are too large to store in the repository. Download them directly from Harvard Dataverse:
+→ Harvard Dataverse: PrimeKG
+Download these two files:
 
-### 2. Install dependencies
+nodes.csv (~5 MB)
+edges.csv (~60 MB)
 
-```bash
-pip install -r requirements.txt
-```
-
-Requires Python 3.9+. Core dependencies: `pandas`, `numpy`, `networkx`, `scikit-learn`, `scipy`, `matplotlib`.
-
-### 3. Download PrimeKG data
-
-The raw PrimeKG knowledge graph files (`nodes.csv` and `edges.csv`) are too large to store in the repository. Download them manually:
-
-1. Go to the **Harvard Dataverse PrimeKG page**:  
-   [https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IXA7BM](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IXA7BM)
-
-2. Download these files:
-   - `nodes.csv` (~5 MB)
-   - `edges.csv` (~60 MB)
-
-3. Place them in `data/raw/`:
-
-```
+Place them in data/raw/:
 data/
 └── raw/
-    ├── nodes.csv      ← Download from Harvard Dataverse
-    └── edges.csv      ← Download from Harvard Dataverse
-```
-
-**Expected formats:**
-
-`nodes.csv`:
-```csv
-node_index,node_id,node_type,node_name,node_source
+    ├── nodes.csv      ← from Harvard Dataverse
+    └── edges.csv      ← from Harvard Dataverse
+Expected formats:
+nodes.csv:
+csvnode_index,node_id,node_type,node_name,node_source
 0,9796,gene/protein,PHYHIP,NCBI
 1,7918,gene/protein,GPANK1,NCBI
-```
-
-`edges.csv`:
-```csv
-relation,display_relation,x_index,y_index
+edges.csv:
+csvrelation,display_relation,x_index,y_index
 protein_protein,ppi,0,8889
 protein_protein,ppi,1,2798
-```
-
-### 4. Ground truth pathways (already in the repo)
-
-The curated ground truth pathways are included in the repository — no extra download needed:
-
-- `data/processed/benchmark_pathways_nodes.csv` — 343 pathways (1,456 nodes total), 150 with ≥ 4 nodes
-- `data/processed/benchmark_pathways_edges.csv` — 1,113 annotated pathway edges
-
-These were extracted from [DrugMechDB](https://drugmechdb.github.io/) and mapped onto PrimeKG node indices using the pipeline in `Ground_Truth_automation/`.
-
-### 5. Run the benchmark
-
-Open and run the notebook top-to-bottom:
-
-```bash
-jupyter notebook algos_/primekg_benchmark_.ipynb
-```
-
+4. Ground truth pathways (already in the repo)
+The curated ground truth pathways are included — no extra download needed:
+FileDescriptiondata/processed/benchmark_pathways_nodes.csv343 pathways (1,456 nodes total); 150 with ≥ 4 nodes used for benchmarkingdata/processed/benchmark_pathways_edges.csv1,113 annotated pathway edges
+These were extracted from DrugMechDB and mapped onto PrimeKG node indices using the pipeline in Ground_Truth_automation/.
+5. Run the benchmark
+bashjupyter notebook algos_/primekg_benchmark_.ipynb
 The notebook will:
-1. Load PrimeKG and ground truth data
-2. Filter to pathways with ≥ 4 nodes (150 pathways)
-3. Build the knowledge graph (~129K nodes, ~8M edges)
-4. Run all 5 algorithms on all 150 pathways
-5. Evaluate with 9 metrics per algorithm per pathway
-6. Generate comparison figures and export CSVs
 
-> **Expected runtime:** ~90–120 minutes total. Learned A* dominates at ~38s/pathway (~95 min). The other 4 algorithms finish in under 10 minutes combined.
+Load PrimeKG and ground truth data
+Filter to pathways with ≥ 4 nodes (150 pathways)
+Build the knowledge graph (~129K nodes, ~8M edges)
+Run all 8 algorithms on all 150 pathways
+Evaluate with 9 metrics per algorithm per pathway
+Generate comparison figures and export CSVs
 
-## Evaluation Metrics
 
-| Category | Metric | Description |
-|----------|--------|-------------|
-| **Node Accuracy** | Precision | Fraction of predicted nodes that are in ground truth |
-| | Recall | Fraction of ground truth nodes recovered |
-| | F1 Score | Harmonic mean of precision and recall |
-| **Target Finding** | Hits@1, @3, @5 | Whether the disease appears in the last k predicted nodes |
-| **Mechanistic Quality** | Relation Accuracy | Fraction of predicted edge types found in ground truth |
-| | Edit Distance | Normalized Levenshtein distance between node sequences (0 = perfect) |
-| | Hub Node Ratio | Fraction of path nodes that are high-degree hubs (lower is better) |
-| **Efficiency** | Path Length MAE | Absolute difference between predicted and ground truth path length |
-| | Speed | Wall-clock time per pathway in milliseconds |
+Expected runtime: ~90–120 minutes total. Learned A* dominates at ~38s/pathway (~95 min). All other algorithms finish in under 15 minutes combined.
 
-## Ground Truth Construction
 
-Ground truth pathways were sourced from [DrugMechDB](https://drugmechdb.github.io/), a curated database of drug mechanism-of-action pathways. Each pathway was:
+Evaluation Metrics
+CategoryMetricDescriptionNode AccuracyPrecisionFraction of predicted nodes that are in ground truthRecallFraction of ground truth nodes recoveredF1 ScoreHarmonic mean of precision and recallTarget FindingHits@1, @3, @5Whether the disease appears in the last k predicted nodesMechanistic QualityRelation AccuracyFraction of predicted edge types found in ground truthEdit DistanceNormalized Levenshtein distance between node sequences (0 = perfect)Hub Node RatioFraction of path nodes that are high-degree hubs (lower is better)EfficiencyPath Length MAEAbsolute difference between predicted and ground truth path lengthSpeedWall-clock time per pathway in milliseconds
 
-1. Parsed from DrugMechDB's YAML format
-2. Mapped onto PrimeKG using identifier lookups (DrugBank → PrimeKG drug index, UniProt → PrimeKG protein index, MESH/MONDO → PrimeKG disease index)
-3. Validated to ensure all nodes and edges exist in PrimeKG
-4. Filtered to retain only fully-mapped pathways
+Key Findings
 
-The extraction and mapping pipeline is in `Ground_Truth_automation/`.
+Edge weighting alone doesn't matter. Phase 1 F1 spread = 0.023 across 5 algorithms; 0/10 pairwise comparisons are statistically significant. Graph topology dominates over weighting strategy.
+Bidirectional search is the first real improvement. Searching from both drug and disease simultaneously cuts edit distance by 0.186 vs. Dijkstra (p < 0.000001). Adding biological signals on top made results worse — the search strategy already implicitly captures mechanistic grammar.
+The core problem is path length. Average predicted path = 3.4 nodes; average ground truth = 5.8 nodes. 68% of bidirectional paths are exactly 3 nodes. The task effectively reduces to picking one intermediate.
+Hub shortcuts are the dominant failure mode. 43% of failures involve routing through high-degree hub nodes (e.g., Seizure: 4,218 connections) that are structurally close to everything but mechanistically irrelevant.
+The first edge determines everything. Paths starting with drug_protein achieve F1 = 0.604; paths starting with drug_effect achieve F1 = 0.437 (gap: +0.167, p = 0.000004). All 30 drugs that route through side effects have protein edges available — the algorithm chooses the side-effect route because it's shorter. Penalizing shortcuts just reveals the next shortcut layer.
+Performance degrades sharply with pathway length. F1 drops from ~0.66 (4-node pathways) to ~0.26 (10-node pathways). No algorithm reliably reconstructs long mechanistic chains.
 
-## Known Limitations
 
-- **Shortest Path is degenerate** — uses `indication` shortcut edges on 100% of pathways, producing 2-node direct paths rather than mechanistic routes
-- **Performance degrades on long pathways** — F1 drops from ~0.65 (4 nodes) to ~0.30 (10+ nodes); no algorithm reliably reconstructs long mechanistic chains
-- **Side-effect routing** — weighted algorithms frequently route through phenotype/side-effect edges rather than the true molecular mechanism
-- **Bidirectional edges** — the graph treats all edges as bidirectional with identical relation labels, erasing biological directionality
-- **Learned A\* data leakage** — currently trains and evaluates on the same pathways without cross-validation
+Ground Truth Construction
+Ground truth pathways were sourced from DrugMechDB, a curated database of drug mechanism-of-action pathways. Each pathway was:
 
-## Citation
+Parsed from DrugMechDB's YAML format
+Mapped onto PrimeKG using identifier lookups (DrugBank → PrimeKG drug index, UniProt → PrimeKG protein index, MESH/MONDO → PrimeKG disease index)
+Validated to ensure all nodes and edges exist in PrimeKG
+Filtered to retain only fully-mapped pathways
 
+The extraction and mapping pipeline is in Ground_Truth_automation/.
+
+Known Limitations
+
+Shortest path is degenerate — uses indication shortcut edges on 100% of pathways, producing 2-node direct paths rather than mechanistic routes
+Performance degrades on long pathways — F1 drops from ~0.65 (4 nodes) to ~0.30 (10+ nodes); no algorithm reliably reconstructs long mechanistic chains
+Side-effect routing — weighted algorithms frequently route through phenotype/side-effect edges rather than the true molecular mechanism
+Bidirectional edges — the graph treats all edges as bidirectional with identical relation labels, erasing biological directionality
+Learned A* data leakage — currently trains and evaluates on the same pathways without cross-validation
+
+
+Citation
 If you use this benchmark, please cite:
 
-- **PrimeKG:** Chandak, P., Huang, K., & Zitnik, M. (2023). Building a knowledge graph to enable precision medicine. *Scientific Data*, 10(1), 67.
-- **DrugMechDB:** Mayers, M., et al. (2022). DrugMechDB: A Curated Database of Drug Mechanisms of Action. *Scientific Data*, 9(1), 648.
+PrimeKG: Chandak, P., Huang, K., & Zitnik, M. (2023). Building a knowledge graph to enable precision medicine. Scientific Data, 10(1), 67.
+DrugMechDB: Mayers, M., et al. (2022). DrugMechDB: A Curated Database of Drug Mechanisms of Action. Scientific Data, 9(1), 648.
 
-## License
-
-This project uses PrimeKG data licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Ground truth pathways are derived from [DrugMechDB](https://drugmechdb.github.io/).
+License
+This project uses PrimeKG data licensed under CC BY 4.0. Ground truth pathways are derived from DrugMechDB.
