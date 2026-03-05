@@ -1,105 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrimeKG – Ground Truths & Methods</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-  <div class="container">
-    <h1>PrimeKG Pathfinding Algorithm Benchmark Laboratory</h1>
-    <p class="subtitle">Benchmarking Graph Algorithms for Drug Repurposing Discovery</p>
-
-    <nav class="main-nav" style="margin-top: 20px;">
-      <a href="index.html">Overview</a>
-      <a href="groundtruths.html" class="active">Ground Truths & Methods</a>
-      <a href="results.html">Results</a>
-    </nav>
-  </div>
-</header>
-
-
-  <main class="container">
-    
-    <section id="groundtruth-graph">
-      <h2>Ground Truth Pathways</h2>
-      <p>
-        We curate mechanistically validated drug–mechanism–disease pathways from literature and 
-        pharmacological databases. Each pathway is represented as a sequence of nodes 
-        (drug → targets → pathways / processes → disease) in PrimeKG.
-      </p>
-      <p>
-        Below is a placeholder for an interactive graph visualization of all curated ground truth pathways.
-      </p>
-
-      <div class="pathway-container" style="min-height: 300px;">
-        
-        <p style="text-align:center; color:#888; margin-top: 80px;">
-          Interactive ground truth graph visualization coming soon.
-        </p>
-      </div>
-        
-
-
-      
-    </section>
-
-    
-    <section id="methodology">
-      <h2>Methodology</h2>
-      <ol class="methodology-list">
-        <li>
-          <strong>Curate Ground Truth Pathways:</strong> Collect validated drug–mechanism–disease 
-          pathways from literature and pharmacological databases.
-        </li>
-        <li>
-          <strong>Implement Pathfinding Algorithms:</strong> Benchmark BFS, Dijkstra, A*, 
-          PageRank‑inverse, and learned‑edge‑weight algorithms on PrimeKG.
-        </li>
-        <li>
-          <strong>Benchmark Against Ground Truth:</strong> Evaluate how often algorithms 
-          recover the mechanistically correct pathway vs. taking hub‑driven shortcuts.
-        </li>
-        <li>
-          <strong>Develop Quality Metrics:</strong> Score paths based on biological plausibility, 
-          hub avoidance, and mechanistic coherence, not just shortest distance.
-        </li>
-      </ol>
-    </section>
-
-   
-    <section id="repository">
-      <h2>Repository Structure</h2>
-      <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
-├── data/
-│   └── ground_truths/
-│       ├── ground_truth_final.csv    # Validated pathway nodes
-│       └── pathway_edges_final.csv   # Pathway edge relationships
-├── notebooks/
-│   └── exploration.ipynb             # EDA and algorithm development
-├── src/
-│   └── prepare_primekg.py            # Data preprocessing scripts
-└── README.md</code></pre>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>PrimeKG Pathfinding Algorithm Benchmark Laboratory</p>
-      <p>
-        <a href="https://github.com/maxxyhc/PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory" target="_blank">
-          View on GitHub
-        </a>
-      </p>
-    </div>
-  </footer>
-</body>
-</html>
- -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,8 +33,17 @@
         Below is an interactive graph visualization of all curated ground truth pathways.
       </p>
 
+      <!-- Styled dropdown + reset -->
+      <div class="pathway-controls">
+        <label for="pathwaySelect" class="pathway-label">
+          <strong>Select Ground Truth Pathway:</strong>
+        </label>
+        <select id="pathwaySelect" class="pathway-select"></select>
+        <button id="resetGraph" class="pathway-reset-btn">Reset View</button>
+      </div>
+
       <div class="pathway-container" style="min-height: 300px;">
-        <div id="groundtruth-graph-viz" style="width: 100%; height: 600px;"></div>
+        <div id="groundtruth-graph-viz" style="width: 100%; height: 700px;"></div>
       </div>
     </section>
 
@@ -194,19 +101,26 @@
   <script type="module">
     import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-    // Load subgraph data (nodes + links) – create this JSON from your CSVs
-    const graphData = await d3.json("subgraph.json");
+    // Load graph data
+    const graphData = await d3.json("subgraph_with_pathways.json");
 
-    const width = document.getElementById("groundtruth-graph-viz").clientWidth;
-    const height = 600;
+    const container = document.getElementById("groundtruth-graph-viz");
+    const width = container.clientWidth || 1000;
+    const height = 700;
 
     const svgRoot = d3.select("#groundtruth-graph-viz")
       .append("svg")
       .attr("width", width)
-      .attr("height", height);
+      .attr("height", height)
+      .style("border", "1px solid #eee")
+      .style("background", "#ffffff")
+      .style("cursor", "grab");
 
     const g = svgRoot.append("g");
 
+    /* -------------------------
+       ZOOM / PAN (mouse wheel + drag)
+    -------------------------- */
     const zoomBehavior = d3.zoom()
       .scaleExtent([0.2, 5])
       .on("zoom", (event) => {
@@ -215,36 +129,150 @@
 
     svgRoot.call(zoomBehavior);
 
-    const link = g.selectAll("line")
+    svgRoot.on("mousedown", () => svgRoot.style("cursor", "grabbing"));
+    svgRoot.on("mouseup", () => svgRoot.style("cursor", "grab"));
+
+    /* -------------------------
+       TOOLTIP DIV
+    -------------------------- */
+    const tooltip = d3.select("body")
+      .append("div")
+      .attr("class", "graph-tooltip")
+      .style("position", "absolute")
+      .style("pointer-events", "none")
+      .style("opacity", 0);
+
+    /* -------------------------
+       PATHWAY DROPDOWN
+    -------------------------- */
+    const pathwayIds = [...new Set(graphData.links.map(l => l.pathway_id))].sort();
+
+    const select = d3.select("#pathwaySelect");
+    select.selectAll("option")
+      .data(pathwayIds)
+      .enter()
+      .append("option")
+      .attr("value", d => d)
+      .text(d => d.replaceAll("_", " "));
+
+    /* -------------------------
+       DEGREE-BASED NODE SIZE
+    -------------------------- */
+    const degreeMap = new Map();
+    graphData.nodes.forEach(n => degreeMap.set(n.id, 0));
+    graphData.links.forEach(l => {
+      const sid = l.source.id ?? l.source;
+      const tid = l.target.id ?? l.target;
+      degreeMap.set(sid, (degreeMap.get(sid) || 0) + 1);
+      degreeMap.set(tid, (degreeMap.get(tid) || 0) + 1);
+    });
+
+    function radiusForNode(n) {
+      const deg = degreeMap.get(n.id) || 0;
+      // base radius 9, plus up to about +7 based on degree
+      return 9 + Math.min(deg, 8) * 0.9;
+    }
+
+    /* -------------------------
+       EDGES (thicker, more visible)
+    -------------------------- */
+    const link = g.append("g")
+      .attr("stroke-linecap", "round")
+      .selectAll("line")
       .data(graphData.links)
-      .enter().append("line")
-      .style("stroke", "#bbb")
-      .style("stroke-width", 1.5)
-      .style("opacity", 0.9);
+      .enter()
+      .append("line")
+      .attr("stroke-width", 2.2)
+      .attr("stroke", "#8b9cff")
+      .attr("opacity", 0.9);
 
-    const node = g.selectAll("circle")
+    link.append("title")
+      .text(d => d.relation || d.pathway_id);
+
+    /* -------------------------
+       NODES (default: dark blue, degree-based radius)
+    -------------------------- */
+    const node = g.append("g")
+      .selectAll("circle")
       .data(graphData.nodes)
-      .enter().append("circle")
-      .attr("r", 6)
-      .style("fill", (d) => {
-        if (d.type === "drug") return "#0077b6";
-        if (d.type === "disease") return "#d62828";
-        if (d.type === "gene") return "#2a9d8f";
-        return "#666";
-      })
-      .style("stroke", "#fff")
-      .style("stroke-width", 1)
-      .call(d3.drag()
-         .on("start", dragstarted)
-         .on("drag", dragged)
-         .on("end", dragended))
-      .on("click", highlightPath)
-      .append("title")
-      .text(d => d.name || d.id);
+      .enter()
+      .append("circle")
+      .attr("r", d => radiusForNode(d))
+      .attr("fill", "#1233ff")
+      .attr("stroke", "#ffffff")
+      .attr("stroke-width", 2)
+      .call(
+        d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended)
+      )
+      .on("mouseover", function (event, d) {
+        d3.select(this)
+          .attr("stroke-width", 3);
 
+        // Collect relationships for tooltip
+        const neighbors = graphData.links
+          .filter(l => l.source.id === d.id || l.target.id === d.id ||
+                       l.source === d.id || l.target === d.id)
+          .map(l => {
+            const targetId = (l.source.id === d.id || l.source === d.id)
+              ? (l.target.id ?? l.target)
+              : (l.source.id ?? l.source);
+            const targetNode = graphData.nodes.find(n => n.id === targetId);
+            return {
+              name: targetNode ? targetNode.name : targetId,
+              type: targetNode ? targetNode.type : "unknown",
+              relation: l.relation || ""
+            };
+          });
+
+        const relationsHtml = neighbors.slice(0, 6).map(n =>
+          `<div class="tooltip-rel">
+             <span class="tooltip-rel-name">${n.name}</span>
+             <span class="tooltip-rel-type">(${n.type})</span>
+             ${n.relation ? `<span class="tooltip-rel-edge">– ${n.relation}</span>` : ""}
+           </div>`
+        ).join("") || "<div class='tooltip-empty'>No relations in subgraph.</div>";
+
+        tooltip
+          .html(`
+            <div class="tooltip-title">${d.name}</div>
+            <div class="tooltip-meta">
+              <div><strong>ID:</strong> ${d.id}</div>
+              <div><strong>Type:</strong> ${d.type}</div>
+              <div><strong>Pathway:</strong> ${d.pathway_id || "N/A"}</div>
+            </div>
+            <div class="tooltip-section-label">Connected nodes:</div>
+            <div class="tooltip-rel-container">
+              ${relationsHtml}
+            </div>
+          `)
+          .style("opacity", 1)
+          .style("left", (event.pageX + 15) + "px")
+          .style("top", (event.pageY + 15) + "px");
+      })
+      .on("mousemove", function (event) {
+        tooltip
+          .style("left", (event.pageX + 15) + "px")
+          .style("top", (event.pageY + 15) + "px");
+      })
+      .on("mouseout", function () {
+        d3.select(this)
+          .attr("stroke-width", 2);
+        tooltip
+          .style("opacity", 0);
+      });
+
+    /* -------------------------
+       FORCE SIMULATION
+    -------------------------- */
     const simulation = d3.forceSimulation(graphData.nodes)
-      .force("link", d3.forceLink(graphData.links).distance(80).id(d => d.id))
-      .force("charge", d3.forceManyBody().strength(-200))
+      .force("link", d3.forceLink(graphData.links)
+        .id(d => d.id)
+        .distance(80)
+      )
+      .force("charge", d3.forceManyBody().strength(-220))
       .force("center", d3.forceCenter(width / 2, height / 2))
       .on("tick", () => {
         link
@@ -253,39 +281,137 @@
           .attr("x2", d => d.target.x)
           .attr("y2", d => d.target.y);
 
-        g.selectAll("circle")
+        node
           .attr("cx", d => d.x)
           .attr("cy", d => d.y);
       });
 
-    function highlightPath(event, d) {
-      // Collect nodes connected to clicked node
-      const connectedIds = new Set([d.id]);
-      graphData.links.forEach(l => {
-        const s = l.source.id ?? l.source;
-        const t = l.target.id ?? l.target;
-        if (s === d.id) connectedIds.add(t);
-        if (t === d.id) connectedIds.add(s);
-      });
-
-      g.selectAll("circle")
-        .style("opacity", n => connectedIds.has(n.id) ? 1 : 0.1);
-      link
-        .style("opacity", l => {
-          const s = l.source.id ?? l.source;
-          const t = l.target.id ?? l.target;
-          return (connectedIds.has(s) && connectedIds.has(t)) ? 1 : 0.1;
-        });
-
-      // Smooth zoom to clicked node
-      svgRoot.transition().duration(750).call(
-        zoomBehavior.transform,
-        d3.zoomIdentity
-          .translate(width / 2 - d.x, height / 2 - d.y)
-          .scale(1.5)
-      );
+    /* -------------------------
+       Helper: compute bounding box of nodes
+    -------------------------- */
+    function getNodesBBox(nodes) {
+      const xs = nodes.map(d => d.x);
+      const ys = nodes.map(d => d.y);
+      const x0 = Math.min(...xs);
+      const x1 = Math.max(...xs);
+      const y0 = Math.min(...ys);
+      const y1 = Math.max(...ys);
+      return [[x0, y0], [x1, y1]];
     }
 
+    /* -------------------------
+       Helper: zoom to nodes with padding
+    -------------------------- */
+    function zoomToNodes(nodes, paddingFactor = 1.4) {
+      if (!nodes.length) return;
+
+      const [[x0, y0], [x1, y1]] = getNodesBBox(nodes);
+      const boxWidth = x1 - x0 || 1;
+      const boxHeight = y1 - y0 || 1;
+
+      const scale = Math.min(
+        (width / boxWidth) / paddingFactor,
+        (height / boxHeight) / paddingFactor,
+        5
+      );
+
+      const midX = (x0 + x1) / 2;
+      const midY = (y0 + y1) / 2;
+
+      const translateX = width / 2 - scale * midX;
+      const translateY = height / 2 - scale * midY;
+
+      const t = d3.zoomIdentity.translate(translateX, translateY).scale(scale);
+
+      svgRoot.transition()
+        .duration(900)
+        .call(zoomBehavior.transform, t);
+    }
+
+    function zoomToAllNodes() {
+      zoomToNodes(graphData.nodes, 1.1);
+    }
+
+    /* -------------------------
+       PATHWAY HIGHLIGHTING
+    -------------------------- */
+    select.on("change", function () {
+      const selectedPathway = this.value;
+
+      const activeLinks = graphData.links.filter(
+        l => l.pathway_id === selectedPathway
+      );
+
+      const activeNodeIds = new Set();
+      activeLinks.forEach(l => {
+        const sid = l.source.id ?? l.source;
+        const tid = l.target.id ?? l.target;
+        activeNodeIds.add(sid);
+        activeNodeIds.add(tid);
+      });
+
+      const activeNodes = graphData.nodes.filter(n => activeNodeIds.has(n.id));
+
+      // Highlight edges (orange for selected pathway)
+      link
+        .attr("stroke", l =>
+          l.pathway_id === selectedPathway ? "#ff9800" : "#8b9cff"
+        )
+        .attr("stroke-width", l =>
+          l.pathway_id === selectedPathway ? 3 : 2.2
+        )
+        .attr("opacity", l =>
+          l.pathway_id === selectedPathway ? 1 : 0.3
+        );
+
+      // Highlight nodes: bold purple vs dark blue, keep degree radius
+      node
+        .attr("fill", n =>
+          activeNodeIds.has(n.id) ? "#b000f5" : "#1233ff"
+        )
+        .attr("opacity", n =>
+          activeNodeIds.has(n.id) ? 1 : 0.45
+        );
+
+      // Snap-zoom to selected pathway
+      zoomToNodes(activeNodes);
+    });
+
+    /* -------------------------
+       Reset button behavior
+    -------------------------- */
+    const resetButton = document.getElementById("resetGraph");
+    resetButton.addEventListener("click", () => {
+      zoomToAllNodes();
+
+      // Reset edges
+      link
+        .attr("stroke", "#8b9cff")
+        .attr("stroke-width", 2.2)
+        .attr("opacity", 0.9);
+
+      // Reset nodes
+      node
+        .attr("fill", "#1233ff")
+        .attr("opacity", 1);
+    });
+
+    /* -------------------------
+       After simulation ends, show full graph then default pathway
+    -------------------------- */
+    simulation.on("end", () => {
+      // Start from full view
+      zoomToAllNodes();
+
+      // Then select first pathway (if any) which snaps in
+      if (pathwayIds.length > 0) {
+        select.property("value", pathwayIds[0]).dispatch("change");
+      }
+    });
+
+    /* -------------------------
+       DRAG HANDLERS
+    -------------------------- */
     function dragstarted(event, d) {
       if (!event.active) simulation.alphaTarget(0.3).restart();
       d.fx = d.x;

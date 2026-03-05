@@ -5,11 +5,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-bg: #f5f0ff;      /* light purple background */
+    --primary-accent: #7b5cff;  /* main purple */
+    --primary-accent-dark: #5a3fd6;
+    --secondary-accent: #e0e0f5;/* soft grey-purple */
+    --text-dark: #262338;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    color: var(--text-dark);
+    background-color: var(--primary-bg);
 }
 
 .container {
@@ -20,24 +28,68 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(135deg, #5a3fd6 0%, #7b5cff 50%, #a08bff 100%);
     color: white;
-    padding: 60px 0;
+    padding: 40px 0 20px 0;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 header h1 {
-    font-size: 2.5rem;          /* slightly larger */
+    font-size: 2.5rem;
     margin-bottom: 8px;
-    font-weight: 800;           /* extra bold */
-    color: #000000;             /* black title */
+    font-weight: 800;
+    color: #000000;
 }
 
 header .subtitle {
     font-size: 1.05rem;
-    font-weight: 500;           /* bolder than before */
-    color: #f0f0ff;             /* lighter, more legible text */
-    opacity: 1;                 /* remove fading */
+    font-weight: 500;
+    color: #f0f0ff;
+    opacity: 1;
+}
+
+/* Top nav */
+.main-nav {
+    margin-top: 22px;
+    display: inline-flex;
+    gap: 12px;
+    background: rgba(10, 10, 40, 0.22);
+    padding: 6px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #f5f0ff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.1s ease;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.4);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    transform: translateY(-1px);
+}
+
+.main-nav a.active {
+    background-color: #ffffff;
+    color: var(--primary-accent-dark);
+    border-color: rgba(255,255,255,0.7);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
 /* Main Content */
@@ -46,19 +98,19 @@ main {
 }
 
 section {
-    background: white;
-    border-radius: 12px;
-    padding: 40px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.06);
 }
 
 h2 {
     font-size: 1.8rem;
-    color: #1a1a2e;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #e94560;
+    color: var(--primary-accent-dark);
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #c7b5ff;
     display: inline-block;
 }
 
@@ -159,24 +211,24 @@ a:hover {
 .entity-tag.cc { background: #ff8e71; }
 .entity-tag.exposure { background: #b4b4b4; }
 
-/* Pathway Visualization */
+/* Pathway Visualization container */
 .pathway-container {
     background: #f8f9fa;
     border-radius: 12px;
-    padding: 40px 20px;
+    padding: 48px 24px;
     margin: 30px 0;
     overflow-x: auto;
 }
 
+/* If you still use linear pathway cards on other pages */
 .pathway-visualization {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: nowrap;
     gap: 0;
-    min-width: 1200px;   /* increase until everything fits in one line */
+    min-width: 1200px;
 }
-
 
 .pathway-node {
     background: white;
@@ -311,6 +363,158 @@ footer a {
     color: #e94560;
 }
 
+/* Pathway controls dropdown + reset button */
+.pathway-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 8px 0;
+    flex-wrap: wrap;
+}
+
+.pathway-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-accent-dark);
+}
+
+.pathway-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 42px 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background:
+        linear-gradient(135deg, #ffffff, #f5f0ff),
+        url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a3fd6' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, right 14px center;
+    background-size: auto, 14px 9px;
+    color: var(--primary-accent-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: relative;
+    outline: none;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.1s ease,
+        border-color 0.2s ease;
+}
+
+.pathway-select:hover {
+    border-color: rgba(90,63,214,0.4);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.pathway-select:focus {
+    border-color: var(--primary-accent-dark);
+    box-shadow: 0 0 0 2px rgba(123,92,255,0.25);
+}
+
+/* Reset button styled like nav pills */
+.pathway-reset-btn {
+    margin-left: 8px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.8);
+    background: #ffffff;
+    color: var(--primary-accent-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.1s ease;
+}
+
+.pathway-reset-btn:hover {
+    background-color: #f5f0ff;
+    border-color: rgba(90,63,214,0.4);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.14);
+    transform: translateY(-1px);
+}
+
+.pathway-reset-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+}
+
+/* Tooltip styling */
+.graph-tooltip {
+    background: #111827;
+    color: #f9fafb;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    max-width: 260px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    z-index: 9999;
+}
+
+.graph-tooltip .tooltip-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #e5e7eb;
+}
+
+.graph-tooltip .tooltip-meta {
+    margin-bottom: 6px;
+}
+
+.graph-tooltip .tooltip-meta div {
+    margin-bottom: 2px;
+}
+
+.graph-tooltip .tooltip-section-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #9ca3af;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.graph-tooltip .tooltip-rel-container {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.graph-tooltip .tooltip-rel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 4px;
+    margin-bottom: 2px;
+}
+
+.graph-tooltip .tooltip-rel-name {
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.graph-tooltip .tooltip-rel-type {
+    color: #a5b4fc;
+    font-size: 0.72rem;
+}
+
+.graph-tooltip .tooltip-rel-edge {
+    color: #fbbf24;
+    font-size: 0.72rem;
+}
+
+.graph-tooltip .tooltip-empty {
+    color: #9ca3af;
+    font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 {
@@ -334,110 +538,4 @@ footer a {
     .edge-line {
         width: 40px;
     }
-}
-
-
-/* Color theme */
-:root {
-    --primary-bg: #f5f0ff;      /* light purple background */
-    --primary-accent: #7b5cff;  /* main purple */
-    --primary-accent-dark: #5a3fd6;
-    --secondary-accent: #e0e0f5;/* soft grey-purple */
-    --text-dark: #262338;
-}
-
-/* Update body background and text */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--primary-bg);
-}
-
-/* Header */
-header {
-    background: linear-gradient(135deg, #5a3fd6 0%, #7b5cff 50%, #a08bff 100%);
-    color: white;
-    padding: 40px 0 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-}
-
-header h1 {
-    font-size: 2.5rem;          /* slightly larger */
-    margin-bottom: 8px;
-    font-weight: 800;           /* extra bold */
-    color: #000000;             /* black title */
-}
-
-header .subtitle {
-    font-size: 1.05rem;
-    font-weight: 500;           /* bolder than before */
-    color: #f0f0ff;             /* lighter, more legible text */
-    opacity: 1;                 /* remove fading */
-}
-
-
-/* Top nav */
-.main-nav {
-    margin-top: 22px;
-    display: inline-flex;
-    gap: 12px;
-    background: rgba(10, 10, 40, 0.22);
-    padding: 6px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
-}
-
-.main-nav a {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: #f5f0ff;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: 
-        background-color 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.1s ease;
-}
-
-/* Default (non-active) button look */
-.main-nav a:hover {
-    background-color: rgba(255,255,255,0.15);
-    border-color: rgba(255,255,255,0.4);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    transform: translateY(-1px);
-}
-
-/* Active page (just add class="active" in HTML) */
-.main-nav a.active {
-    background-color: #ffffff;
-    color: var(--primary-accent-dark);
-    border-color: rgba(255,255,255,0.7);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-}
-
-/* Slight tweak to sections to match new theme */
-section {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 32px;
-    margin-bottom: 28px;
-    box-shadow: 0 2px 14px rgba(0,0,0,0.06);
-}
-
-/* Update section titles color */
-h2 {
-    font-size: 1.8rem;
-    color: var(--primary-accent-dark);
-    margin-bottom: 18px;
-    padding-bottom: 8px;
-    border-bottom: 3px solid #c7b5ff;
-    display: inline-block;
 }
