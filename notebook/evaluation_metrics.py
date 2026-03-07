@@ -3,35 +3,29 @@
 # ============================================
 # 
 # 7 Main Metrics:
-#   1. precision          - What fraction of predicted nodes are correct?
-#   2. recall_at_6_hops   - What fraction of GT nodes found within 6 hops?
-#   3. f1_score           - Harmonic mean of precision and recall
-#   4. path_length_accuracy - How close is predicted length to GT length?
-#   5. hub_node_ratio     - What fraction of path nodes are hubs?
-#   6. mrr                - Mean Reciprocal Rank of first correct node
-#   7. speed              - Execution time in milliseconds
+#   1. precision           - What fraction of predicted nodes are correct?
+#   2. recall              - What fraction of GT nodes are found?
+#   3. f1_score            - Harmonic mean of precision and recall
+#   4. edit_distance       - Structural similarity to GT path (lower is better)
+#   5. mrr                 - Mean Reciprocal Rank of first correct intermediate node
+#   6. hub_node_ratio      - What fraction of path nodes are hubs? (lower is better)
+#   7. path_length_accuracy - How close is predicted length to GT length?
 #
 # Helper functions are in evaluation_helpers.py
 # ============================================
-# Define Evaluation Metrics
-
-# We evaluate algorithms using 9 metrics across three categories:
-
+# 
+# We evaluate algorithms using 7 metrics across three categories:
+#
 # | Category | Metrics | What It Measures |
 # |----------|---------|------------------|
-# | **Node Accuracy**  | Precision, Recall, F1 | Are the right nodes in the path? |
-# | **Target Finding** | Hits@1, Hits@3, Hits@5 | Does the path reach the disease? |
-# | **Mechanistic Quality** | Relation Accuracy, Edit Distance, Hub Ratio | Is the path biologically valid? |
+# | **Node Overlap**  | Precision, Recall, F1 | Are the right nodes in the path? |
+# | **Sequence Quality** | Edit Distance, MRR | Is the path structure correct? |
+# | **Path Characteristics** | Hub Node Ratio, Path Length Accuracy | Does the path have good properties? |
+#
+# Note: Speed is measured separately in the runner during algorithm execution.
+# ============================================
 
-import time
-from evaluation_helpers import (
-    is_valid_prediction,
-    calculate_edit_distance,
-    compute_degree_counts,
-    compute_hub_threshold,
-    calculate_hits_at_k,
-    calculate_relation_accuracy
-)
+from evaluation_helpers import *
 
 
 # ============================================
@@ -54,23 +48,21 @@ def precision(predicted_ids, ground_truth_ids):
 
 
 # ============================================
-# 2. RECALL @ 6 HOPS
+# 2. RECALL
 # ============================================
-def recall_at_k_hops(predicted_ids, ground_truth_ids, k=None):
+def recall(predicted_ids, ground_truth_ids):
     """
     What fraction of ground truth nodes are found in the predicted path?
-    If k is None, uses the full predicted path (standard recall).
-    If k is provided, only considers first k nodes of prediction.
     
-    Formula: |predicted[:k] ∩ ground_truth| / |ground_truth|
+    Formula: |predicted ∩ ground_truth| / |ground_truth|
     """
     if not is_valid_prediction(predicted_ids):
         return 0.0
     
-    truncated = predicted_ids if k is None else predicted_ids[:k]
+    pred_set = set(predicted_ids)
     gt_set = set(ground_truth_ids)
     
-    return len(set(truncated) & gt_set) / len(gt_set) if gt_set else 0.0
+    return len(pred_set & gt_set) / len(gt_set) if gt_set else 0.0
 
 
 # ============================================
@@ -79,78 +71,55 @@ def recall_at_k_hops(predicted_ids, ground_truth_ids, k=None):
 def f1_score(predicted_ids, ground_truth_ids):
     """
     Harmonic mean of precision and recall.
-    
     Formula: 2 * (precision * recall) / (precision + recall)
     """
     if not is_valid_prediction(predicted_ids):
         return 0.0
     
-    pred_set = set(predicted_ids)
-    gt_set = set(ground_truth_ids)
-    intersection = len(pred_set & gt_set)
-    
-    prec = intersection / len(pred_set) if pred_set else 0
-    rec = intersection / len(gt_set) if gt_set else 0
+    prec = precision(predicted_ids, ground_truth_ids)
+    rec = recall(predicted_ids, ground_truth_ids)
     
     if prec + rec == 0:
         return 0.0
     
     return 2 * (prec * rec) / (prec + rec)
 
-
 # ============================================
-# 4. PATH LENGTH ACCURACY
+# 4. EDIT DISTANCE 
 # ============================================
-def path_length_accuracy(predicted_length, ground_truth_length):
+def edit_distance(predicted_ids, ground_truth_ids):
     """
-    How close is predicted path length to ground truth?
+    Calculate normalized Levenshtein edit distance between two sequences.
     
-    Formula: 1 - |predicted_length - gt_length| / max(predicted_length, gt_length)
-    
-    Returns value in [0, 1] where 1 = exact match
+    Returns value in [0, 1] where 0 = identical, 1 = completely different.
     """
-    if predicted_length == 0 and ground_truth_length == 0:
+    if not predicted_ids or predicted_ids == ['NONE']:
         return 1.0
     
-    max_len = max(predicted_length, ground_truth_length)
-    if max_len == 0:
-        return 0.0
+    m, n = len(predicted_ids), len(ground_truth_ids)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
     
-    return 1 - abs(predicted_length - ground_truth_length) / max_len
-
-
-# ============================================
-# 5. HUB NODE RATIO
-# ============================================
-def hub_node_ratio(predicted_indices, degree_count, hub_threshold):
-    """
-    What fraction of predicted nodes are hubs (high-degree nodes)?
+    for i in range(m + 1):
+        dp[i][0] = i
+    for j in range(n + 1):
+        dp[0][j] = j
     
-    Lower is better - means path avoids generic hub shortcuts.
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if predicted_ids[i-1] == ground_truth_ids[j-1]:
+                dp[i][j] = dp[i-1][j-1]
+            else:
+                dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
     
-    Args:
-        predicted_indices: list of node indices in predicted path
-        degree_count: dict of {node_index: degree}
-        hub_threshold: degree above which a node is considered a hub
-    """
-    if not predicted_indices:
-        return 0.0
-    
-    hub_count = sum(
-        1 for idx in predicted_indices
-        if degree_count.get(idx, 0) >= hub_threshold
-    )
-    
-    return hub_count / len(predicted_indices)
-
+    return dp[m][n] / max(m, n)
 
 # ============================================
-# 6. MEAN RECIPROCAL RANK (MRR)
+# 5. MEAN RECIPROCAL RANK (MRR)
 # ============================================
 def mrr(predicted_ids, ground_truth_ids):
     """
     Mean Reciprocal Rank - how early does the first correct INTERMEDIATE node appear?
-    Excludes source (first) and target (last) nodes since they're guaranteed correct.
+    Excludes source (first) and target (last) nodes.
     
     Formula: 1 / rank_of_first_correct_intermediate_node
     Higher is better (1.0 = first intermediate node is correct)
@@ -173,24 +142,46 @@ def mrr(predicted_ids, ground_truth_ids):
 
 
 # ============================================
-# 7. SPEED (ms)
+# 6. HUB NODE RATIO
 # ============================================
-def speed(run_fn, *args, **kwargs):
+def hub_node_ratio(predicted_indices, degree_count, hub_threshold):
     """
-    Measure execution time of a function in milliseconds.
+    What fraction of predicted nodes are hubs (high-degree nodes)?
+    
+    Lower is better - means path avoids generic hub shortcuts.
     
     Args:
-        run_fn: function to time
-        *args, **kwargs: arguments to pass to run_fn
-    
-    Returns:
-        tuple: (result, elapsed_time_ms)
+        predicted_indices: list of node indices in predicted path
+        degree_count: dict of {node_index: degree}
+        hub_threshold: degree above which a node is considered a hub
     """
-    start = time.perf_counter()
-    result = run_fn(*args, **kwargs)
-    elapsed_ms = (time.perf_counter() - start) * 1000
+    if not predicted_indices:
+        return 0.0
     
-    return result, elapsed_ms
+    hub_count = sum(
+        1 for idx in predicted_indices
+        if degree_count.get(idx, 0) >= hub_threshold
+    )
+    
+    return hub_count / len(predicted_indices)
+
+# ============================================
+# 7. PATH LENGTH ACCURACY
+# ============================================
+def path_length_accuracy(predicted_length, ground_truth_length):
+    """
+    How close is predicted path length to ground truth?
+    
+    Formula: 1 - |predicted_length - gt_length| / max(predicted_length, gt_length)
+    
+    Returns value in [0, 1] where 1 = exact match
+    """
+    max_len = max(predicted_length, ground_truth_length)
+    
+    if max_len == 0:
+        return 1.0 # Both lengths are zero, consider it a perfect match
+    
+    return 1 - abs(predicted_length - ground_truth_length) / max_len
 
 
 # ============================================
@@ -207,20 +198,12 @@ def evaluate_pathway(predicted_ids, predicted_indices, predicted_length,
     """
     return {
         'precision': precision(predicted_ids, ground_truth_ids),
-        'recall_at_6_hops': recall_at_k_hops(predicted_ids, ground_truth_ids),
+        'recall': recall(predicted_ids, ground_truth_ids),
         'f1_score': f1_score(predicted_ids, ground_truth_ids),
-        'path_length_accuracy': path_length_accuracy(predicted_length, ground_truth_length),
+        'edit_distance': edit_distance(predicted_ids, ground_truth_ids),
+        'mrr': mrr(predicted_ids, ground_truth_ids),
         'hub_node_ratio': hub_node_ratio(predicted_indices, degree_count, hub_threshold),
-        'mrr': mrr(predicted_ids, ground_truth_ids)
+        'path_length_accuracy': path_length_accuracy(predicted_length, ground_truth_length)
         # Note: speed is measured separately when running the algorithm
     }
 
-
-print("✓ Evaluation metrics loaded:")
-print("  1. precision")
-print("  2. recall_at_6_hops")
-print("  3. f1_score")
-print("  4. path_length_accuracy")
-print("  5. hub_node_ratio")
-print("  6. mrr")
-print("  7. speed")
