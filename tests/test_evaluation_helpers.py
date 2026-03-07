@@ -2,159 +2,225 @@
 Tests for evaluation helper functions.
 Run with: pytest tests/test_evaluation_helpers.py -v
 """
-import sys
-import os
 import pytest
-import numpy as np
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'notebook'))
-
+import pandas as pd
+import time as time_module
+from collections import Counter
 from evaluation_helpers import (
     is_valid_prediction,
-    calculate_edit_distance,
+    compute_degree_counts,
     compute_hub_threshold,
-    calculate_hits_at_k,
     calculate_relation_accuracy,
-    calculate_set_intersection,
-    calculate_path_length_mae,
-    calculate_hub_node_ratio
+    speed
 )
 
 
 class TestIsValidPrediction:
-    def test_valid_list(self):
-        assert is_valid_prediction([1, 2, 3]) == True
-
+    """Test prediction validation"""
+    
+    def test_valid_prediction(self):
+        """Valid prediction with nodes"""
+        assert is_valid_prediction(['A', 'B', 'C']) == True
+    
     def test_empty_list(self):
-        assert not is_valid_prediction([])
-
-    def test_none_string(self):
-        assert is_valid_prediction(['NONE']) == False
-
-    def test_none_value(self):
-        assert not is_valid_prediction(None)
-
-    def test_single_node(self):
-        assert is_valid_prediction([42]) == True
-
-
-class TestSetIntersection:
-    def test_full_overlap(self):
-        assert calculate_set_intersection({1, 2, 3}, {1, 2, 3}) == 3
-
-    def test_partial_overlap(self):
-        assert calculate_set_intersection({1, 2, 3}, {2, 3, 4}) == 2
-
-    def test_no_overlap(self):
-        assert calculate_set_intersection({1, 2}, {3, 4}) == 0
-
-    def test_empty_sets(self):
-        assert calculate_set_intersection(set(), set()) == 0
-
-
-class TestEditDistance:
-    def test_identical_sequences(self):
-        assert calculate_edit_distance(['A', 'B', 'C'], ['A', 'B', 'C']) == 0.0
-
-    def test_completely_different(self):
-        assert calculate_edit_distance(['A', 'B'], ['C', 'D']) == 1.0
-
-    def test_one_substitution(self):
-        result = calculate_edit_distance(['A', 'B', 'C'], ['A', 'X', 'C'])
-        assert abs(result - 1/3) < 0.01
-
-    def test_different_lengths(self):
-        result = calculate_edit_distance(['A', 'B'], ['A', 'B', 'C'])
-        assert abs(result - 1/3) < 0.01
-
-    def test_empty_prediction(self):
-        assert calculate_edit_distance([], ['A', 'B']) == 1.0
-
+        """Empty list is invalid"""
+        assert is_valid_prediction([]) == False
+    
     def test_none_prediction(self):
-        assert calculate_edit_distance(['NONE'], ['A', 'B']) == 1.0
+        """['NONE'] is invalid"""
+        assert is_valid_prediction(['NONE']) == False
+    
+    def test_single_node(self):
+        """Single node is valid"""
+        assert is_valid_prediction(['A']) == True
+    
+    def test_none_value(self):
+        """None value is invalid"""
+        assert is_valid_prediction(None) == False
 
 
-class TestHitsAtK:
-    def test_target_at_end(self):
-        hits = calculate_hits_at_k(['drug', 'protein', 'disease'], 'disease')
-        assert hits['hits_at_1'] == 1
-        assert hits['hits_at_3'] == 1
-        assert hits['hits_at_5'] == 1
-
-    def test_target_not_present(self):
-        hits = calculate_hits_at_k(['drug', 'protein', 'gene'], 'disease')
-        assert hits['hits_at_1'] == 0
-        assert hits['hits_at_3'] == 0
-        assert hits['hits_at_5'] == 0
-
-    def test_target_second_from_end(self):
-        hits = calculate_hits_at_k(['drug', 'disease', 'gene'], 'disease')
-        assert hits['hits_at_1'] == 0
-        assert hits['hits_at_3'] == 1
-
-    def test_invalid_prediction(self):
-        hits = calculate_hits_at_k([], 'disease')
-        assert hits['hits_at_1'] == 0
-        assert hits['hits_at_3'] == 0
-        assert hits['hits_at_5'] == 0
-
-
-class TestRelationAccuracy:
-    def test_all_correct(self):
-        predicted = ['ppi', 'drug_protein', 'disease_protein']
-        gt = ['ppi', 'drug_protein', 'disease_protein']
-        assert calculate_relation_accuracy(predicted, gt) == 1.0
-
-    def test_none_correct(self):
-        predicted = ['ppi', 'ppi']
-        gt = ['drug_protein', 'disease_protein']
-        assert calculate_relation_accuracy(predicted, gt) == 0.0
-
-    def test_partial_match(self):
-        predicted = ['ppi', 'drug_protein', 'fake_relation']
-        gt = ['ppi', 'drug_protein']
-        assert abs(calculate_relation_accuracy(predicted, gt) - 2/3) < 0.01
-
-    def test_empty_predictions(self):
-        assert calculate_relation_accuracy([], ['ppi']) == 0.0
-
-
-class TestPathLengthMAE:
-    def test_exact_match(self):
-        assert calculate_path_length_mae(5, 5) == 0
-
-    def test_off_by_two(self):
-        assert calculate_path_length_mae(3, 5) == 2
-
-    def test_predicted_longer(self):
-        assert calculate_path_length_mae(8, 5) == 3
-
-
-class TestHubNodeRatio:
-    def test_no_hubs(self):
-        degree_count = {1: 10, 2: 5, 3: 8}
-        assert calculate_hub_node_ratio([1, 2, 3], degree_count, hub_threshold=100) == 0.0
-
-    def test_all_hubs(self):
-        degree_count = {1: 500, 2: 600, 3: 700}
-        assert calculate_hub_node_ratio([1, 2, 3], degree_count, hub_threshold=100) == 1.0
-
-    def test_mixed(self):
-        degree_count = {1: 500, 2: 10, 3: 600}
-        result = calculate_hub_node_ratio([1, 2, 3], degree_count, hub_threshold=100)
-        assert abs(result - 2/3) < 0.01
-
-    def test_empty_path(self):
-        assert calculate_hub_node_ratio([], {}, hub_threshold=100) == 0
+class TestComputeDegreeCounts:
+    """Test degree counting from edge dataframe"""
+    
+    def test_simple_triangle(self):
+        """Simple 3-node triangle graph"""
+        edges = pd.DataFrame({
+            'x_index': [1, 2, 3],
+            'y_index': [2, 3, 1]
+        })
+        degree_count = compute_degree_counts(edges)
+        
+        assert degree_count[1] == 2
+        assert degree_count[2] == 2
+        assert degree_count[3] == 2
+    
+    def test_hub_node(self):
+        """One hub node connected to many"""
+        edges = pd.DataFrame({
+            'x_index': [1, 1, 1],
+            'y_index': [2, 3, 4]
+        })
+        degree_count = compute_degree_counts(edges)
+        
+        assert degree_count[1] == 3  # Hub
+        assert degree_count[2] == 1
+        assert degree_count[3] == 1
+        assert degree_count[4] == 1
+    
+    def test_empty_edges(self):
+        """Empty edge dataframe"""
+        edges = pd.DataFrame({
+            'x_index': [],
+            'y_index': []
+        })
+        degree_count = compute_degree_counts(edges)
+        
+        assert len(degree_count) == 0
+    
+    def test_returns_counter(self):
+        """Returns Counter object"""
+        edges = pd.DataFrame({
+            'x_index': [1],
+            'y_index': [2]
+        })
+        degree_count = compute_degree_counts(edges)
+        
+        assert isinstance(degree_count, Counter)
 
 
 class TestComputeHubThreshold:
-    def test_basic_threshold(self):
-        degree_count = {i: i for i in range(1, 101)}
-        threshold = compute_hub_threshold(degree_count, percentile=95)
-        assert threshold >= 95
+    """Test hub threshold calculation"""
+    
+    def test_95th_percentile_default(self):
+        """Default 95th percentile"""
+        degree_count = Counter({
+            1: 10, 2: 20, 3: 30, 4: 40, 5: 50,
+            6: 60, 7: 70, 8: 80, 9: 90, 10: 100
+        })
+        threshold = compute_hub_threshold(degree_count)
+        
+        # 95th percentile of [10,20,30,40,50,60,70,80,90,100] = 95
+        assert threshold >= 90
+        assert threshold <= 100
+    
+    def test_custom_percentile(self):
+        """Custom percentile value"""
+        degree_count = Counter({1: 10, 2: 20, 3: 30, 4: 40})
+        threshold = compute_hub_threshold(degree_count, percentile=50)
+        
+        # 50th percentile (median) of [10,20,30,40] = 25
+        assert threshold == 25.0
+    
+    def test_100th_percentile(self):
+        """100th percentile returns max"""
+        degree_count = Counter({1: 10, 2: 50, 3: 100})
+        threshold = compute_hub_threshold(degree_count, percentile=100)
+        
+        assert threshold == 100.0
+    
+    def test_0th_percentile(self):
+        """0th percentile returns min"""
+        degree_count = Counter({1: 10, 2: 50, 3: 100})
+        threshold = compute_hub_threshold(degree_count, percentile=0)
+        
+        assert threshold == 10.0
 
-    def test_uniform_degrees(self):
-        degree_count = {i: 50 for i in range(100)}
-        threshold = compute_hub_threshold(degree_count, percentile=95)
-        assert threshold == 50.0
+
+class TestCalculateRelationAccuracy:
+    """Test relation type accuracy"""
+    
+    def test_perfect_match(self):
+        """All predicted relations are in GT"""
+        pred_relations = ['binds', 'regulates']
+        gt_edge_types = ['binds', 'regulates', 'treats']
+        
+        assert calculate_relation_accuracy(pred_relations, gt_edge_types) == 1.0
+    
+    def test_no_match(self):
+        """No predicted relations are in GT"""
+        pred_relations = ['X', 'Y']
+        gt_edge_types = ['A', 'B']
+        
+        assert calculate_relation_accuracy(pred_relations, gt_edge_types) == 0.0
+    
+    def test_partial_match(self):
+        """Half of predicted relations match"""
+        pred_relations = ['binds', 'X', 'regulates', 'Y']
+        gt_edge_types = ['binds', 'regulates', 'treats']
+        
+        assert calculate_relation_accuracy(pred_relations, gt_edge_types) == 0.5
+    
+    def test_empty_prediction(self):
+        """Empty prediction returns 0"""
+        pred_relations = []
+        gt_edge_types = ['binds', 'regulates']
+        
+        assert calculate_relation_accuracy(pred_relations, gt_edge_types) == 0.0
+    
+    def test_duplicate_relations(self):
+        """Duplicate relations counted separately"""
+        pred_relations = ['binds', 'binds', 'binds']
+        gt_edge_types = ['binds', 'regulates']
+        
+        # All 3 'binds' match
+        assert calculate_relation_accuracy(pred_relations, gt_edge_types) == 1.0
+
+
+class TestSpeed:
+    """Test timing function"""
+    
+    def test_returns_result_and_time(self):
+        """Returns both result and elapsed time"""
+        def sample_func(x):
+            return x * 2
+        
+        result, elapsed = speed(sample_func, 5)
+        
+        assert result == 10
+        assert isinstance(elapsed, float)
+        assert elapsed >= 0
+    
+    def test_measures_time_correctly(self):
+        """Measures time for sleep"""
+        def slow_func():
+            time_module.sleep(0.01)  # 10ms sleep
+            return 42
+        
+        result, elapsed = speed(slow_func)
+        
+        assert result == 42
+        assert elapsed >= 10  # At least 10ms
+        assert elapsed < 100  # But not crazy long
+    
+    def test_forwards_args(self):
+        """Forwards arguments correctly"""
+        def add(a, b):
+            return a + b
+        
+        result, elapsed = speed(add, 3, 5)
+        
+        assert result == 8
+    
+    def test_forwards_kwargs(self):
+        """Forwards keyword arguments correctly"""
+        def greet(name, greeting="Hello"):
+            return f"{greeting}, {name}"
+        
+        result, elapsed = speed(greet, "Alice", greeting="Hi")
+        
+        assert result == "Hi, Alice"
+    
+    def test_very_fast_function(self):
+        """Handles very fast functions"""
+        def instant():
+            return 1
+        
+        result, elapsed = speed(instant)
+        
+        assert result == 1
+        assert elapsed >= 0
+        assert elapsed < 1  # Less than 1ms
+
+
+if __name__ == '__main__':
+    pytest.main([__file__, '-v'])
