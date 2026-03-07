@@ -60,7 +60,9 @@ Full results: `algos_/evaluation_results_all_algorithms.csv`
 │   ├── algo_final.ipynb             ← Primary self-contained benchmark notebook
 │   ├── Algorithms.py
 │   ├── evaluation_helpers.py
-│   └── evaluation_metrics.py
+│   ├── evaluation_metrics.py
+│   ├── evaluation_runner.py
+│   └── evaluation_visualization.py
 │
 ├── algos_/                          ← Legacy version (kept for reference)
 │   ├── primekg_benchmark_.ipynb
@@ -71,24 +73,30 @@ Full results: `algos_/evaluation_results_all_algorithms.csv`
 │   ├── f1_by_length.png
 │   └── timing_comparison.png
 │
-├── data/
-│   ├── raw/                         ← PrimeKG source files (NOT in repo — download below)
-│   │   ├── nodes.csv
-│   │   ├── edges.csv
-│   │   └── ...
-│   └── processed/                   ← Ground truth pathways (included in repo)
-│       ├── benchmark_pathways_nodes.csv
-│       ├── benchmark_pathways_edges.csv
-│       └── ...
+├── data/                            ← All data files
+│   ├── benchmark_pathways_nodes.csv ← Ground truth pathways (included in repo)
+│   ├── benchmark_pathways_edges.csv ← Ground truth pathway edges (included in repo)
+│   ├── benchmark_pathways_metadata.csv
+│   ├── nodes.csv                    ← PrimeKG nodes (NOT in repo — download below)
+│   ├── edges.csv                    ← PrimeKG edges (NOT in repo — download below)
+│   └── raw/                         ← Additional raw data (NOT in repo)
+│       ├── kg.csv
+│       ├── mesh_to_mondo_lookup.csv
+│       └── uniprot_to_entrez_lookup.csv
 │
 ├── Ground_Truth_automation/         ← Pipeline for extracting pathways from DrugMechDB
 │   ├── automated_pipeline.py
 │   ├── pathway_validator.py
-│   └── ...
+│   └── pathway_config.yaml
+│
+├── tests/                           ← Unit tests
+│   ├── test_evaluation_helpers.py
+│   └── test_evaluation_metrics.py
 │
 ├── src/
 │   └── prepare_primekg.py
 │
+├── pytest.ini
 ├── requirements.txt
 └── README.md
 ```
@@ -124,13 +132,12 @@ Download these two files:
 - `nodes.csv` (~5 MB)
 - `edges.csv` (~60 MB)
 
-Place them in `data/raw/`:
+Place them in `data/`:
 
 ```
 data/
-└── raw/
-    ├── nodes.csv      ← from Harvard Dataverse
-    └── edges.csv      ← from Harvard Dataverse
+├── nodes.csv      ← from Harvard Dataverse
+└── edges.csv      ← from Harvard Dataverse
 ```
 
 **Expected formats:**
@@ -155,8 +162,9 @@ The curated ground truth pathways are included — no extra download needed:
 
 | File | Description |
 |------|-------------|
-| `data/processed/benchmark_pathways_nodes.csv` | 343 pathways (1,456 nodes total); 150 with ≥ 4 nodes used for benchmarking |
-| `data/processed/benchmark_pathways_edges.csv` | 1,113 annotated pathway edges |
+| `data/benchmark_pathways_nodes.csv` | 343 pathways (1,456 nodes total); 150 with ≥ 4 nodes used for benchmarking |
+| `data/benchmark_pathways_edges.csv` | 1,113 annotated pathway edges |
+| `data/benchmark_pathways_metadata.csv` | Pathway metadata (drug, disease, path length) |
 
 These were extracted from [DrugMechDB](https://drugmechdb.github.io/) and mapped onto PrimeKG node indices using the pipeline in `Ground_Truth_automation/`.
 
@@ -175,6 +183,15 @@ The notebook will:
 6. Generate comparison figures and export CSVs
 
 > **Expected runtime:** ~90–120 minutes total. Learned A* dominates at ~38s/pathway (~95 min). All other algorithms finish in under 15 minutes combined.
+
+### 6. Run tests
+
+```bash
+pip install pytest
+python -m pytest -v
+```
+
+Runs 65 unit tests covering all evaluation metrics and helper functions.
 
 ---
 
