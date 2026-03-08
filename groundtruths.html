@@ -22,17 +22,113 @@
 
   <main class="container">
     <!-- Ground Truth Graph -->
-    <section id="groundtruth-graph">
-      <h2>Ground Truth Pathways</h2>
-      <p>
-        We curate mechanistically validated drug–mechanism–disease pathways from literature and 
-        pharmacological databases. Each pathway is represented as a sequence of nodes 
-        (drug → targets → pathways / processes → disease) in PrimeKG.
-      </p>
-      <p>
-        Below is an interactive graph visualization of all curated ground truth pathways.
-      </p>
+  <!-- Ground Truth Curation -->
+<section id="ground-truth-curation">
+  <h2>Ground Truth Curation</h2>
+  <p>
+    We integrated <strong>DrugMechDB</strong> with <strong>PrimeKG</strong> through a structured
+    entity-mapping pipeline to create a benchmark-ready set of mechanistic pathways.
+  </p>
 
+  <div class="pipeline-card">
+    <div class="pipeline-super-title">Data Pipeline</div>
+
+    <div class="pipeline">
+      <div class="pipeline-row">
+        <!-- DrugMechDB -->
+        <div class="data-block">
+          <div class="block-label source">Source</div>
+          <div class="main-data-box drugmechdb">
+            <div class="data-title">DrugMechDB</div>
+          </div>
+          <div class="stats-boxes">
+            <div class="mini-stat-box">
+              <div class="mini-stat-number">5,666</div>
+              <div class="mini-stat-label">Pathways</div>
+            </div>
+            <div class="mini-stat-box">
+              <div class="mini-stat-number">4,583</div>
+              <div class="mini-stat-label">Indications</div>
+            </div>
+            <div class="mini-stat-box">
+              <div class="mini-stat-number">1,580</div>
+              <div class="mini-stat-label">Drugs</div>
+            </div>
+            <div class="mini-stat-box">
+              <div class="mini-stat-number">744</div>
+              <div class="mini-stat-label">Diseases</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow -->
+        <div class="horizontal-arrow-container">
+          <div class="label-above-arrow">343 Pathways Mapped</div>
+          <div class="arrow-horizontal">→</div>
+          <div class="label-below-arrow">Entity Mapping</div>
+        </div>
+
+        <!-- PrimeKG -->
+        <div class="data-block">
+          <div class="block-label target">Target</div>
+          <div class="main-data-box primekg-box">
+            <div class="data-title">PrimeKG</div>
+          </div>
+          <div class="stats-boxes">
+            <div class="mini-stat-box primekg">
+              <div class="mini-stat-number">129K+</div>
+              <div class="mini-stat-label">Nodes</div>
+            </div>
+            <div class="mini-stat-box primekg">
+              <div class="mini-stat-number">8.1M+</div>
+              <div class="mini-stat-label">Edges</div>
+            </div>
+            <div class="mini-stat-box primekg">
+              <div class="mini-stat-number">10</div>
+              <div class="mini-stat-label">Entity Types</div>
+            </div>
+            <div class="mini-stat-box primekg">
+              <div class="mini-stat-number">11</div>
+              <div class="mini-stat-label">Relations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vertical-arrow-section">
+        <div class="arrow-down">↓</div>
+        <div class="filter-label">Filter: pathways with 4+ nodes</div>
+      </div>
+
+      <div class="final-benchmark-wrap">
+        <div class="final-box">
+          <div class="final-left">Final Benchmark Set</div>
+          <div class="final-center">
+            <div class="final-number">150</div>
+            <div class="final-right">
+              <div class="final-label">Pathways</div>
+              <div class="final-sublabel">4–11 nodes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="curation-notes">
+    <div class="curation-note">
+      <h3>Quality Score</h3>
+      <p>How much of the predicted pathway matches the mappable ground-truth mechanism.</p>
+    </div>
+    <div class="curation-note">
+      <h3>Coverage Score</h3>
+      <p>How much of the full original mechanism is recoverable inside PrimeKG.</p>
+    </div>
+    <div class="curation-note">
+      <h3>Why it matters</h3>
+      <p>These scores separate algorithmic failure from graph incompleteness and ontology mismatch.</p>
+    </div>
+  </div>
       <!-- Styled dropdown + reset -->
       <div class="pathway-controls">
         <label for="pathwaySelect" class="pathway-label">
@@ -45,44 +141,6 @@
       <div class="pathway-container" style="min-height: 300px;">
         <div id="groundtruth-graph-viz" style="width: 100%; height: 700px;"></div>
       </div>
-    </section>
-
-    <!-- Methodology -->
-    <section id="methodology">
-      <h2>Methodology</h2>
-      <ol class="methodology-list">
-        <li>
-          <strong>Curate Ground Truth Pathways:</strong> Collect validated drug–mechanism–disease 
-          pathways from literature and pharmacological databases.
-        </li>
-        <li>
-          <strong>Implement Pathfinding Algorithms:</strong> Benchmark BFS, Dijkstra, A*, 
-          PageRank‑inverse, and learned‑edge‑weight algorithms on PrimeKG.
-        </li>
-        <li>
-          <strong>Benchmark Against Ground Truth:</strong> Evaluate how often algorithms 
-          recover the mechanistically correct pathway vs. taking hub‑driven shortcuts.
-        </li>
-        <li>
-          <strong>Develop Quality Metrics:</strong> Score paths based on biological plausibility, 
-          hub avoidance, and mechanistic coherence, not just shortest distance.
-        </li>
-      </ol>
-    </section>
-
-    <!-- Repository Structure -->
-    <section id="repository">
-      <h2>Repository Structure</h2>
-      <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
-├── data/
-│   └── ground_truths/
-│       ├── ground_truth_final.csv    # Validated pathway nodes
-│       └── pathway_edges_final.csv   # Pathway edge relationships
-├── notebooks/
-│   └── exploration.ipynb             # EDA and algorithm development
-├── src/
-│   └── prepare_primekg.py            # Data preprocessing scripts
-└── README.md</code></pre>
     </section>
   </main>
 

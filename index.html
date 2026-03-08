@@ -66,47 +66,6 @@
       </div>
     </section>
 
-    <!-- Dataset -->
-    <section id="dataset">
-      <h2>The Dataset: PrimeKG</h2>
-      <p>
-        <a href="https://github.com/mims-harvard/PrimeKG" target="_blank">PrimeKG</a> is a 
-        precision medicine knowledge graph that integrates 20+ biomedical resources.
-      </p>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-number">8.1M+</span>
-          <span class="stat-label">Edges (Relationships)</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">129K+</span>
-          <span class="stat-label">Nodes (Entities)</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">10</span>
-          <span class="stat-label">Entity Types</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">18</span>
-          <span class="stat-label">Relationship Types</span>
-        </div>
-      </div>
-
-      <h3>Entity Types</h3>
-      <div class="entity-types">
-        <span class="entity-tag drug">Drug</span>
-        <span class="entity-tag gene">Gene/Protein</span>
-        <span class="entity-tag disease">Disease</span>
-        <span class="entity-tag anatomy">Anatomy</span>
-        <span class="entity-tag pathway">Pathway</span>
-        <span class="entity-tag phenotype">Effect/Phenotype</span>
-        <span class="entity-tag bp">Biological Process</span>
-        <span class="entity-tag mf">Molecular Function</span>
-        <span class="entity-tag cc">Cellular Component</span>
-        <span class="entity-tag exposure">Exposure</span>
-      </div>
-    </section>
-
     <!-- Key Pathway: Tirofiban → Acute Coronary Syndrome -->
     <section id="pathway">
       <h2>Example: Tirofiban → Acute Coronary Syndrome</h2>
@@ -186,6 +145,129 @@
         </ol>
       </div>
     </section>
+
+    <!-- Methods -->
+<section id="methods">
+  <h2>Methods: Algorithm Families</h2>
+  <p>
+    All methods share biological transition constraints that ban direct drug → disease shortcuts.
+  </p>
+
+  <div class="algorithm-table-card">
+    <table class="algorithm-table">
+      <colgroup>
+        <col style="width: 34%;">
+        <col style="width: 18%;">
+        <col style="width: 48%;">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Algorithm</th>
+          <th>Type</th>
+          <th>Key Idea</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#4ea1cc;"></span>
+              <span>Dijkstra</span>
+            </div>
+          </td>
+          <td><span class="alg-tag classical">Classical</span></td>
+          <td>Unweighted shortest-path baseline</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#dfab4c;"></span>
+              <span>Hub-Penalized</span>
+            </div>
+          </td>
+          <td><span class="alg-tag heuristic">Heuristic</span></td>
+          <td>Penalize high-degree hub nodes</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#af84c0;"></span>
+              <span>PageRank-Inverse</span>
+            </div>
+          </td>
+          <td><span class="alg-tag centrality">Centrality</span></td>
+          <td>Penalize high-PageRank nodes</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#78b07a;"></span>
+              <span>Meta-Path BFS</span>
+            </div>
+          </td>
+          <td><span class="alg-tag learned">Constraint-Based</span></td>
+          <td>Only valid biological relation sequences</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#d47d9b;"></span>
+              <span>Semantic Bridging</span>
+            </div>
+          </td>
+          <td><span class="alg-tag llm">LLM</span></td>
+          <td>Edge weight = 1 − β · cosine similarity</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#d95f5f;"></span>
+              <span>Bidirectional <span class="star">★</span></span>
+            </div>
+          </td>
+          <td><span class="alg-tag search">Search</span></td>
+          <td>Forward + backward Dijkstra</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#d8be3f;"></span>
+              <span>K-Shortest + Bio</span>
+            </div>
+          </td>
+          <td><span class="alg-tag search">Search</span></td>
+          <td>k = 4 candidate paths, biological re-ranking</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="alg-cell">
+              <span class="swatch" style="background:#69bc78;"></span>
+              <span>Bidirectional + Relation Wt</span>
+            </div>
+          </td>
+          <td><span class="alg-tag hybrid">Hybrid</span></td>
+          <td>Enrichment-based relation weighting</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Repository Structure -->
+    <section id="repository">
+      <h2>Repository Structure</h2>
+      <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
+├── data/
+│   └── ground_truths/
+│       ├── ground_truth_final.csv    # Validated pathway nodes
+│       └── pathway_edges_final.csv   # Pathway edge relationships
+├── notebooks/
+│   └── exploration.ipynb             # EDA and algorithm development
+├── src/
+│   └── prepare_primekg.py            # Data preprocessing scripts
+└── README.md</code></pre>
+    </section>
+    
   </main>
 
   <footer>
