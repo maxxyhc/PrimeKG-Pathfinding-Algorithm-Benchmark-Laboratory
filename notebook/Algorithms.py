@@ -444,3 +444,564 @@ class SemanticBridgingPath:
             target,
             allowed_transition
         )
+    
+
+
+class BidirectionalRelationWeighted:
+    def __init__(self, graph, relation_weights, max_depth=8, max_explore=50000):
+        self.graph = graph
+        self.relation_weights = relation_weights
+        self.max_depth = max_depth
+        self.max_explore = max_explore
+
+    def _get_weight(self, u, v):
+        ed = self.graph.get_edge_data(u, v) or {}
+        rel = ed.get('relation', 'unknown')
+        return self.relation_weights.get(rel, 1.0)
+
+    def find_path(self, source, target):
+        if source == target:
+            return [source], [], 0.0
+
+        dist_f = {source: 0.0}
+        parent_f = {source: None}
+        pq_f = [(0.0, source)]
+
+        dist_b = {target: 0.0}
+        parent_b = {target: None}
+        pq_b = [(0.0, target)]
+
+        best_cost = float('inf')
+        meeting = None
+        explored = 0
+
+        while pq_f or pq_b:
+            explored += 1
+            if explored > self.max_explore:
+                break
+
+            # Forward
+            if pq_f:
+                cf, uf = heapq.heappop(pq_f)
+                if cf > self.max_depth * 2:
+                    pq_f = []
+                elif cf == dist_f.get(uf, float('inf')) and cf <= best_cost:
+                    for v in self.graph.successors(uf):
+                        if not allowed_transition(self.graph, source, uf, v):
+                            continue
+                        w = self._get_weight(uf, v)
+                        nc = cf + w
+                        if nc < dist_f.get(v, float('inf')):
+                            dist_f[v] = nc
+                            parent_f[v] = uf
+                            heapq.heappush(pq_f, (nc, v))
+                            if v in dist_b and nc + dist_b[v] < best_cost:
+                                best_cost = nc + dist_b[v]
+                                meeting = v
+
+            # Backward
+            if pq_b:
+                cb, ub = heapq.heappop(pq_b)
+                if cb > self.max_depth * 2:
+                    pq_b = []
+                elif cb == dist_b.get(ub, float('inf')) and cb <= best_cost:
+                    for v in self.graph.predecessors(ub):
+                        w = self._get_weight(v, ub)
+                        nc = cb + w
+                        if nc < dist_b.get(v, float('inf')):
+                            dist_b[v] = nc
+                            parent_b[v] = ub
+                            heapq.heappush(pq_b, (nc, v))
+                            if v in dist_f and dist_f[v] + nc < best_cost:
+                                best_cost = dist_f[v] + nc
+                                meeting = v
+
+            min_f = pq_f[0][0] if pq_f else float('inf')
+            min_b = pq_b[0][0] if pq_b else float('inf')
+            if min_f + min_b >= best_cost:
+                break
+
+        if meeting is None:
+            return self._fallback(source, target)
+
+        # Reconstruct
+        fwd = []
+        cur = meeting
+        while cur is not None:
+            fwd.append(cur)
+            cur = parent_f.get(cur)
+        fwd.reverse()
+
+        bwd = []
+        cur = parent_b.get(meeting)
+        while cur is not None:
+            bwd.append(cur)
+            cur = parent_b.get(cur)
+
+        path = fwd + bwd
+
+        for i in range(len(path) - 1):
+            if not self.graph.has_edge(path[i], path[i + 1]):
+                return self._fallback(source, target)
+            if not allowed_transition(self.graph, source, path[i], path[i + 1]):
+                return self._fallback(source, target)
+
+        if path[-1] != target:
+            return self._fallback(source, target)
+
+        relations = []
+        for i in range(len(path) - 1):
+            ed = self.graph.get_edge_data(path[i], path[i + 1]) or {}
+            relations.append(ed.get("relation", "unknown"))
+
+        return path, relations, best_cost
+
+    def _fallback(self, source, target):
+        dist = {source: 0.0}
+        parent = {source: None}
+        pq = [(0.0, source)]
+
+        while pq:
+            cost, u = heapq.heappop(pq)
+            if cost != dist.get(u, float('inf')):
+                continue
+            if cost > self.max_depth * 2:
+                break
+            if u == target:
+                break
+            for v in self.graph.successors(u):
+                if not allowed_transition(self.graph, source, u, v):
+                    continue
+                w = self._get_weight(u, v)
+                nc = cost + w
+                if nc < dist.get(v, float('inf')):
+                    dist[v] = nc
+                    parent[v] = u
+                    heapq.heappush(pq, (nc, v))
+
+        if target not in dist:
+            return [], [], float('inf')
+
+        path = []
+        cur = target
+        while cur is not None:
+            path.append(cur)
+            cur = parent[cur]
+        path.reverse()
+
+        relations = []
+        for i in range(len(path) - 1):
+            ed = self.graph.get_edge_data(path[i], path[i + 1]) or {}
+            relations.append(ed.get("relation", "unknown"))
+        return path, relations, dist[target]
+
+
+class BidirectionalKShortestBio:
+    def __init__(self, graph, k=4, max_depth=8, max_explore=50000):
+        self.graph = graph
+        self.k = k
+        self.max_depth = max_depth
+        self.max_explore = max_explore
+        self.degrees = dict(graph.degree())
+        degree_vals = list(self.degrees.values())
+        self.degree_p90 = np.percentile(degree_vals, 90)
+        self.degree_p99 = np.percentile(degree_vals, 99)
+
+    def _bidir_shortest(self, source, target, excluded_edges=None, excluded_nodes=None):
+        """Single bidirectional shortest path with exclusions."""
+        if excluded_edges is None:
+            excluded_edges = set()
+        if excluded_nodes is None:
+            excluded_nodes = set()
+
+        dist_f = {source: 0.0}
+        parent_f = {source: None}
+        pq_f = [(0.0, source)]
+
+        dist_b = {target: 0.0}
+        parent_b = {target: None}
+        pq_b = [(0.0, target)]
+
+        best_cost = float('inf')
+        meeting = None
+        explored = 0
+
+        while pq_f or pq_b:
+            explored += 1
+            if explored > self.max_explore:
+                break
+
+            if pq_f:
+                cf, uf = heapq.heappop(pq_f)
+                if cf > self.max_depth:
+                    pq_f = []
+                elif cf == dist_f.get(uf, float('inf')) and cf <= best_cost:
+                    for v in self.graph.successors(uf):
+                        if v in excluded_nodes or (uf, v) in excluded_edges:
+                            continue
+                        if not allowed_transition(self.graph, source, uf, v):
+                            continue
+                        nc = cf + 1.0
+                        if nc < dist_f.get(v, float('inf')):
+                            dist_f[v] = nc
+                            parent_f[v] = uf
+                            heapq.heappush(pq_f, (nc, v))
+                            if v in dist_b and nc + dist_b[v] < best_cost:
+                                best_cost = nc + dist_b[v]
+                                meeting = v
+
+            if pq_b:
+                cb, ub = heapq.heappop(pq_b)
+                if cb > self.max_depth:
+                    pq_b = []
+                elif cb == dist_b.get(ub, float('inf')) and cb <= best_cost:
+                    for v in self.graph.predecessors(ub):
+                        if v in excluded_nodes or (v, ub) in excluded_edges:
+                            continue
+                        nc = cb + 1.0
+                        if nc < dist_b.get(v, float('inf')):
+                            dist_b[v] = nc
+                            parent_b[v] = ub
+                            heapq.heappush(pq_b, (nc, v))
+                            if v in dist_f and dist_f[v] + nc < best_cost:
+                                best_cost = dist_f[v] + nc
+                                meeting = v
+
+            min_f = pq_f[0][0] if pq_f else float('inf')
+            min_b = pq_b[0][0] if pq_b else float('inf')
+            if min_f + min_b >= best_cost:
+                break
+
+        if meeting is None:
+            return None, float('inf')
+
+        # Reconstruct
+        fwd = []
+        cur = meeting
+        while cur is not None:
+            fwd.append(cur)
+            cur = parent_f.get(cur)
+        fwd.reverse()
+
+        bwd = []
+        cur = parent_b.get(meeting)
+        while cur is not None:
+            bwd.append(cur)
+            cur = parent_b.get(cur)
+
+        path = fwd + bwd
+
+        # Validate
+        for i in range(len(path) - 1):
+            if not self.graph.has_edge(path[i], path[i + 1]):
+                return None, float('inf')
+            if not allowed_transition(self.graph, source, path[i], path[i + 1]):
+                return None, float('inf')
+
+        if path[-1] != target:
+            return None, float('inf')
+
+        return path, float(len(path) - 1)
+
+    def _fwd_shortest(self, source, target, excluded_edges=None, excluded_nodes=None):
+        """Forward-only fallback."""
+        if excluded_edges is None:
+            excluded_edges = set()
+        if excluded_nodes is None:
+            excluded_nodes = set()
+
+        dist = {source: 0.0}
+        parent = {source: None}
+        pq = [(0.0, source)]
+
+        while pq:
+            cost, u = heapq.heappop(pq)
+            if cost != dist.get(u, float('inf')):
+                continue
+            if cost > self.max_depth:
+                break
+            if u == target:
+                break
+            for v in self.graph.successors(u):
+                if v in excluded_nodes or (u, v) in excluded_edges:
+                    continue
+                if not allowed_transition(self.graph, source, u, v):
+                    continue
+                nc = cost + 1.0
+                if nc < dist.get(v, float('inf')):
+                    dist[v] = nc
+                    parent[v] = u
+                    heapq.heappush(pq, (nc, v))
+
+        if target not in dist:
+            return None, float('inf')
+
+        path = []
+        cur = target
+        while cur is not None:
+            path.append(cur)
+            cur = parent[cur]
+        path.reverse()
+        return path, dist[target]
+
+    def _find_k_paths(self, source, target):
+        """Find k diverse paths using Yen's with bidirectional base search."""
+        # Try bidirectional first, fall back to forward
+        first_path, first_cost = self._bidir_shortest(source, target)
+        if first_path is None:
+            first_path, first_cost = self._fwd_shortest(source, target)
+        if first_path is None:
+            return []
+
+        A = [(first_path, first_cost)]
+        B = []
+        seen = {tuple(first_path)}
+        counter = 0
+
+        for _ in range(1, self.k):
+            prev_path = A[-1][0]
+            max_spur = min(len(prev_path) - 1, 4)
+
+            for i in range(max_spur):
+                spur_node = prev_path[i]
+                root_path = prev_path[:i + 1]
+
+                excl_edges = set()
+                for (p, _) in A:
+                    if len(p) > i and p[:i + 1] == root_path and i + 1 < len(p):
+                        excl_edges.add((p[i], p[i + 1]))
+
+                excl_nodes = set(root_path[:-1])
+
+                # Try bidirectional, fall back to forward
+                spur_path, _ = self._bidir_shortest(spur_node, target, excl_edges, excl_nodes)
+                if spur_path is None:
+                    spur_path, _ = self._fwd_shortest(spur_node, target, excl_edges, excl_nodes)
+
+                if spur_path is not None:
+                    total_path = root_path[:-1] + spur_path
+                    pt = tuple(total_path)
+                    if pt not in seen and total_path[-1] == target:
+                        seen.add(pt)
+                        counter += 1
+                        heapq.heappush(B, (float(len(total_path) - 1), counter, total_path))
+
+            if not B:
+                break
+            cost, _, path = heapq.heappop(B)
+            A.append((path, cost))
+
+        return A
+
+    def _score_path(self, path):
+        if len(path) < 2:
+            return -999
+        score = 0.0
+
+        # Node type diversity
+        ntypes = set()
+        for node in path[1:-1]:
+            ntypes.add(self.graph.nodes[node].get('node_type', 'unknown'))
+        score += len(ntypes) * 0.4
+
+        # Relation quality
+        rels = []
+        for i in range(len(path) - 1):
+            ed = self.graph.get_edge_data(path[i], path[i + 1]) or {}
+            rels.append(ed.get('relation', 'unknown'))
+
+        if rels:
+            if rels[0] == 'drug_protein':
+                score += 0.8
+            if rels[-1] == 'disease_protein':
+                score += 0.8
+            for r in rels:
+                if r in ('drug_protein', 'disease_protein', 'bioprocess_protein'):
+                    score += 0.3
+                elif r == 'ppi':
+                    score += 0.1
+
+        # Hub penalty
+        for node in path[1:-1]:
+            deg = self.degrees.get(node, 0)
+            if deg > self.degree_p99:
+                score -= 1.5
+            elif deg > self.degree_p90:
+                score -= 0.3
+
+        # Length preference
+        score -= 0.3 * abs(len(path) - 5)
+        return score
+
+    def find_path(self, source, target):
+        candidates = self._find_k_paths(source, target)
+        if not candidates:
+            return [], [], float('inf')
+
+        scored = [(self._score_path(p), p, c) for p, c in candidates]
+        scored.sort(key=lambda x: x[0], reverse=True)
+        _, best_path, best_cost = scored[0]
+
+        relations = []
+        for i in range(len(best_path) - 1):
+            ed = self.graph.get_edge_data(best_path[i], best_path[i + 1]) or {}
+            relations.append(ed.get("relation", "unknown"))
+        return best_path, relations, best_cost
+    
+class BidirectionalFast:
+    def __init__(self, graph, max_depth=8, max_explore=50000):
+        self.graph = graph
+        self.max_depth = max_depth
+        self.max_explore = max_explore
+
+    def find_path(self, source, target):
+        if source == target:
+            return [source], [], 0.0
+
+        # Forward state
+        dist_f = {source: 0.0}
+        parent_f = {source: None}
+        pq_f = [(0.0, source)]
+        visited_f = set()
+
+        # Backward state
+        dist_b = {target: 0.0}
+        parent_b = {target: None}
+        pq_b = [(0.0, target)]
+        visited_b = set()
+
+        best_cost = float('inf')
+        meeting_node = None
+        explored = 0
+
+        while pq_f or pq_b:
+            explored += 1
+            if explored > self.max_explore:
+                break
+
+            # Forward step
+            if pq_f:
+                cost_f, u_f = heapq.heappop(pq_f)
+                if cost_f > self.max_depth:
+                    pq_f = []
+                elif cost_f == dist_f.get(u_f, float('inf')) and cost_f <= best_cost:
+                    visited_f.add(u_f)
+                    for v in self.graph.successors(u_f):
+                        if not allowed_transition(self.graph, source, u_f, v):
+                            continue
+                        new_cost = cost_f + 1.0
+                        if new_cost < dist_f.get(v, float('inf')):
+                            dist_f[v] = new_cost
+                            parent_f[v] = u_f
+                            heapq.heappush(pq_f, (new_cost, v))
+                            if v in dist_b:
+                                total = new_cost + dist_b[v]
+                                if total < best_cost:
+                                    best_cost = total
+                                    meeting_node = v
+
+            # Backward step
+            if pq_b:
+                cost_b, u_b = heapq.heappop(pq_b)
+                if cost_b > self.max_depth:
+                    pq_b = []
+                elif cost_b == dist_b.get(u_b, float('inf')) and cost_b <= best_cost:
+                    visited_b.add(u_b)
+                    for v in self.graph.predecessors(u_b):
+                        new_cost = cost_b + 1.0
+                        if new_cost < dist_b.get(v, float('inf')):
+                            dist_b[v] = new_cost
+                            parent_b[v] = u_b
+                            heapq.heappush(pq_b, (new_cost, v))
+                            if v in dist_f:
+                                total = dist_f[v] + new_cost
+                                if total < best_cost:
+                                    best_cost = total
+                                    meeting_node = v
+
+            # Early termination
+            min_f = pq_f[0][0] if pq_f else float('inf')
+            min_b = pq_b[0][0] if pq_b else float('inf')
+            if min_f + min_b >= best_cost:
+                break
+
+        if meeting_node is None:
+            return [], [], float('inf')
+
+        # Reconstruct forward half: source → meeting
+        fwd = []
+        cur = meeting_node
+        while cur is not None:
+            fwd.append(cur)
+            cur = parent_f.get(cur)
+        fwd.reverse()
+
+        # Reconstruct backward half: meeting → target
+        bwd = []
+        cur = parent_b.get(meeting_node)
+        while cur is not None:
+            bwd.append(cur)
+            cur = parent_b.get(cur)
+
+        full_path = fwd + bwd
+
+        # Validate edges exist and constraints hold
+        valid = [full_path[0]]
+        for i in range(len(full_path) - 1):
+            u, v = full_path[i], full_path[i + 1]
+            if self.graph.has_edge(u, v) and allowed_transition(self.graph, source, u, v):
+                valid.append(v)
+            else:
+                # Path broken — fall back to forward-only Dijkstra
+                return self._fallback(source, target)
+
+        if valid[-1] != target:
+            return self._fallback(source, target)
+
+        relations = []
+        for i in range(len(valid) - 1):
+            ed = self.graph.get_edge_data(valid[i], valid[i + 1]) or {}
+            relations.append(ed.get("relation", "unknown"))
+
+        return valid, relations, float(len(valid) - 1)
+
+    def _fallback(self, source, target):
+        dist = {source: 0.0}
+        parent = {source: None}
+        pq = [(0.0, source)]
+        explored = 0
+
+        while pq:
+            cost, u = heapq.heappop(pq)
+            if cost != dist.get(u, float('inf')):
+                continue
+            explored += 1
+            if explored > self.max_explore or cost > self.max_depth:
+                break
+            if u == target:
+                break
+            for v in self.graph.successors(u):
+                if not allowed_transition(self.graph, source, u, v):
+                    continue
+                nc = cost + 1.0
+                if nc < dist.get(v, float('inf')):
+                    dist[v] = nc
+                    parent[v] = u
+                    heapq.heappush(pq, (nc, v))
+
+        if target not in dist:
+            return [], [], float('inf')
+
+        path = []
+        cur = target
+        while cur is not None:
+            path.append(cur)
+            cur = parent[cur]
+        path.reverse()
+
+        relations = []
+        for i in range(len(path) - 1):
+            ed = self.graph.get_edge_data(path[i], path[i + 1]) or {}
+            relations.append(ed.get("relation", "unknown"))
+        return path, relations, dist[target]
+
