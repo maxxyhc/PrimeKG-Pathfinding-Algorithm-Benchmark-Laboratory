@@ -25,8 +25,7 @@
 # Note: Speed is measured separately in the runner during algorithm execution.
 # ============================================
 
-from evaluation_helpers import *
-
+from src.evaluation_helpers import *
 
 # ============================================
 # 1. PRECISION
