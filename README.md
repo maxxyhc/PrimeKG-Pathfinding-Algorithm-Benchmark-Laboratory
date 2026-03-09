@@ -12,13 +12,13 @@ We evaluate **8 pathfinding algorithms across 2 phases** against **150 curated g
 
 #### Phase 1 — Edge Weighting & Constrained Search
 
-| # | Algorithm | Strategy | Avg Time/Pathway |
-|---|-----------|----------|-----------------|
-| 1 | **Dijkstra** | Unweighted baseline (NetworkX shortest path) | 0.03 ms |
-| 2 | **Meta-Path BFS** | BFS constrained to valid biological edge-type sequences | — |
-| 3 | **Hub-Penalized** | Penalizes high-degree hub nodes (`w = 1 + α·log(degree)`) | 2,049 ms |
-| 4 | **PageRank-Inverse** | Prefers low-centrality nodes (`w = 1/(1 + PageRank)`) | 4,929 ms |
-| 5 | **Semantic Bridging** | TF-IDF cosine similarity edge weighting | 3,394 ms |
+| # | Algorithm | Strategy | 
+|---|-----------|----------|
+| 1 | **Dijkstra** | Unweighted baseline (NetworkX shortest path) |
+| 2 | **Meta-Path BFS** | BFS constrained to valid biological edge-type sequences |
+| 3 | **Hub-Penalized** | Penalizes high-degree hub nodes (`w = 1 + α·log(degree)`) |
+| 4 | **PageRank-Inverse** | Prefers low-centrality nodes (`w = 1/(1 + PageRank)`) |
+| 5 | **Semantic Bridging** | TF-IDF cosine similarity edge weighting |
 
 #### Phase 2 — Search Strategy
 
@@ -37,7 +37,7 @@ We evaluate **8 pathfinding algorithms across 2 phases** against **150 curated g
 | **F1 Score** ↑ | 0.545 | 0.540 | 0.547 | **0.557** |
 | **Edit Distance** ↓ | 0.615 | 0.551 | 0.544 | **0.537** |
 
-> Phase 1 F1 spread = 0.017. Edge weighting alone does not significantly differentiate algorithms — graph topology dominates.
+> Phase 1 F1 spread = 0.023. Edge weighting alone does not significantly differentiate algorithms — graph topology dominates.
 
 #### Phase 2 — Search Strategy
 
@@ -58,9 +58,8 @@ We evaluate **8 pathfinding algorithms across 2 phases** against **150 curated g
 │                                      runs all 8 algorithms, evaluates, saves results
 ├── src/                             ← Core modules
 │   ├── Algorithms.py                ← All 8 pathfinding algorithm implementations
-│   ├── evaluation_metrics.py        ← 7 evaluation metrics (F1, edit distance, MRR, etc.)
-│   ├── evaluation_helpers.py        ← Helper functions (degree counts, hub threshold, timing)
-│   └── prepare_primekg.py           ← PrimeKG data cleaning for Neo4j export
+│   ├── evaluation_metrics.py        ← 7 evaluation metrics 
+│   └── evaluation_helpers.py        ← Helper functions    
 │
 ├── data/                            ← All data files
 │   ├── benchmark_pathways_nodes.csv ← Ground truth pathways (included in repo)
@@ -69,10 +68,10 @@ We evaluate **8 pathfinding algorithms across 2 phases** against **150 curated g
 │   ├── nodes.csv                    ← PrimeKG nodes (NOT in repo — download below)
 │   ├── edges.csv                    ← PrimeKG edges (NOT in repo — download below)
 │   └── raw/                         ← Additional raw data (NOT in repo)
-│       ├── indication_paths.yaml    ← DrugMechDB source pathways
-│       ├── kg.csv                   ← Raw PrimeKG knowledge graph
-│       ├── mesh_to_mondo_lookup.csv ← MeSH → Mondo disease ID mapping
-│       └── uniprot_to_entrez_lookup.csv ← UniProt → Entrez gene ID mapping
+│       ├── indication_paths.yaml    
+│       ├── kg.csv                   
+│       ├── mesh_to_mondo_lookup.csv 
+│       └── uniprot_to_entrez_lookup.csv 
 │
 ├── Ground_Truth_automation/         ← Ground truth extraction pipeline
 │   ├── automated_pipeline.py        ← End-to-end pathway extraction
@@ -81,19 +80,30 @@ We evaluate **8 pathfinding algorithms across 2 phases** against **150 curated g
 │   └── pathway_validator.py         ← Validates extracted pathways against PrimeKG
 │
 ├── tests/                           ← Unit tests
-│   ├── test_evaluation_helpers.py
-│   └── test_evaluation_metrics.py
+│   ├── __init__.py                  ← Test package initialization
+│   ├── conftest.py                  ← Pytest configuration and fixtures
+│   ├── test_algorithms.py           ← Algorithm unit tests
+│   ├── test_evaluation_helpers.py   ← Helper function tests
+│   └── test_evaluation_metrics.py   ← Metric calculation tests
 │
-├── notebook/                        ← Intermediate algorithm output files
-│   ├── bidir_paths.csv              ← Bidirectional search predictions
-│   └── brw_paths.csv                ← Bidir + Relation Weighted predictions
+├── notebook/                        ← Analysis notebook and visualizations
+│   ├── results_analyses.ipynb       ← Complete benchmark analysis with all visualizations
+│   ├── case_study_1.png             ← Case study visualization: Pegvisomant pathway
+│   └── case_study_2.png             ← Case study visualization: Regorafenib pathway
 │
+├── results/                         ← Benchmark outputs (generated after running)
+│   ├── predictions/                 ← Algorithm predictions per pathway
+│   ├── detailed_results.csv         ← Per-pathway metrics
+│   └── algorithm_summary.csv        ← Aggregate performance by algorithm
+│
+├── logs/                            ← Execution logs (generated after running)
 ├── index.html                       ← Interactive results dashboard
 ├── results.html                     ← Results visualization page
 ├── groundtruths.html                ← Ground truth pathway viewer
 ├── style.css                        ← Dashboard styling
 ├── subgraph_with_pathways.json      ← Subgraph data for visualization
 ├── requirements.txt                 ← Python dependencies
+├── .gitignore
 └── README.md
 ```
 
@@ -114,7 +124,14 @@ cd PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory
 pip install -r requirements.txt
 ```
 
-Requires Python 3.9+. Core dependencies: `pandas`, `numpy`, `networkx`, `scikit-learn`, `scipy`.
+Requires **Python 3.9+**. Key dependencies:
+- Core: `numpy`, `pandas`, `scipy`, `networkx`
+- ML: `scikit-learn`
+- Visualization: `matplotlib`, `seaborn`, `plotly`
+- Jupyter: `jupyter`, `notebook`
+- Utilities: `tqdm`, `requests`, `PyYAML`
+
+See `requirements.txt` for complete list with version specifications.
 
 ### 3. Download PrimeKG data
 
@@ -123,8 +140,8 @@ The raw PrimeKG files are too large to store in the repository. Download them di
 **[→ Harvard Dataverse: PrimeKG](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IXA7BM)**
 
 Download these two files:
-- `nodes.csv` (~5 MB)
-- `edges.csv` (~60 MB)
+- `nodes.csv` (~8.5 MB)
+- `edges.csv` (~369 MB)
 
 Place them in `data/`:
 
@@ -176,13 +193,40 @@ This will:
 5. Evaluate with 7 metrics per algorithm per pathway
 6. Save results to `results/` (predictions, detailed results, summary by algorithm)
 
+**Expected outputs:**
+
+After completion, you'll find:
+```
+results/
+├── all_predictions.csv      ← All pathway predictions (pathway_id, algorithm, predicted nodes/edges)
+├── all_results.csv           ← Complete evaluation metrics for every pathway × algorithm
+└── summary_by_algorithm.csv  ← Aggregate performance statistics by algorithm
+```
+
 Logs are saved to `logs/` with timestamps.
 
-### 6. Run tests
+### 6. Analyze results
+
+Open and run the analysis notebook to explore results with visualizations:
+```bash
+jupyter notebook notebook/results_analyses.ipynb
+```
+
+The notebook contains:
+- **Setup** 
+- **Algorithm Performance Analysis** 
+- **Detailed Comparisons** 
+- **Case Studies** 
+- **Pathway Level Analysis** 
+- **Hub Node Analysis** 
+- **Conclusions & Future Work**
+
+### 7. Run tests
 
 ```bash
 python -m pytest tests/ -v
 ```
+Runs 104 unit tests covering all algorithms, evaluation metrics, and helper functions.
 
 ---
 
@@ -202,7 +246,7 @@ python -m pytest tests/ -v
 
 ## Key Findings
 
-- **Edge weighting alone doesn't matter.** Phase 1 F1 spread = 0.017 across algorithms. Graph topology dominates over weighting strategy.
+- **Edge weighting alone doesn't matter.** Phase 1 F1 spread = 0.023 across algorithms. Graph topology dominates over weighting strategy.
 - **Bidirectional search is the first real improvement.** Searching from both drug and disease simultaneously cuts edit distance by 0.186 vs. Dijkstra (p < 0.000001). Adding biological signals on top made results *worse* — the search strategy already implicitly captures mechanistic grammar.
 - **The core problem is path length.** Average predicted path = 3.4 nodes; average ground truth = 5.8 nodes. 68% of bidirectional paths are exactly 3 nodes. The task effectively reduces to picking one intermediate.
 - **Hub shortcuts are the dominant failure mode.** 43% of failures involve routing through high-degree hub nodes (e.g., Seizure: 4,218 connections) that are structurally close to everything but mechanistically irrelevant.
@@ -211,17 +255,6 @@ python -m pytest tests/ -v
 - **Biological constraints help selectively.** Meta-Path BFS enforces valid edge-type sequences but sacrifices recall; K-Shortest + Bio scoring re-ranks candidate paths by node type diversity and relation quality.
 
 ---
-
-## Ground Truth Construction
-
-Ground truth pathways were sourced from [DrugMechDB](https://drugmechdb.github.io/), a curated database of drug mechanism-of-action pathways. Each pathway was:
-
-1. Parsed from DrugMechDB's YAML format
-2. Mapped onto PrimeKG using identifier lookups (DrugBank → PrimeKG drug index, UniProt → PrimeKG protein index, MeSH/MONDO → PrimeKG disease index)
-3. Validated to ensure all nodes and edges exist in PrimeKG
-4. Filtered to retain only fully-mapped pathways
-
-The extraction and mapping pipeline is in `Ground_Truth_automation/`.
 
 ## Interactive Dashboard
 
