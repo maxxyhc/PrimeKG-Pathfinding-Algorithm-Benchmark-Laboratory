@@ -253,21 +253,42 @@
   </div>
 </section>
 
-<!-- Repository Structure -->
-    <section id="repository">
-      <h2>Repository Structure</h2>
-      <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
+<section id="repository">
+  <h2>Repository Structure</h2>
+  <pre><code>PrimeKG-Pathfinding-Algorithm-Benchmark-Laboratory/
 ├── data/
-│   └── ground_truths/
-│       ├── ground_truth_final.csv    # Validated pathway nodes
-│       └── pathway_edges_final.csv   # Pathway edge relationships
-├── notebooks/
-│   └── exploration.ipynb             # EDA and algorithm development
-├── src/
-│   └── prepare_primekg.py            # Data preprocessing scripts
-└── README.md</code></pre>
-    </section>
-    
+│   ├── benchmark_pathways_nodes.csv        # Ground-truth pathway nodes
+│   ├── benchmark_pathways_edges.csv        # Ground-truth pathway edges
+│   ├── benchmark_pathways_metadata.csv
+│   ├── nodes.csv                           # PrimeKG nodes (download separately)
+│   ├── edges.csv                           # PrimeKG edges (download separately)
+│   └── raw/                                # Additional raw data (not tracked in repo)
+│       ├── kg.csv
+│       ├── mesh_to_mondo_lookup.csv
+│       └── uniprot_to_entrez_lookup.csv
+│
+├── Ground_Truth_automation/                # Pipeline to extract DrugMechDB pathways
+│   ├── automated_pipeline.py
+│   ├── pathway_validator.py
+│   └── pathway_config.yaml
+│
+├── src/                                    # Core implementation code
+│   ├── algorithms.py
+│   ├── evaluation_helpers.py
+│   ├── evaluation_metrics.py
+│   └── benchmark_runner.py
+│
+├── tests/                                  # Unit tests
+│   ├── test_evaluation_helpers.py
+│   └── test_evaluation_metrics.py
+│
+├── results_analysis.ipynb                  # Notebook for analyzing benchmark outputs
+├── pytest.ini
+├── requirements.txt
+└── README.md
+</code></pre>
+</section>
+
   </main>
 
   <footer>
