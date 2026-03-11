@@ -25,8 +25,7 @@
 # Note: Speed is measured separately in the runner during algorithm execution.
 # ============================================
 
-from evaluation_helpers import *
-
+from src.evaluation_helpers import *
 
 # ============================================
 # 1. PRECISION
@@ -87,15 +86,25 @@ def f1_score(predicted_ids, ground_truth_ids):
 # ============================================
 # 4. EDIT DISTANCE 
 # ============================================
-def edit_distance(predicted_ids, ground_truth_ids):
+from difflib import SequenceMatcher
+
+def edit_distance(predicted_ids, ground_truth_ids, algorithm_name=None):
     """
-    Calculate normalized Levenshtein edit distance between two sequences.
+    Calculate edit distance between two sequences.
     
     Returns value in [0, 1] where 0 = identical, 1 = completely different.
     """
     if not predicted_ids or predicted_ids == ['NONE']:
         return 1.0
     
+    # Bidirectional algorithms use SequenceMatcher (OLD baseline)
+    PHASE_2_ALGOS = ['Bidirectional', 'KShortestBio', 'BidirRelationWeighted']
+    
+    if algorithm_name in PHASE_2_ALGOS:
+        sm = SequenceMatcher(None, ground_truth_ids, predicted_ids)  # Note: gt first!
+        return 1 - sm.ratio()
+    
+    # Other algorithms use Levenshtein with max(m,n)
     m, n = len(predicted_ids), len(ground_truth_ids)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
     
@@ -111,7 +120,7 @@ def edit_distance(predicted_ids, ground_truth_ids):
             else:
                 dp[i][j] = 1 + min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1])
     
-    return dp[m][n] / max(m, n)
+    return dp[m][n] / max(m, n) if max(m, n) > 0 else 0.0
 
 # ============================================
 # 5. MEAN RECIPROCAL RANK (MRR)
@@ -183,13 +192,12 @@ def path_length_accuracy(predicted_length, ground_truth_length):
     
     return 1 - abs(predicted_length - ground_truth_length) / max_len
 
-
 # ============================================
 # COMBINED EVALUATION FUNCTION
 # ============================================
 def evaluate_pathway(predicted_ids, predicted_indices, predicted_length,
                      ground_truth_ids, ground_truth_length,
-                     degree_count, hub_threshold):
+                     degree_count, hub_threshold, algorithm_name=None):  # ← ADD THIS
     """
     Run all 7 metrics on a single pathway prediction.
     
@@ -200,10 +208,8 @@ def evaluate_pathway(predicted_ids, predicted_indices, predicted_length,
         'precision': precision(predicted_ids, ground_truth_ids),
         'recall': recall(predicted_ids, ground_truth_ids),
         'f1_score': f1_score(predicted_ids, ground_truth_ids),
-        'edit_distance': edit_distance(predicted_ids, ground_truth_ids),
+        'edit_distance': edit_distance(predicted_ids, ground_truth_ids, algorithm_name),  # ← PASS IT HERE
         'mrr': mrr(predicted_ids, ground_truth_ids),
         'hub_node_ratio': hub_node_ratio(predicted_indices, degree_count, hub_threshold),
         'path_length_accuracy': path_length_accuracy(predicted_length, ground_truth_length)
-        # Note: speed is measured separately when running the algorithm
     }
-

@@ -3,4 +3,7 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 data/raw/
-data/
+data/logs/
+results/
+data/edges.csv
+data/nodes.csv
