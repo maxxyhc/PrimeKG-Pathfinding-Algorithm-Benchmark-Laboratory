@@ -67,85 +67,87 @@
       </div>
     </section>
 
-    <!-- Key Pathway: Tirofiban → Acute Coronary Syndrome -->
-    <section id="pathway">
-      <h2>Example: Tirofiban → Acute Coronary Syndrome</h2>
-      <p>
-        Below is a mechanistically grounded drug–disease pathway showing how 
-        <strong>Tirofiban</strong> treats <strong>Acute Coronary Syndrome</strong> 
-        by inhibiting platelet aggregation via integrin receptors.
-      </p>
+<!-- Key Pathway: Tirofiban → Acute Coronary Syndrome -->
+<section id="pathway">
+  <h2>Example: Tirofiban → Acute Coronary Syndrome</h2>
+  <p>
+    Below is a mechanistically grounded drug–disease pathway showing how 
+    <strong>Tirofiban</strong> treats <strong>Acute Coronary Syndrome</strong> 
+    by inhibiting platelet aggregation through the platelet integrin receptor αIIbβ3.
+  </p>
 
-      <div class="pathway-container">
-        <div class="pathway-visualization">
-          <!-- Node 1: Tirofiban -->
-          <div class="pathway-node drug">
-            <div class="node-icon">💊</div>
-            <div class="node-name">Tirofiban</div>
-            <div class="node-meta">DB00775 | Drug</div>
-          </div>
+  <div class="pathway-container">
+    <div class="pathway-visualization">
 
-          <div class="pathway-edge">
-            <div class="edge-line"></div>
-            <div class="edge-label">targets</div>
-          </div>
-
-          <!-- Node 2: Integrin alpha-IIb -->
-          <div class="pathway-node gene">
-            <div class="node-icon">🧬</div>
-            <div class="node-name">Integrin αIIb</div>
-            <div class="node-meta">3674 | Gene/Protein</div>
-          </div>
-
-          <div class="pathway-edge">
-            <div class="edge-line"></div>
-            <div class="edge-label">participates in</div>
-          </div>
-
-          <!-- Node 3: Platelet aggregation -->
-          <div class="pathway-node pathway">
-            <div class="node-icon">🔄</div>
-            <div class="node-name">Platelet aggregation</div>
-            <div class="node-meta">70527 | Biological Process</div>
-          </div>
-
-          <div class="pathway-edge">
-            <div class="edge-line"></div>
-            <div class="edge-label">mediated by</div>
-          </div>
-
-          <!-- Node 4: Integrin beta-3 -->
-          <div class="pathway-node gene">
-            <div class="node-icon">🧬</div>
-            <div class="node-name">Integrin β3</div>
-            <div class="node-meta">3690 | Gene/Protein</div>
-          </div>
-
-          <div class="pathway-edge">
-            <div class="edge-line"></div>
-            <div class="edge-label">implicated in</div>
-          </div>
-
-          <!-- Node 5: Acute Coronary Syndrome -->
-          <div class="pathway-node disease">
-            <div class="node-icon">🏥</div>
-            <div class="node-name">Acute Coronary Syndrome</div>
-            <div class="node-meta">D054058 | Disease</div>
-          </div>
-        </div>
+      <!-- Node 1 -->
+      <div class="pathway-node drug">
+        <div class="node-icon">💊</div>
+        <div class="node-name">Tirofiban</div>
+        <div class="node-meta">DB00775 | Drug</div>
       </div>
 
-      <div class="pathway-explanation">
-        <h3>Mechanistic Explanation</h3>
-        <ol>
-          <li><strong>Tirofiban</strong> is a small‑molecule inhibitor of platelet glycoprotein IIb/IIIa complexes.</li>
-          <li>The drug binds to <strong>Integrin αIIb/β3</strong> on platelets, blocking fibrinogen binding.</li>
-          <li>This directly suppresses <strong>platelet aggregation</strong>, a key step in thrombus formation.</li>
-          <li>By reducing thrombus formation in coronary arteries, Tirofiban helps prevent and treat 
-              <strong>Acute Coronary Syndrome</strong>.</li>
-        </ol>
+      <div class="pathway-edge">
+        <div class="edge-line"></div>
+        <div class="edge-label">inhibits</div>
       </div>
-    </section>
+
+      <!-- Node 2 -->
+      <div class="pathway-node gene">
+        <div class="node-icon">🧬</div>
+        <div class="node-name">Integrin αIIbβ3</div>
+        <div class="node-meta">ITGA2B / ITGB3 | Platelet receptor</div>
+      </div>
+
+      <div class="pathway-edge">
+        <div class="edge-line"></div>
+        <div class="edge-label">mediates</div>
+      </div>
+
+      <!-- Node 3 -->
+      <div class="pathway-node pathway">
+        <div class="node-icon">🔄</div>
+        <div class="node-name">Platelet aggregation</div>
+        <div class="node-meta">GO:0070527 | Biological process</div>
+      </div>
+
+      <div class="pathway-edge">
+        <div class="edge-line"></div>
+        <div class="edge-label">promotes</div>
+      </div>
+
+      <!-- Node 4 -->
+      <div class="pathway-node pathway">
+        <div class="node-icon">🩸</div>
+        <div class="node-name">Coronary thrombosis</div>
+        <div class="node-meta">Pathophysiology</div>
+      </div>
+
+      <div class="pathway-edge">
+        <div class="edge-line"></div>
+        <div class="edge-label">causes</div>
+      </div>
+
+      <!-- Node 5 -->
+      <div class="pathway-node disease">
+        <div class="node-icon">🏥</div>
+        <div class="node-name">Acute Coronary Syndrome</div>
+        <div class="node-meta">D054058 | Disease</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="pathway-explanation">
+    <h3>Mechanistic Explanation</h3>
+    <ol>
+      <li><strong>Tirofiban</strong> is a small-molecule antagonist of the platelet glycoprotein IIb/IIIa receptor.</li>
+      <li>It binds the platelet integrin complex <strong>αIIbβ3 (ITGA2B/ITGB3)</strong>, preventing fibrinogen binding.</li>
+      <li>This blocks <strong>platelet aggregation</strong>, the final common step in thrombus formation.</li>
+      <li>Reduced aggregation decreases <strong>coronary thrombus formation</strong> after plaque rupture.</li>
+      <li>Preventing coronary thrombosis reduces the risk and severity of <strong>Acute Coronary Syndrome</strong>.</li>
+    </ol>
+  </div>
+</section>
 
     <!-- Methods -->
 <section id="methods">
